@@ -1,0 +1,147 @@
+/* Refactored for Retal K2 Theme v2 from BR_radioButtonCard.css - colours, fonts and radii now come from 00-retal-tokens.css; left/right are logical so Arabic mirrors. */
+/* =========================================================
+   RADIO BUTTONS AS CARDS (Updated for New K2 DOM)
+========================================================= */
+
+/* 1. Hide K2 default radio circles (Targeting K2's NEW SVG circles) */
+.theme-entry .stack-container[role="radiogroup"]:has(.radio-card-content) label.radio > svg,
+.theme-entry .stack-container.br-card-group label.radio > svg,
+.theme-entry .stack-container[role="radiogroup"]:has(.radio-card-content) .input-control-img,
+.theme-entry .stack-container.br-card-group .input-control-img {
+    display: none !important;
+}
+
+/* 2. Container Flexbox so that cards align side by side */
+.theme-entry .stack-container[role="radiogroup"]:has(.radio-card-content),
+.theme-entry .stack-container.br-card-group {
+    display: flex !important;
+    gap: 20px !important;
+    flex-direction: row !important;
+    width: 100% !important;
+}
+
+
+/* THE DOM FIX: Handling K2's new .multi-select-box-list-item wrapper */
+.theme-entry .stack-container[role="radiogroup"]:has(.radio-card-content) .multi-select-box-list-item,
+.theme-entry .stack-container.br-card-group .multi-select-box-list-item {
+    height: 100% !important;
+    display: block !important;
+    width: 100% !important;
+}
+
+/* 3. The Card (Clickable Label) Styling */
+.theme-entry .stack-container[role="radiogroup"]:has(.radio-card-content) label.radio,
+.theme-entry .stack-container.br-card-group label.radio {
+    display: block !important;
+    border: 1px solid var(--retal-copper-100) !important; 
+    border-radius: var(--retal-radius) !important;
+    padding: 24px !important;
+    background-color: var(--retal-white) !important;
+    cursor: pointer !important;
+    transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease !important;
+    height: 100% !important;
+    box-sizing: border-box !important;
+    box-shadow: none !important;
+    width: 100% !important;
+    transform: translateY(0px) !important;
+    margin: 0 !important;
+}
+
+/* Hover State */
+.theme-entry .stack-container[role="radiogroup"]:has(.radio-card-content) label.radio:hover,
+.theme-entry .stack-container.br-card-group label.radio:hover {
+    border-color: var(--retal-copper-600) !important; 
+    transform: translateY(-2px) !important;
+}
+
+/* Active / Selected State */
+.theme-entry .stack-container[role="radiogroup"]:has(.radio-card-content) label.radio.checked,
+.theme-entry .stack-container[role="radiogroup"]:has(.radio-card-content) label.radio:has(input[type="radio"]:checked),
+.theme-entry .stack-container.br-card-group label.radio.checked,
+.theme-entry .stack-container.br-card-group label.radio:has(input[type="radio"]:checked) {
+    border-color: var(--retal-copper-600) !important;
+    box-shadow: 0 0 0 1px var(--retal-copper-600) !important; 
+    background-color: var(--retal-copper-100) !important; 
+}
+
+/* 4. Inside Content (Typography & Icons) */
+.theme-entry .radio-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.theme-entry .radio-icon {
+    width: 46px;
+    height: 46px;
+    background-color: var(--retal-copper-100); 
+    border-radius: var(--retal-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.theme-entry .radio-card-content h3 {
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    color: var(--retal-black) !important;
+    margin: 0 0 8px 0 !important;
+    font-family: var(--retal-font-body) !important;
+}
+
+.theme-entry .radio-card-content p {
+    font-size: 14px !important;
+    color: var(--retal-muted) !important;
+    margin: 0 !important;
+    line-height: 1.4 !important;
+    font-family: var(--retal-font-body) !important;
+    white-space: normal !important; 
+}
+
+/* Card Icon Hover & Active State Design */
+.theme-entry .stack-container[role="radiogroup"]:has(.radio-card-content) label.radio.checked .radio-icon,
+.theme-entry .stack-container[role="radiogroup"]:has(.radio-card-content) label.radio:has(input[type="radio"]:checked) .radio-icon,
+.theme-entry .stack-container.br-card-group label.radio.checked .radio-icon,
+.theme-entry .stack-container.br-card-group label.radio:has(input[type="radio"]:checked) .radio-icon {
+    background-color: var(--retal-copper-600) !important;
+}
+
+.theme-entry .stack-container[role="radiogroup"]:has(.radio-card-content) label.radio.checked .radio-icon svg,
+.theme-entry .stack-container[role="radiogroup"]:has(.radio-card-content) label.radio:has(input[type="radio"]:checked) .radio-icon svg,
+.theme-entry .stack-container.br-card-group label.radio.checked .radio-icon svg,
+.theme-entry .stack-container.br-card-group label.radio:has(input[type="radio"]:checked) .radio-icon svg {
+    stroke: var(--retal-white) !important;
+}
+
+/* THE SCROLLBAR & OVERFLOW KILLER (For K2 New DOM) */
+
+/* 1. Nuke any height/scroll restrictions on ALL parent wrappers */
+.theme-entry .input-control.control-group-container:has(.radio-card-content),
+.theme-entry .control-group-container:has(.radio-card-content) .input-control-m,
+.theme-entry .control-group-container:has(.radio-card-content) .input-control-m-c,
+.theme-entry .control-group-container:has(.radio-card-content) .multi-select-outer-panel {
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+}
+
+/* 2. Fix the width math (50% hata kar flex ko decide karne do taaki gap fit ho jaye) */
+.theme-entry .stack-container[role="radiogroup"]:has(.radio-card-content) .stack,
+.theme-entry .stack-container.br-card-group .stack {
+    flex: 1 1 0 !important; /* Yeh automatically equal space lega gap ko subtract karke */
+    width: auto !important; /* 50% yahan se remove kar diya gaya hai */
+    min-width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* 3. Ensure the inner list item stretches fully without causing overflow */
+.theme-entry .stack-container[role="radiogroup"]:has(.radio-card-content) .multi-select-box-list-item,
+.theme-entry .stack-container.br-card-group .multi-select-box-list-item {
+    height: 100% !important;
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}

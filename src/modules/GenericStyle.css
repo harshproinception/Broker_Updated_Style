@@ -1,0 +1,1273 @@
+/* Refactored for Retal K2 Theme v2 from GenericStyle.css - colours, fonts and radii now come from 00-retal-tokens.css; left/right are logical so Arabic mirrors. */
+/* =========================================
+1. CSS VARIABLES (COLORS & FONTS)
+========================================= */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root {
+   
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    /* Font Variables */
+    
+    
+    
+    
+    
+}
+
+.theme-entry,
+.theme-entry * {
+    box-sizing: border-box;
+}
+
+
+
+.theme-entry {
+    font-family: var(--retal-font-body) !important;
+    color: var(--color-text) !important;
+}
+
+.theme-entry input,
+.theme-entry textarea,
+.theme-entry select,
+.theme-entry button,
+.theme-entry a,
+.theme-entry span,
+.theme-entry div {
+    font-family: var(--retal-font-body) !important;
+}
+
+.theme-entry a {
+    color: var(--color-primary);
+}
+
+.theme-entry a:hover {
+    color: var(--color-primary-hover);
+}
+
+.theme-entry input.SFC.SourceCode-Forms-Controls-Web-TextBox,
+.theme-entry .SFC.SourceCode-Forms-Controls-Web-TextBox,
+.theme-entry .SFC.SourceCode-Forms-Controls-Web-Control-SpinBox {
+    width: 100% !important;
+    height: var(--control-height) !important;
+    padding: 0 13px !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: 0 !important;
+    background: var(--color-surface) !important;
+    color: var(--color-text) !important;
+    font-size: 14px !important;
+    outline: none !important;
+    box-shadow: none !important;
+    transition: all var(--transition) !important;
+}
+
+.theme-entry input.SFC.SourceCode-Forms-Controls-Web-TextBox:hover,
+.theme-entry input.SFC.SourceCode-Forms-Controls-Web-TextBox:focus,
+.theme-entry .SFC.SourceCode-Forms-Controls-Web-TextBox:hover,
+.theme-entry .SFC.SourceCode-Forms-Controls-Web-TextBox:focus,
+.theme-entry .SFC.SourceCode-Forms-Controls-Web-Control-SpinBox:hover,
+.theme-entry .SFC.SourceCode-Forms-Controls-Web-Control-SpinBox:focus {
+    border-color: var(--color-primary) !important;
+}
+
+.theme-entry textarea {
+    width: 100% !important;
+    min-height: 90px !important;
+    padding: 12px 13px !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: 0 !important;
+    background: var(--color-surface) !important;
+    color: var(--color-text) !important;
+    font-size: 14px !important;
+    outline: none !important;
+    box-shadow: none !important;
+    resize: vertical !important;
+    transition: all var(--transition) !important;
+}
+
+.theme-entry textarea:hover,
+.theme-entry textarea:focus {
+    border-color: var(--color-primary) !important;
+}
+
+.theme-entry .input-control.textarea,
+.theme-entry .input-control:has(textarea) {
+    border: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+}
+
+.theme-entry .dropdown-box {
+    /*width: 100% !important;*/
+    height: var(--control-height) !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: 0 !important;
+    background: var(--color-surface) !important;
+    overflow: hidden !important;
+    transition: all var(--transition) !important;
+}
+
+.theme-entry .dropdown-box:hover,
+.theme-entry .dropdown-box.active {
+    border-color: var(--color-primary) !important;
+}
+
+.theme-entry .dropdown-box .input-control-t,
+.theme-entry .dropdown-box .input-control-b {
+    display: none !important;
+}
+
+.theme-entry .dropdown-box .input-control-body,
+.theme-entry .dropdown-box .input-control-m-c,
+.theme-entry .dropdown-box .input-control-m,
+.theme-entry .dropdown-box .styling-outer-wrapper {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.theme-entry .dropdown-box .input-control-wrapper {
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    padding-inline-start: 13px !important;
+}
+
+.theme-entry .dropdown-box a.input-control,
+.theme-entry .dropdown-box a.input-control span {
+    font-size: 14px !important;
+    color: var(--color-text) !important;
+}
+
+.theme-entry .dropdown-box .border-left-only {
+    border-inline-start: none !important;
+}
+
+.theme-entry .calendar-control {
+    width: 100% !important;
+    height: var(--control-height) !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: 0 !important;
+    background: var(--color-surface) !important;
+    overflow: hidden !important;
+    transition: all var(--transition) !important;
+}
+
+.theme-entry .calendar-control:hover,
+.theme-entry .calendar-control.active {
+    border-color: var(--color-primary) !important;
+}
+
+.theme-entry .calendar-control .input-control-t,
+.theme-entry .calendar-control .input-control-b {
+    display: none !important;
+}
+
+.theme-entry .calendar-control .input-control-body,
+.theme-entry .calendar-control .input-control-m-c,
+.theme-entry .calendar-control .input-control-m,
+.theme-entry .calendar-control .styling-outer-wrapper {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.theme-entry .calendar-control .input-control-wrapper {
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    padding-inline-start: 13px !important;
+}
+
+.theme-entry .calendar-control input.input-control {
+    border: none !important;
+    background: transparent !important;
+    color: var(--color-text) !important;
+    font-size: 14px !important;
+    outline: none !important;
+}
+
+.theme-entry .calendar-control .border-left-only {
+    border-inline-start: none !important;
+}
+
+/* .theme-entry .SFC.SourceCode-Forms-Controls-Web-Label:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+    display: block !important;
+    margin-bottom: 8px !important;
+    color: var(--color-text) !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+} */
+
+.theme-entry h1,
+.theme-entry h2,
+.theme-entry h3,
+.theme-entry h4,
+.theme-entry h5,
+.theme-entry h6 {
+    margin-top: 0 !important;
+    color: var(--color-text) !important;
+    font-family: var(--retal-font-display) !important;
+}
+
+.theme-entry h1 {
+    font-size: 30px !important;
+    font-weight: 500 !important;
+}
+
+.theme-entry h2 {
+    font-size: 26px !important;
+    font-weight: 500 !important;
+}
+
+.theme-entry h3 {
+    font-size: 22px !important;
+    font-weight: 500 !important;
+}
+
+.theme-entry h4 {
+    font-size: 18px !important;
+    font-weight: 550 !important;
+}
+
+.theme-entry a.SourceCode-Forms-Controls-Web-Button,
+.theme-entry .SourceCode-Forms-Controls-Web-Button {
+    min-height: 40px !important;
+    padding: 9px 18px !important;
+    border: 1px solid var(--color-primary) !important;
+    border-radius: 0 !important;
+    background: var(--color-surface) !important;
+    color: var(--color-primary) !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    line-height: 1.2 !important;
+    text-decoration: none !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    cursor: pointer !important;
+    box-shadow: none !important;
+    transition: all var(--transition) !important;
+}
+
+.theme-entry a.SourceCode-Forms-Controls-Web-Button:hover,
+.theme-entry .SourceCode-Forms-Controls-Web-Button:hover {
+    background: var(--color-primary-light) !important;
+    border-color: var(--color-primary) !important;
+    color: var(--color-primary-hover) !important;
+}
+
+.theme-entry a.SourceCode-Forms-Controls-Web-Button.button-primary,
+.theme-entry .SourceCode-Forms-Controls-Web-Button.button-primary {
+    background: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+    color: var(--retal-white) !important;
+}
+
+.theme-entry a.SourceCode-Forms-Controls-Web-Button.button-primary:hover,
+.theme-entry .SourceCode-Forms-Controls-Web-Button.button-primary:hover {
+    background: var(--color-primary-hover) !important;
+    border-color: var(--color-primary-hover) !important;
+    color: var(--retal-white) !important;
+}
+
+.theme-entry a.SourceCode-Forms-Controls-Web-Button.button-quiet,
+.theme-entry .SourceCode-Forms-Controls-Web-Button.button-quiet {
+    background: transparent !important;
+    border-color: transparent !important;
+    color: var(--color-primary) !important;
+    box-shadow: none !important;
+}
+
+.theme-entry a.SourceCode-Forms-Controls-Web-Button.button-quiet:hover,
+.theme-entry .SourceCode-Forms-Controls-Web-Button.button-quiet:hover {
+    background: var(--color-primary-light) !important;
+    border-color: transparent !important;
+    color: var(--color-primary-hover) !important;
+}
+
+.theme-entry a.SourceCode-Forms-Controls-Web-Button.button-destructive,
+.theme-entry .SourceCode-Forms-Controls-Web-Button.button-destructive {
+    background: var(--color-danger) !important;
+    border-color: var(--color-danger) !important;
+    color: var(--retal-white) !important;
+}
+
+.theme-entry a.SourceCode-Forms-Controls-Web-Button.button-destructive:hover,
+.theme-entry .SourceCode-Forms-Controls-Web-Button.button-destructive:hover {
+    background: var(--retal-danger) !important;
+    border-color: var(--retal-danger) !important;
+    color: var(--retal-white) !important;
+}
+
+.theme-entry a.SourceCode-Forms-Controls-Web-Button.disabled,
+.theme-entry a.SourceCode-Forms-Controls-Web-Button[disabled],
+.theme-entry .SourceCode-Forms-Controls-Web-Button.disabled,
+.theme-entry .SourceCode-Forms-Controls-Web-Button[disabled] {
+    opacity: 0.5 !important;
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+}
+
+.theme-entry input[type="checkbox"] {
+    accent-color: var(--color-primary) !important;
+}
+
+.theme-entry .checkbox {
+    cursor: pointer !important;
+}
+
+.theme-entry .checkbox-label,
+.theme-entry label {
+    color: var(--color-text) !important;
+    font-size: 14px !important;
+}
+
+.theme-entry input[type="radio"] {
+    accent-color: var(--color-primary) !important;
+}
+
+.theme-entry .radio {
+    cursor: pointer !important;
+}
+
+.theme-entry .radio-label {
+    color: var(--color-text) !important;
+    font-size: 14px !important;
+}
+
+.theme-entry a:not(.SourceCode-Forms-Controls-Web-Button) {
+    color: var(--color-primary) !important;
+    text-decoration: none !important;
+    transition: color var(--transition) !important;
+}
+
+.theme-entry a:not(.SourceCode-Forms-Controls-Web-Button):hover {
+    color: var(--color-primary-hover) !important;
+    text-decoration: underline !important;
+}
+
+.theme-entry .card,
+.theme-entry .k2-card {
+    background: var(--color-surface) !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: 0 !important;
+    box-shadow: var(--shadow-sm) !important;
+}
+
+.theme-entry .card:hover,
+.theme-entry .k2-card:hover {
+    box-shadow: var(--shadow-md) !important;
+}
+
+.theme-entry .pill,
+.theme-entry .status-pill,
+.theme-entry .badge {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 28px !important;
+    padding: 4px 11px !important;
+    border-radius: var(--radius-pill) !important;
+    background: var(--color-secondary) !important;
+    color: var(--color-text) !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+    gap: 7px !important;
+}
+
+.theme-entry .pill.success,
+.theme-entry .status-pill.success,
+.theme-entry .badge.success,
+.theme-entry .status-available {
+    background: var(--color-success-light) !important;
+    color: var(--color-success) !important;
+}
+
+.theme-entry .pill.warning,
+.theme-entry .status-pill.warning,
+.theme-entry .badge.warning,
+.theme-entry .status-reserved {
+    background: var(--color-warning-light) !important;
+    color: var(--color-warning) !important;
+}
+
+.theme-entry .pill.danger,
+.theme-entry .status-pill.danger,
+.theme-entry .badge.danger,
+.theme-entry .status-sold {
+    background: var(--color-danger-light) !important;
+    color: var(--color-danger) !important;
+}
+
+.theme-entry .pill.primary,
+.theme-entry .status-pill.primary,
+.theme-entry .badge.primary,
+.theme-entry .status-completed {
+    background: var(--color-success-light) !important;
+    color: var(--color-success) !important;
+}
+
+.theme-entry .pill.active,
+.theme-entry .status-pill.active,
+.theme-entry .badge.active {
+    background: var(--color-primary) !important;
+    color: var(--retal-white) !important;
+}
+
+.theme-entry .pill.inactive,
+.theme-entry .status-pill.inactive,
+.theme-entry .badge.inactive {
+    background: var(--color-secondary) !important;
+    color: var(--color-text-muted) !important;
+}
+
+.theme-entry .pill.neutral,
+.theme-entry .status-pill.neutral,
+.theme-entry .badge.neutral {
+    background: var(--retal-copper-100) !important;
+    color: var(--color-text-secondary) !important;
+}
+
+.theme-entry .status-available::before,
+.theme-entry .status-reserved::before,
+.theme-entry .status-sold::before {
+    content: "" !important;
+    width: 8px !important;
+    height: 8px !important;
+    min-width: 8px !important;
+    border-radius: 50% !important;
+    background: currentColor !important;
+    display: inline-block !important;
+}
+
+.theme-entry .status-completed {
+    padding-inline-start: 14px !important;
+    padding-inline-end: 14px !important;
+}
+
+.theme-entry .SourceCode-Forms-Controls-Web-ListView {
+    border: 1px solid var(--color-border) !important;
+    border-radius: 0 !important;
+    background: var(--color-surface) !important;
+    overflow: hidden !important;
+    box-shadow: var(--shadow-sm) !important;
+}
+
+.theme-entry .SourceCode-Forms-Controls-Web-ListView table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+}
+
+.theme-entry .SourceCode-Forms-Controls-Web-ListView th {
+    padding: 13px 15px !important;
+    background: var(--retal-copper-50) !important;
+    border-bottom: 1px solid var(--color-border) !important;
+    color: var(--color-text-secondary) !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    text-align: start !important;
+}
+
+.theme-entry .SourceCode-Forms-Controls-Web-ListView td {
+    padding: 13px 15px !important;
+    border-bottom: 1px solid var(--retal-copper-100) !important;
+    color: var(--color-text) !important;
+    font-size: 13px !important;
+}
+
+.theme-entry .SourceCode-Forms-Controls-Web-ListView tbody tr:hover {
+    background: var(--retal-copper-50) !important;
+}
+
+.theme-entry .SourceCode-Forms-Controls-Web-ListView tbody tr:last-child td {
+    border-bottom: none !important;
+}
+
+.theme-entry .grid,
+.theme-entry .grid-table,
+.theme-entry table.grid {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    background: var(--color-surface) !important;
+}
+
+.theme-entry .grid th,
+.theme-entry .grid-table th,
+.theme-entry table.grid th {
+    padding: 12px !important;
+    background: var(--retal-copper-50) !important;
+    border-bottom: 1px solid var(--color-border) !important;
+    color: var(--color-text-secondary) !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    text-align: start !important;
+}
+
+.theme-entry .grid td,
+.theme-entry .grid-table td,
+.theme-entry table.grid td {
+    padding: 12px !important;
+    border-bottom: 1px solid var(--retal-copper-100) !important;
+    color: var(--color-text) !important;
+    font-size: 13px !important;
+}
+
+.theme-entry .form-tabs {
+    border: none !important;
+    background: transparent !important;
+}
+
+.theme-entry .form-tabs .tab-box-tab {
+    border: none !important;
+    background: transparent !important;
+    color: var(--color-text-secondary) !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    transition: all var(--transition) !important;
+}
+
+.theme-entry .form-tabs .tab-box-tab:hover {
+    color: var(--color-primary) !important;
+}
+
+.theme-entry .form-tabs .tab-box-tab.selected,
+.theme-entry .form-tabs .tab-box-tab.active {
+    color: var(--color-primary) !important;
+    border-bottom: 2px solid var(--color-primary) !important;
+}
+
+.theme-entry [name="Progress"] .container.metro {
+    display: flex !important;
+    width: 100% !important;
+}
+
+.theme-entry [name="Progress"] .step {
+    border-radius: 50% !important;
+    background: var(--retal-copper-200) !important;
+}
+
+.theme-entry [name="Progress"] .step-title {
+    color: var(--color-text-muted) !important;
+    font-size: 12px !important;
+}
+
+.theme-entry [name="Progress"] .connector-left,
+.theme-entry [name="Progress"] .connector-right {
+    background: var(--retal-copper-200) !important;
+}
+
+.theme-entry [name="Progress"] .completed .step,
+.theme-entry [name="Progress"] .last-completed .step {
+    background: var(--color-success) !important;
+}
+
+.theme-entry [name="Progress"] .completed .step-title,
+.theme-entry [name="Progress"] .last-completed .step-title {
+    color: var(--color-success) !important;
+}
+
+.theme-entry [name="Progress"] .inprogress .step,
+.theme-entry [name="Progress"] .selected .step {
+    background: var(--color-primary) !important;
+}
+
+.theme-entry [name="Progress"] .inprogress .step-title,
+.theme-entry [name="Progress"] .selected .step-title {
+    color: var(--color-primary) !important;
+}
+
+.theme-entry table {
+    border-color: var(--color-border) !important;
+}
+
+.theme-entry table th {
+    color: var(--color-text-secondary) !important;
+    font-weight: 600 !important;
+}
+
+.theme-entry table td {
+    color: var(--color-text) !important;
+}
+
+.theme-entry .input-control.invalid,
+.theme-entry .input-control.invalid.watermark,
+.theme-entry input.invalid,
+.theme-entry textarea.invalid {
+    border-color: var(--color-danger) !important;
+}
+
+.theme-entry .input-control.invalid a.input-control,
+.theme-entry .input-control.invalid a.input-control span,
+.theme-entry input.invalid,
+.theme-entry textarea.invalid {
+    color: var(--color-danger) !important;
+}
+
+.theme-entry .input-control.invalid .input-control-watermark {
+    color: var(--color-danger) !important;
+}
+
+.theme-entry .validation-error {
+    color: var(--color-danger) !important;
+    font-size: 12px !important;
+    margin-top: 5px !important;
+}
+
+.theme-entry .popup.dialog {
+    border-radius: 0 !important;
+    overflow: hidden !important;
+    box-shadow: var(--shadow-md) !important;
+}
+
+.theme-entry .popup.dialog .dialog-header,
+.theme-entry .popup.dialog .popup-header {
+    background: var(--color-surface) !important;
+    border-bottom: 1px solid var(--color-border) !important;
+}
+
+.theme-entry .popup.dialog .dialog-content,
+.theme-entry .popup.dialog .popup-content {
+    background: var(--color-surface) !important;
+}
+
+.theme-entry .tooltip {
+    padding: 7px 10px !important;
+    border-radius: 0 !important;
+    background: var(--retal-ink) !important;
+    color: var(--retal-white) !important;
+    font-size: 12px !important;
+}
+
+.theme-entry a.SourceCode-Forms-Controls-Web-Button.icon-button,
+.theme-entry .SourceCode-Forms-Controls-Web-Button.icon-button {
+    width: 40px !important;
+    min-width: 40px !important;
+    height: 40px !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+}
+
+.theme-entry .panel,
+.theme-entry .view,
+.theme-entry .section {
+    box-sizing: border-box !important;
+}
+
+/* =========================================================
+  5 K2 PROGRESS BAR CUSTOMIZATION (INLINE, STRETCHED & GREEN)
+========================================================= */
+
+
+.theme-entry div[name="Progress"] .container.metro {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    /* Isse elements naye line mein nahi jayenge */
+    width: 100% !important;
+    counter-reset: k2-step-counter;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Ensure container takes full width */
+.theme-entry div[name="Progress"] .step-container {
+    display: flex !important;
+    flex: 1 1 0 !important;
+    /* This will STRETCH connecting line */
+    min-width: 0 !important;
+}
+
+.theme-entry div[name="Progress"] .step-area {
+    display: flex !important;
+    flex-direction: row !important;
+    /* ADDED THIS */
+    width: 100% !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-decoration: none !important;
+}
+
+.theme-entry div[name="Progress"] .step-item,
+.theme-entry div[name="Progress"] .step-title {
+    display: contents !important;
+}
+
+.theme-entry div[name="Progress"] .connector-left {
+    order: 1;
+}
+
+.theme-entry div[name="Progress"] .step {
+    order: 2;
+}
+
+.theme-entry div[name="Progress"] .title {
+    order: 3;
+}
+
+.theme-entry div[name="Progress"] .connector-right {
+    order: 4;
+}
+
+/* FIX LINE STRETCHING */
+.theme-entry div[name="Progress"] .connector-left,
+.theme-entry div[name="Progress"] .connector-right {
+    position: static !important;
+    height: 2px !important;
+    background-color: var(--retal-copper-100) !important;
+    flex: 1 1 100% !important;
+    /* Stretch fixing */
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+.theme-entry div[name="Progress"] .step-container.first .connector-left,
+.theme-entry div[name="Progress"] .step-container.last .connector-right {
+    display: none !important;
+}
+
+/* DEFAULT STEP CIRCLE */
+.theme-entry div[name="Progress"] .step {
+    counter-increment: k2-step-counter;
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 50% !important;
+    border: 2px solid var(--retal-copper-100) !important;
+    background-color: var(--retal-white) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+    cursor: default !important;
+    pointer-events: none !important;
+}
+
+.theme-entry div[name="Progress"] .step svg {
+    display: none !important;
+}
+
+/* NUMBER (1, 2, 3...) */
+.theme-entry div[name="Progress"] .step::after {
+    content: counter(k2-step-counter);
+    font-family: var(--retal-font-body) !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: var(--retal-line-strong) !important;
+}
+
+.theme-entry div[name="Progress"] .title {
+    font-family: var(--retal-font-body) !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    color: var(--retal-muted) !important;
+    margin-inline-start: 12px !important;
+    margin-inline-end: 12px !important;
+    white-space: nowrap !important;
+    overflow: visible !important;
+    display: block !important;
+}
+
+/* -----------------------------------------------------
+   CURRENT ACTIVE STEP (Step 1 by default where user is)
+------------------------------------------------------ */
+.theme-entry div[name="Progress"] .step-container.selected .step {
+    background-color: var(--retal-primary, var(--retal-copper-500)) !important;
+    border-color: var(--retal-primary, var(--retal-copper-500)) !important;
+}
+
+.theme-entry div[name="Progress"] .step-container.selected .step::after {
+    color: var(--retal-white) !important;
+    /* Active text color */
+}
+
+.theme-entry div[name="Progress"] .step-container.selected .title {
+    color: var(--retal-dark, var(--retal-ink)) !important;
+    font-weight: 600 !important;
+}
+
+/* -----------------------------------------------------
+   COMPLETED STEPS (Green Check & Green Line)
+------------------------------------------------------ */
+/* Green Circle for completed steps */
+.theme-entry div[name="Progress"] .step-container.completed .step {
+    background-color: var(--retal-success) !important;
+    /* Green color */
+    border-color: var(--retal-success) !important;
+}
+
+/* Replace Number with Green Tick using Mask Image */
+.theme-entry div[name="Progress"] .step-container.completed .step::after {
+    content: '';
+    /* Number hide */
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    /* Tick color */
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") no-repeat center / contain;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") no-repeat center / contain;
+}
+
+/* Title text color for completed step */
+.theme-entry div[name="Progress"] .step-container.completed .title {
+    color: var(--retal-dark, var(--retal-ink)) !important;
+}
+
+/* Green Connector Lines: Right line of completed step AND Left line of next step */
+.theme-entry div[name="Progress"] .step-container.completed .connector-right,
+.theme-entry div[name="Progress"] .step-container.completed+.step-container .connector-left {
+    background-color: var(--retal-success) !important;
+}
+
+@media (max-width: 860px) {
+
+    .theme-entry a.SourceCode-Forms-Controls-Web-Button,
+    .theme-entry .SourceCode-Forms-Controls-Web-Button {
+        min-height: 40px !important;
+        padding: 9px 14px !important;
+    }
+
+    .theme-entry .SourceCode-Forms-Controls-Web-ListView {
+        overflow-x: auto !important;
+    }
+
+    .theme-entry .form-tabs .tab-box-tab {
+        font-size: 13px !important;
+        padding-inline-start: 10px !important;
+        padding-inline-end: 10px !important;
+    }
+
+    .theme-entry [name="Progress"] .container.metro {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 14px !important;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .theme-entry input.SFC.SourceCode-Forms-Controls-Web-TextBox,
+    .theme-entry .SFC.SourceCode-Forms-Controls-Web-Control-SpinBox,
+    .theme-entry .dropdown-box,
+    .theme-entry .calendar-control {
+        height: 42px !important;
+    }
+
+    .theme-entry a.SourceCode-Forms-Controls-Web-Button,
+    .theme-entry .SourceCode-Forms-Controls-Web-Button {
+        min-height: 40px !important;
+        padding: 9px 12px !important;
+    }
+}
+
+
+/* Below is the code for the tables (it is moved from the lead but the js to handle table is in lead.js  */
+
+.theme-entry .detail-table {
+    width: 100% !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    background: var(--retal-white) !important;
+    border: 1px solid var(--retal-copper-100) !important;
+    border-radius: var(--retal-radius) !important;
+    overflow: hidden !important;
+}
+
+.theme-entry .detail-table > .editor-cell {
+    min-height: 38px !important;
+    height: auto !important;
+    padding: 8px 14px !important;
+    margin: 0 !important;
+    border-bottom: 1px solid var(--retal-copper-100) !important;
+    box-sizing: border-box !important;
+    background: var(--retal-white) !important;
+}
+
+.theme-entry .detail-table > .editor-cell:nth-last-child(-n + 2) {
+    border-bottom: 0 !important;
+}
+
+.theme-entry .detail-table > .editor-cell > .SFC.SourceCode-Forms-Controls-Web-Label {
+    color: var(--retal-copper-600) !important;
+    font-weight: 600 !important;
+    font-size: 13px !important;
+    line-height: 1.2 !important;
+}
+
+.theme-entry .detail-table > .editor-cell > .SFC.SourceCode-Forms-Controls-Web-DataLabel {
+    color: var(--retal-copper-800) !important;
+    font-weight: 500 !important;
+    font-size: 13px !important;
+    line-height: 1.2 !important;
+}
+
+.theme-entry .detail-table > .editor-cell:first-child {
+    grid-column: 1 / -1 !important;
+    min-height: 40px !important;
+    height: 40px !important;
+    padding: 10px 14px !important;
+    background: var(--retal-copper-50) !important;
+    border-bottom: 1px solid var(--retal-copper-100) !important;
+}
+
+.theme-entry .detail-table > .editor-cell:first-child .SFC.SourceCode-Forms-Controls-Web-Label {
+    color: var(--retal-copper-600) !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.3px !important;
+}
+
+
+/* Handeling the k2 default error message popup */
+/* K2 Message Box */
+.popup .lyt-messagebox-layout {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    gap: 16px !important;
+    direction: ltr !important;
+}
+
+.popup .lyt-messagebox-layout .icon {
+    flex: 0 0 32px !important;
+    width: 32px !important;
+    min-width: 32px !important;
+    height: 32px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    order: 1 !important;
+}
+
+.popup .lyt-messagebox-layout .message {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.5 !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+    box-sizing: border-box !important;
+    order: 2 !important;
+}
+
+
+/* RTL */
+html[dir="rtl"] .popup .lyt-messagebox-layout,
+body[dir="rtl"] .popup .lyt-messagebox-layout {
+    direction: rtl !important;
+    flex-direction: row !important;
+    text-align: end !important;
+}
+
+html[dir="rtl"] .popup .lyt-messagebox-layout .icon,
+body[dir="rtl"] .popup .lyt-messagebox-layout .icon {
+    order: 2 !important;
+    direction: ltr !important;
+    margin: 0 !important;
+}
+
+html[dir="rtl"] .popup .lyt-messagebox-layout .message,
+body[dir="rtl"] .popup .lyt-messagebox-layout .message {
+    order: 1 !important;
+    direction: rtl !important;
+    text-align: end !important;
+}
+
+/*==============================
+Converting textbox to the normal text 
+===============================*/
+.theme-entry input.SFC.SourceCode-Forms-Controls-Web-TextBox[name="Broker Custm Det Text Box National ID"],
+.theme-entry .SFC.SourceCode-Forms-Controls-Web-TextBox[name="Broker Custm Det Text Box National ID"],
+.theme-entry .SFC.SourceCode-Forms-Controls-Web-Control-SpinBox[name="Broker Custm Det Text Box National ID"] {
+    padding-inline-start: 0px !important;
+    padding-bottom: 20px !important;
+    border: none !important;
+}
+/* Standard K2 error and validation classes */
+.SourceCode-Forms-Controls-Web-Label[name*="Error"],
+.SourceCode-Forms-Controls-Web-Label[name*="error"],
+.SourceCode-Forms-Controls-Web-DataLabel[name*="Error"],
+.SourceCode-Forms-Controls-Web-DataLabel[name*="error"] {
+    color: var(--retal-danger) !important;
+    -webkit-text-fill-color: var(--retal-danger) !important;
+    font-weight: 600 !important;
+}
+
+
+/* ==========================================================================
+   K2 THEME ENTRY - MESSAGE & WARNING POPUPS
+   Scope: K2 popup dialogs containing a *-message class
+   Covers: Default, Confirmation, Error, Info, Warning, None and future types
+   Default K2 icons and internal message layout remain untouched.
+   ========================================================================== */
+ 
+ 
+/* ---- 1. Common popup configuration -------------------------------------- */
+ 
+.theme-entry .popup.dialog[class*="-message"] {
+    --pp-width: 440px;
+    --pp-brand: var(--retal-copper-600);
+    --pp-brand-hover: var(--retal-copper-600);
+    --pp-brand-dark: var(--retal-copper-800);
+    --pp-btn-border: var(--retal-copper-300);
+    --pp-divider: var(--retal-copper-100);
+    --pp-text: var(--retal-ink-2);
+    --pp-header-bg: var(--retal-copper-50);
+    --pp-header-text: var(--retal-copper-900);
+ 
+    background: var(--retal-white) !important;
+    border: 1px solid var(--retal-copper-100) !important;
+    border-radius: var(--retal-radius) !important;
+    overflow: hidden !important;
+ 
+    box-shadow:
+        0 24px 60px rgba(92, 46, 20, 0.20),
+        0 4px 12px rgba(92, 46, 20, 0.08) !important;
+}
+ 
+ 
+/* ---- 2. Warning popup width adjustment ---------------------------------- */
+/* Only applies to the original small warning popup.
+   K2 calculates its initial position using a 320px width. */
+ 
+.theme-entry .popup.warning-message.simple-message-content.runtime-message.size-small {
+    width: var(--pp-width) !important;
+    margin-inline-start: calc((320px - var(--pp-width)) / 2) !important;
+}
+ 
+ 
+/* ---- 3. Header ----------------------------------------------------------- */
+ 
+.theme-entry .popup.dialog[class*="-message"] .popup-header,
+.theme-entry .popup.dialog[class*="-message"] .popup-header-l,
+.theme-entry .popup.dialog[class*="-message"] .popup-header-c,
+.theme-entry .popup.dialog[class*="-message"] .popup-header-r,
+.theme-entry .popup.dialog[class*="-message"] .popup-header-wrapper,
+.theme-entry .popup.dialog[class*="-message"] .popup-header-wrapper .wrapper {
+    background: var(--pp-header-bg) !important;
+}
+ 
+.theme-entry .popup.dialog[class*="-message"] .popup-header {
+    box-shadow:
+        -40px 0 0 var(--pp-header-bg),
+        40px 0 0 var(--pp-header-bg) !important;
+}
+ 
+.theme-entry .popup.dialog[class*="-message"] .popup-header-text {
+    color: var(--pp-header-text) !important;
+    font-size: 17px !important;
+    font-weight: 600 !important;
+}
+ 
+ 
+/* ---- 4. Body ------------------------------------------------------------- */
+/* Preserve all K2 internal icon, panel and message positioning. */
+ 
+.theme-entry .popup.dialog[class*="-message"] .popup-body-l,
+.theme-entry .popup.dialog[class*="-message"] .popup-body-r,
+.theme-entry .popup.dialog[class*="-message"] .popup-footer-l,
+.theme-entry .popup.dialog[class*="-message"] .popup-footer-r {
+    display: none !important;
+}
+ 
+.theme-entry .popup.dialog[class*="-message"] .popup-body,
+.theme-entry .popup.dialog[class*="-message"] .popup-body-c,
+.theme-entry .popup.dialog[class*="-message"] .popup-body-content {
+    background: var(--retal-white) !important;
+}
+ 
+.theme-entry .popup.dialog[class*="-message"] .lyt-messagebox-layout .message {
+    font-size: 15px !important;
+    line-height: 1.55 !important;
+    font-weight: 400 !important;
+    color: var(--pp-text) !important;
+}
+ 
+ 
+/* ---- 5. Footer ------------------------------------------------------------ */
+ 
+.theme-entry .popup.dialog[class*="-message"] .popup-footer {
+    height: auto !important;
+    background: var(--retal-white) !important;
+    border-top: 1px solid var(--pp-divider) !important;
+}
+ 
+.theme-entry .popup.dialog[class*="-message"] .popup-footer-c {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 12px !important;
+    margin: 0 !important;
+    padding: 14px 20px !important;
+    background: var(--retal-white) !important;
+}
+ 
+ 
+/* ---- 6. Default buttons - secondary ------------------------------------- */
+/* Cancel, No, Close and other secondary actions. */
+ 
+.theme-entry .popup.dialog[class*="-message"] .popup-footer a.button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    float: none !important;
+ 
+    min-width: 0 !important;
+    height: 40px !important;
+ 
+    margin: 0 !important;
+    padding: 0 24px !important;
+ 
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    line-height: 1 !important;
+ 
+    text-decoration: none !important;
+    cursor: pointer !important;
+ 
+    background: var(--retal-white) !important;
+    color: var(--pp-brand-dark) !important;
+ 
+    border: 1.5px solid var(--pp-btn-border) !important;
+    border-radius: var(--retal-radius) !important;
+ 
+    box-shadow: none !important;
+ 
+    transition:
+        background-color 0.15s ease,
+        border-color 0.15s ease,
+        color 0.15s ease !important;
+}
+ 
+.theme-entry .popup.dialog[class*="-message"] .popup-footer a.button:hover {
+    background: var(--retal-copper-50) !important;
+    border-color: var(--pp-brand) !important;
+}
+ 
+ 
+/* ---- 7. Primary buttons - OK / Yes -------------------------------------- */
+ 
+.theme-entry .popup.dialog[class*="-message"] .popup-footer a.button[id^="messageBoxButton_OK"],
+.theme-entry .popup.dialog[class*="-message"] .popup-footer a.button[id^="messageBoxButton_Yes"],
+.theme-entry .popup.dialog.confirmation-message .popup-footer a.button:first-of-type {
+    order: 2 !important;
+ 
+    background: var(--pp-brand) !important;
+    border-color: var(--pp-brand) !important;
+    color: var(--retal-white) !important;
+}
+ 
+.theme-entry .popup.dialog[class*="-message"] .popup-footer a.button[id^="messageBoxButton_OK"]:hover,
+.theme-entry .popup.dialog[class*="-message"] .popup-footer a.button[id^="messageBoxButton_Yes"]:hover,
+.theme-entry .popup.dialog.confirmation-message .popup-footer a.button:first-of-type:hover {
+    background: var(--pp-brand-hover) !important;
+    border-color: var(--pp-brand-hover) !important;
+}
+ 
+ 
+/* ---- 8. Cancel buttons in other K2 popups ------------------------------- */
+/* Targets Cancel buttons when K2 exposes their identity through
+   an ID, class, title or accessibility label.
+   Does not affect ordinary form buttons. */
+ 
+.theme-entry .popup .popup-footer a.button[id*="cancel" i],
+.theme-entry .popup .popup-footer a.button[class*="cancel" i],
+.theme-entry .popup .popup-footer a.button[title*="cancel" i],
+.theme-entry .popup .popup-footer a.button[aria-label*="cancel" i] {
+    background: var(--retal-white) !important;
+    color: var(--pp-brand-dark, var(--retal-copper-800)) !important;
+    border: 1.5px solid var(--pp-btn-border, var(--retal-copper-300)) !important;
+    border-radius: var(--retal-radius) !important;
+    box-shadow: none !important;
+}
+ 
+.theme-entry .popup .popup-footer a.button[id*="cancel" i]:hover,
+.theme-entry .popup .popup-footer a.button[class*="cancel" i]:hover,
+.theme-entry .popup .popup-footer a.button[title*="cancel" i]:hover,
+.theme-entry .popup .popup-footer a.button[aria-label*="cancel" i]:hover {
+    background: var(--retal-copper-50) !important;
+    border-color: var(--pp-brand, var(--retal-copper-600)) !important;
+}
+ 
+ 
+/* ---- 9. Keyboard focus --------------------------------------------------- */
+ 
+.theme-entry .popup.dialog[class*="-message"] .popup-footer a.button:focus-visible,
+.theme-entry .popup .popup-footer a.button[id*="cancel" i]:focus-visible,
+.theme-entry .popup .popup-footer a.button[class*="cancel" i]:focus-visible,
+.theme-entry .popup .popup-footer a.button[title*="cancel" i]:focus-visible,
+.theme-entry .popup .popup-footer a.button[aria-label*="cancel" i]:focus-visible {
+    outline: 2px solid rgba(166, 96, 62, 0.45) !important;
+    outline-offset: 2px !important;
+}
+ 
+ 
+/* ---- 10. Responsive warning popup --------------------------------------- */
+ 
+@media (max-width: 480px) {
+    .theme-entry .popup.warning-message.simple-message-content.runtime-message.size-small {
+        width: calc(100vw - 32px) !important;
+        margin-inline-start: calc((320px - (100vw - 32px)) / 2) !important;
+    }
+}

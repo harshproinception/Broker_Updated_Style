@@ -1,0 +1,412 @@
+/* Refactored for Retal K2 Theme v2 from CustomList.css - colours, fonts and radii now come from 00-retal-tokens.css; left/right are logical so Arabic mirrors. */
+/* PERF: ".pi-has-*" classes replace ":has(marker)" selectors - set by Global.js.
+   ":is(*, span)" / ":is(*, a)" always match; they only keep the original specificity. */
+.form > .row.pi-has-mycust-list:is(*, span),
+.view.pi-has-mycust-list:is(*, span),
+.grid.pi-has-mycust-list:is(*, span) {
+    box-sizing: border-box !important;
+    padding-inline-start: 0 !important;
+    padding-inline-end: 0 !important;
+    width: 100% !important;
+}
+
+.view.pi-has-mycust-list:is(*, span) .grid,
+.grid.pi-has-mycust-list:is(*, span) {
+    width: 100% !important;
+    background: var(--retal-white) !important;
+    border: 1px solid var(--retal-copper-100) !important;
+    border-radius: var(--retal-radius) !important;
+    box-shadow: 0 3px 12px rgba(60, 40, 30, 0.04) !important;
+    overflow: hidden !important;
+    margin-inline-start: 0 !important;
+    padding-inline-start: 0 !important;
+    box-sizing: border-box !important;
+}
+
+.view.pi-has-mycust-list:is(*, span) .grid-toolbars,
+.grid.pi-has-mycust-list:is(*, span) .grid-toolbars {
+    background: var(--retal-white) !important;
+    padding: 16px 20px 16px 0px !important;
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    gap: 8px !important;
+    margin-inline-start: 0 !important;
+}
+
+.view.pi-has-mycust-list:is(*, span) .grid-toolbars > *,
+.grid.pi-has-mycust-list:is(*, span) .grid-toolbars > * {
+    float: none !important;
+}
+
+.view.pi-has-mycust-list:is(*, span) a.SourceCode-Forms-Controls-Web-Button,
+.view.pi-has-mycust-list:is(*, span) a.toolbar-button,
+.view.pi-has-mycust-list:is(*, span) a.Edit-row,
+.view.pi-has-mycust-list:is(*, span) input[type="button"],
+.view.pi-has-mycust-list:is(*, span) input[type="submit"],
+.grid.pi-has-mycust-list:is(*, span) a.SourceCode-Forms-Controls-Web-Button,
+.grid.pi-has-mycust-list:is(*, span) a.toolbar-button,
+.grid.pi-has-mycust-list:is(*, span) a.Edit-row {
+    cursor: pointer !important;
+    pointer-events: auto !important;
+}
+
+
+.view.pi-has-mycust-list:is(*, span) input[name*="Search"],
+.grid.pi-has-mycust-list:is(*, span) input[name*="Search"] {
+    width: 320px !important;
+    height: 38px !important;
+    padding: 0 12px !important;
+    background: var(--retal-white) !important;
+    border: 1px solid var(--retal-copper-200) !important;
+    border-radius: var(--retal-radius) !important;
+    color: var(--retal-ink-2) !important;
+    font-size: 13px !important;
+    outline: none !important;
+    box-sizing: border-box !important;
+    pointer-events: auto !important;
+    vertical-align: middle !important;
+    margin-inline-start: 0 !important;
+    display: inline-block !important;
+}
+
+
+.view.pi-has-mycust-list:is(*, span) a[name*="Search"],
+.grid.pi-has-mycust-list:is(*, span) a[name*="Search"] {
+    height: 38px !important;
+    padding: 0 14px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: var(--retal-copper-500) !important;
+    border: none !important;
+    border-radius: 0px !important;
+    color: var(--retal-white) !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    font-size: 13px !important;
+    box-sizing: border-box !important;
+    white-space: nowrap !important;
+    vertical-align: middle !important;
+    margin-inline-start: 6px !important;
+}
+
+.view.pi-has-mycust-list:is(*, span) a[name*="Search"]:hover,
+.grid.pi-has-mycust-list:is(*, span) a[name*="Search"]:hover {
+    background: var(--retal-copper-600) !important;
+}
+
+
+.view.pi-has-mycust-list:is(*, span) a[name*="Clear"],
+.grid.pi-has-mycust-list:is(*, span) a[name*="Clear"] {
+    height: 38px !important;
+    padding: 0 14px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: var(--retal-white) !important;
+    color: var(--retal-copper-500) !important;
+    border: 1px solid var(--retal-copper-200) !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    box-sizing: border-box !important;
+    vertical-align: middle !important;
+    margin-inline-start: 6px !important;
+    border-radius: var(--retal-radius) !important;
+}
+
+
+.view.pi-has-mycust-list:is(*, span) a[name="Button All"],
+.view.pi-has-mycust-list:is(*, span) a[name="Button In Progress"],
+.view.pi-has-mycust-list:is(*, span) a[name="Button Need attention"],
+.view.pi-has-mycust-list:is(*, span) a[name="Button Completed"],
+.grid.pi-has-mycust-list:is(*, span) a[name="Button All"],
+.grid.pi-has-mycust-list:is(*, span) a[name="Button In Progress"],
+.grid.pi-has-mycust-list:is(*, span) a[name="Button Need attention"],
+.grid.pi-has-mycust-list:is(*, span) a[name="Button Completed"] {
+    height: 38px !important;
+    padding: 0 14px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: var(--retal-white) !important;
+    color: var(--retal-copper-500) !important;
+    border: 1px solid var(--retal-copper-200) !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    box-sizing: border-box !important;
+    vertical-align: middle !important;
+}
+
+/* .view:has(span[name="MyCustomer_List_Style_dlb"]) a[name="Button All"],
+.grid:has(span[name="MyCustomer_List_Style_dlb"]) a[name="Button All"] {
+    border-radius: 0px 0 0 0px !important;
+}
+
+.view:has(span[name="MyCustomer_List_Style_dlb"]) a[name="Button Completed"],
+.grid:has(span[name="MyCustomer_List_Style_dlb"]) a[name="Button Completed"] {
+    border-radius: 0 0px 0px 0 !important;
+} */
+
+.view.pi-has-mycust-list:is(*, span) a[name^="Button "].active,
+.grid.pi-has-mycust-list:is(*, span) a[name^="Button "].active {
+    background: var(--retal-copper-500) !important;
+    color: var(--retal-white) !important;
+}
+
+
+body.pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) a[name*="Add a customer"],
+body.pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) a[name*="Add a customer"] {
+    height: 38px !important;
+    padding: 0 16px !important;
+    margin-inline-start: 290px !important;
+    margin-inline-end: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: var(--retal-copper-500) !important;
+    border: none !important;
+    border-radius: 0px !important;
+    color: var(--retal-white) !important;
+    text-decoration: none !important;
+    font-weight: 700 !important;
+    font-size: 13px !important;
+    box-sizing: border-box !important;
+    white-space: nowrap !important;
+    vertical-align: middle !important;
+}
+
+/* RTL Override */
+[dir="rtl"] body.pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) a[name*="Add a customer"],
+[dir="rtl"] body.pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) a[name*="Add a customer"],
+body[dir="rtl"].pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) a[name*="Add a customer"],
+body[dir="rtl"].pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) a[name*="Add a customer"] {
+    margin-inline-end: 230px !important;
+    margin-inline-start: 0 !important;
+}
+
+body.pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) .grid-toolbars:has(a[name*="Add a customer"]),
+body.pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) .grid-toolbars:has(a[name*="Add a customer"]) {
+    display: flex !important;
+    justify-content: flex-start !important;
+}
+
+body.pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) a[name*="Add a customer"]:hover,
+body.pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) a[name*="Add a customer"]:hover {
+    background: var(--retal-copper-600) !important;
+}
+
+.view.pi-has-mycust-list:is(*, span) .grid-table,
+.view.pi-has-mycust-list:is(*, span) .grid-content-table,
+.view.pi-has-mycust-list:is(*, span) table.grid-content-table,
+.view.pi-has-mycust-list:is(*, span) table.grid-header-table,
+.grid.pi-has-mycust-list:is(*, span) .grid-table,
+.grid.pi-has-mycust-list:is(*, span) .grid-content-table,
+.grid.pi-has-mycust-list:is(*, span) table.grid-content-table,
+.grid.pi-has-mycust-list:is(*, span) table.grid-header-table {
+    width: 100% !important;
+    table-layout: fixed !important;
+    border-collapse: collapse !important;
+    margin-inline-start: 4px !important;
+    padding-inline-start: 0 !important;
+    background-color: var(--retal-copper-50) !important;
+    --list-item-hover-background-color: var(--retal-copper-100) !important;
+    --list-item-selected-background-color: var(--retal-copper-200) !important;
+}
+
+
+.view.pi-has-mycust-list:is(*, span) .grid-header-table th,
+.view.pi-has-mycust-list:is(*, span) .grid-header-table td,
+.view.pi-has-mycust-list:is(*, span) .grid thead th,
+.view.pi-has-mycust-list:is(*, span) .grid-header-cell,
+.grid.pi-has-mycust-list:is(*, span) .grid-header-table th,
+.grid.pi-has-mycust-list:is(*, span) .grid-header-table td,
+.grid.pi-has-mycust-list:is(*, span) .grid thead th,
+.grid.pi-has-mycust-list:is(*, span) .grid-header-cell,
+.grid.pi-has-mycust-list:is(*, span) .grid-column-header-table td {
+    padding: 14px 16px 14px 0px !important;
+    /* text-align: left !important; */
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    color: var(--retal-muted) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    box-sizing: border-box !important;
+    vertical-align: middle !important;
+}
+
+.view.pi-has-mycust-list:is(*, span) .grid-header-table th > *,
+.view.pi-has-mycust-list:is(*, span) .grid-header-cell > *,
+.view.pi-has-mycust-list:is(*, span) .grid-header-cell-content,
+.view.pi-has-mycust-list:is(*, span) .grid-header-cell-label,
+.view.pi-has-mycust-list:is(*, span) .grid-header-cell-text,
+.grid.pi-has-mycust-list:is(*, span) .grid-column-header-text,
+.grid.pi-has-mycust-list:is(*, span) .grid-column-header-cell-content {
+    color: var(--retal-muted) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    margin-inline-start: 4px !important;
+    padding-inline-start: 0 !important;
+    /* text-align: left !important; */
+    display: inline-flex !important;
+    align-items: center !important;
+}
+
+
+.view.pi-has-mycust-list:is(*, span) .grid-content-table tbody tr,
+.grid.pi-has-mycust-list:is(*, span) .grid-content-table tbody tr {
+    height: 54px !important;
+    background: var(--retal-white) !important;
+}
+
+.view.pi-has-mycust-list:is(*, span) .grid-content-table tbody tr:nth-child(even),
+.grid.pi-has-mycust-list:is(*, span) .grid-content-table tbody tr:nth-child(even) {
+    background: var(--retal-copper-50) !important;
+}
+
+.view.pi-has-mycust-list:is(*, span) .grid-content-table tbody tr:hover,
+.grid.pi-has-mycust-list:is(*, span) .grid-content-table tbody tr:hover {
+    background: var(--retal-copper-50) !important;
+}
+
+.view.pi-has-mycust-list:is(*, span) .grid-content-table tbody td,
+.grid.pi-has-mycust-list:is(*, span) .grid-content-table tbody td {
+    padding: 0 16px 0 0px !important;
+    border-bottom: 1px solid var(--retal-copper-100) !important;
+    font-size: 13px !important;
+    color: var(--retal-info) !important;
+    /* text-align: left !important; */
+    vertical-align: middle !important;
+    box-sizing: border-box !important;
+}
+
+.view.pi-has-mycust-list:is(*, span) .grid-content-table tbody td > *,
+.grid.pi-has-mycust-list:is(*, span) .grid-content-table tbody td > * {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: inline-block !important;
+    box-sizing: border-box !important;
+}
+
+.view.pi-has-mycust-list:is(*, span) .grid-header-table th:first-child,
+.view.pi-has-mycust-list:is(*, span) .grid-content-table tbody td:first-child,
+.grid.pi-has-mycust-list:is(*, span) .grid-column-header-table td:first-child,
+.grid.pi-has-mycust-list:is(*, span) .grid-content-table tbody td:first-child {
+    padding-inline-start: 0px !important;
+}
+
+.view.pi-has-mycust-list:is(*, span) .grid-content-table tbody td:last-child,
+.grid.pi-has-mycust-list:is(*, span) .grid-content-table tbody td:last-child {
+    /* text-align: center !important; */
+    padding-inline-start: 0 !important;
+    padding-inline-end: 0 !important;
+}
+
+
+.view.pi-has-mycust-list:is(*, span) .unit-pill,
+.grid.pi-has-mycust-list:is(*, span) .unit-pill {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 3px 10px !important;
+    background-color: var(--retal-copper-50) !important;
+    color: var(--retal-copper-500) !important;
+    border-radius: var(--retal-radius) !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.3px !important;
+}
+
+.view.pi-has-mycust-list:is(*, span) .days-urgent,
+.grid.pi-has-mycust-list:is(*, span) .days-urgent {
+    color: var(--retal-danger) !important;
+    font-weight: 700 !important;
+    font-size: 13px !important;
+}
+
+.view.pi-has-mycust-list:is(*, span) .days-pill-completed,
+.grid.pi-has-mycust-list:is(*, span) .days-pill-completed {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 3px 12px !important;
+    background-color: var(--retal-success-soft) !important;
+    color: var(--retal-success) !important;
+    border-radius: var(--retal-radius) !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+}
+
+.view.pi-has-mycust-list:is(*, span) .days-muted,
+.grid.pi-has-mycust-list:is(*, span) .days-muted {
+    color: var(--retal-muted) !important;
+    font-size: 13px !important;
+    font-weight: 400 !important;
+}
+
+.theme-entry .grid .grid-column-header-table,
+.theme-entry .grid .grid-column-header-table th,
+.theme-entry .grid .grid-column-header-table td {
+    background-color: var(--retal-copper-50) !important;
+}
+
+
+.theme-entry .view.pi-has-header-name .grid-toolbars, 
+.theme-entry .grid.pi-has-header-name .grid-toolbars {
+    background: var(--retal-copper-50) !important;
+    padding: 0px !important;
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    gap: 8px !important;
+    margin-inline-start: 0 !important;
+}
+
+
+.theme-entry [name="header_name_label"] {
+    color: var(--retal-copper-600) !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    margin: 0 !important;
+}
+
+/*==============================
+Hiding the list buttons in the home page
+===============================*/
+body.pi-has-card-style:is(*, span) .theme-entry .toolbar>.toolbar-wrapper>table>tbody>tr>td>.SFC.SourceCode-Forms-Controls-Web-TextBox,
+body.pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) a[name*="Search"],
+body.pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) a[name*="Search"],
+body.pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) a[name="Button All"],
+body.pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) a[name="Button In Progress"],
+body.pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) a[name="Button Need attention"],
+body.pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) a[name="Button Completed"],
+body.pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) a[name="Button All"],
+body.pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) a[name="Button In Progress"],
+body.pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) a[name="Button Need attention"],
+body.pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) a[name="Button Completed"] {
+    display: none !important;
+}
+
+/*===================================================
+  grid toolbar hieght fix for customer dashboard page
+=====================================================*/
+
+body.pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) .grid-toolbars,
+body.pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) .grid-toolbars {
+    height: 80px !important;
+}
+
+/* =====================================================
+   FIX: UNNECESSARY HORIZONTAL SCROLLBAR IN K2 LISTS
+===================================================== */
+/* Preserve vertical scrolling if the list needs it */
+.theme-entry .view.pi-has-mycust-list .scroll-wrapper {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+}

@@ -1,0 +1,259 @@
+/* Refactored for Retal K2 Theme v2 from BR_Input.css - colours, fonts and radii now come from 00-retal-tokens.css; left/right are logical so Arabic mirrors. */
+/* =========================================================
+   K2 GENERIC CONTROLS MASTER STYLING
+   Based on Prototype (.field & .inp combined)
+========================================================= */
+
+/* ---------------------------------------------------------
+   1. TEXTBOX & SPINBOX (Standard Inputs)
+--------------------------------------------------------- */
+.theme-entry .SFC.SourceCode-Forms-Controls-Web-TextBox,
+.theme-entry .SFC.SourceCode-Forms-Controls-Web-Control-SpinBox {
+    border: 1px solid var(--retal-copper-100) !important;
+    border-radius: var(--retal-radius) !important;
+    background-color: var(--retal-white) !important;
+    padding: 12px 13px !important; 
+    box-sizing: border-box !important;
+    width: 100% !important;
+    height: 44px !important; /* Standard Height */
+    transition: all 0.15s ease-in-out !important;
+    box-shadow: none !important;
+    outline: none !important;
+    font-family: var(--retal-font-body) !important;
+    font-size: 14px !important;
+}
+
+.theme-entry .SFC.SourceCode-Forms-Controls-Web-TextBox:focus,
+.theme-entry .SFC.SourceCode-Forms-Controls-Web-TextBox:hover,
+.theme-entry .SFC.SourceCode-Forms-Controls-Web-Control-SpinBox:focus,
+.theme-entry .SFC.SourceCode-Forms-Controls-Web-Control-SpinBox:hover {
+    border-color: var(--retal-copper-600) !important; /* Hover Highlight */
+}
+
+/* ---------------------------------------------------------
+   2. TEXTAREA (Direct Tag Targeting - MAGIC FIX)
+--------------------------------------------------------- */
+.theme-entry textarea {
+    border: 1px solid var(--retal-copper-100) !important;
+    border-radius: var(--retal-radius) !important;
+    background-color: var(--retal-white) !important;
+    padding: 12px 13px !important; 
+    box-sizing: border-box !important;
+    width: 100% !important;
+    min-height: 80px !important;
+    transition: all 0.15s ease-in-out !important;
+    box-shadow: none !important;
+    outline: none !important;
+    font-family: var(--retal-font-body) !important;
+    font-size: 14px !important;
+    resize: vertical !important; 
+}
+
+.theme-entry textarea:focus,
+.theme-entry textarea:hover {
+    border-color: var(--retal-copper-600) !important;
+}
+
+/* Textarea ke bahar wale K2 double-borders clear karna */
+.theme-entry .input-control.textarea,
+.theme-entry .input-control:has(textarea) {
+    border: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+}
+
+
+/* ---------------------------------------------------------
+   3. DROPDOWNS & DATE PICKERS (DOM-Specific Targeting)
+--------------------------------------------------------- */
+/* Main Container Styling */
+.theme-entry .dropdown-box,
+.theme-entry .calendar-control {
+    border: 1px solid var(--retal-copper-100) !important;
+    border-radius: var(--retal-radius) !important;
+    background-color: var(--retal-white) !important;
+    height: 44px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    transition: all 0.15s ease-in-out !important;
+}
+
+/* Hover & Focus States */
+.theme-entry .dropdown-box:hover,
+.theme-entry .calendar-control:hover,
+.theme-entry .dropdown-box.active,
+.theme-entry .calendar-control.active {
+    border-color: var(--retal-copper-600) !important;
+}
+
+/* K2 native 9-grid borders ko hide karna */
+.theme-entry .dropdown-box .input-control-t,
+.theme-entry .dropdown-box .input-control-b,
+.theme-entry .calendar-control .input-control-t,
+.theme-entry .calendar-control .input-control-b {
+    display: none !important;
+}
+
+/* Remove background and shadows from Internal wrappers */
+.theme-entry .dropdown-box .input-control-body,
+.theme-entry .calendar-control .input-control-body,
+.theme-entry .dropdown-box .input-control-m-c,
+.theme-entry .calendar-control .input-control-m-c {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Middle section full height*/
+.theme-entry .dropdown-box .styling-outer-wrapper,
+.theme-entry .calendar-control .styling-outer-wrapper,
+.theme-entry .dropdown-box .input-control-m,
+.theme-entry .calendar-control .input-control-m {
+    height: 100% !important;
+}
+
+/* Text vertically center and left padding */
+.theme-entry .dropdown-box .input-control-wrapper,
+.theme-entry .calendar-control .input-control-wrapper {
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    padding-inline-start: 13px !important;
+}
+
+/* Typography Settings */
+.theme-entry .dropdown-box a.input-control span,
+.theme-entry .calendar-control input.input-control {
+    font-family: var(--retal-font-body) !important;
+    font-size: 14px !important;
+    color: var(--retal-ink) !important;
+    border: none !important; 
+    background: transparent !important;
+}
+
+/* Calendar and Dropdown icon's left line remove  */
+.theme-entry .dropdown-box .border-left-only,
+.theme-entry .calendar-control .border-left-only {
+    border-inline-start: none !important;
+}
+
+
+
+/* 4. LABELS (e.g. "Representative mobile") */
+/* :not() ensures that Headings (h1-h6) inside Header/Footer are COMPLETELY IGNORED */
+.theme-entry .SFC.SourceCode-Forms-Controls-Web-Label:not(.hidden):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+    font-family: var(--retal-font-body) !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: var(--retal-ink) !important; 
+    margin-bottom: 8px !important;
+    display: block !important;
+}
+
+    /* 5. Error Input css  */
+
+    .theme-entry .input-control.invalid.watermark a.input-control,
+    .theme-entry .input-control.invalid.watermark a.input-control span,
+    .theme-entry .SFC.SourceCode-Forms-Controls-Web-TextBox.invalid.watermark,
+    .theme-entry .input-control.invalid .input-control-watermark {
+        color: var(--retal-danger) !important;
+    }
+
+    .theme-entry input.SFC.SourceCode-Forms-Controls-Web-TextBox.invalid {
+        border-color: var(--retal-danger) !important;
+        color: var(--retal-danger) !important;
+    }
+
+    .theme-entry .SFC.SourceCode-Forms-Controls-Web-TextBox.invalid.watermark {
+        border: 1px solid var(--retal-danger) !important;
+        color: var(--retal-danger) !important;
+    }
+
+    .input-control.select-box.lookup-box.calendar-control.datepicker.invalid .styling-outer-wrapper {
+        border: 1px solid var(--retal-danger) !important;
+        color: var(--retal-danger) !important;
+    }
+
+
+
+/* =========================================================
+   ULTIMATE MOBILE RESPONSIVENESS FIX FOR K2 LANDING PAGE
+========================================================= */
+@media (max-width: 860px) {
+
+
+    .theme-entry div[name='Header_Div']{
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+    }
+
+    .theme-entry div[name='Header_Div'] img{
+        height: 26px !important;
+        margin-inline-start: 1rem !important;
+    }
+
+    .theme-entry  .rf-top {
+        grid-template-columns: 1fr !important;
+        gap: 28px !important;
+    }
+
+    .theme-entry [name='valBand']{
+        padding: 1rem !important;
+    }
+
+    .theme-entry [name="tblStartAndSignin"]{
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .theme-entry a.SourceCode-Forms-Controls-Web-Button, .theme-entry .SourceCode-Forms-Controls-Web-Button{
+        padding: clamp(5px, 2vw, 16px) clamp(5px, 0vw, 30px) !important;
+    }
+
+    .theme-entry [name="tblAlreadySigned"]{
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: baseline !important;
+    }
+
+
+    .theme-entry div[name="Progress"] .container.metro {
+        flex-flow: column !important;
+        align-items: flex-start !important;
+        gap: 1rem !important;
+        padding-inline-start: 1rem !important;
+    }
+
+    .theme-entry .stack-container[role="radiogroup"]:has(.radio-card-content) {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .theme-entry .stack-container[role="radiogroup"]:has(.radio-card-content) .stack {
+        width: 80% !important;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .theme-entry span:has(a[name="btnStartRegistration"]):has(a[name="btnTrackApplication"]) {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-self: baseline !important;
+    gap: 12px;
+}
+
+.theme-entry div[name="tblIndividual-Local"],
+.theme-entry div[name="tblIndividual-International"],
+.theme-entry div[name="tblCompany-Local"], 
+.theme-entry div[name="tblCompany-International"]{
+        grid-template-columns: 40% 5% 1fr !important;
+    }
+
+.theme-entry span[name="Data Label notify"]{
+        width: 85vw !important;
+    }
+
+}

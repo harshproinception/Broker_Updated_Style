@@ -1,0 +1,130 @@
+/* =========================================================================
+   RETAL K2 THEME v2 - 00 DESIGN TOKENS
+   Single source of truth for colour, type, spacing and shape.
+   Source: RETAL BRAND 2026 guidelines (Retal_Brand_Small.pdf)
+     Primary  #9E6850 (Pantone 7525 C)   - usage ~50%
+     Charcoal #3F3F3F (Pantone Black 7 C) - usage ~20%
+     Beige    #E6DEDB                     - usage ~15%
+     White    #FFFFFF                     - usage ~15%
+     Secondary (accents only, with a primary): #AABCC4 (7542 C), #DEE2E2 (5855 C), #CCC47D (427 C)
+     Title font SangBleu Kingdom, body font ABC Favorit, Arabic 29LT Zarid Display.
+     Square blocks - no rounded corners.
+   Every other file reads these variables. Never hard-code a hex colour in a component file.
+   ========================================================================= */
+
+/* ---------- Brand fonts (WOFF2, served from ../fonts relative to this CSS) ---------- */
+@font-face { font-family: "Retal SangBleu"; src: url("../fonts/SangBleuKingdom-Regular-WebXL.woff2") format("woff2"); font-weight: 300 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Retal Favorit";  src: url("../fonts/ABCFavoritArabicVariable.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Retal Zarid"; src: url("../fonts/29LTZaridDisplay-Regular.woff2") format("woff2"); font-weight: 300 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Retal Zarid"; src: url("../fonts/29LTZaridDisplay-Medium.woff2")  format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Retal Zarid"; src: url("../fonts/29LTZaridDisplay-Bold.woff2")    format("woff2"); font-weight: 600 800; font-style: normal; font-display: swap; }
+
+:root {
+  /* ---------- Primary: copper (600 = brand #9E6850) ---------- */
+  --retal-copper-900: #4A2F23;
+  --retal-copper-800: #6B4433;
+  --retal-copper-700: #85563F;   /* hover */
+  --retal-copper-600: #9E6850;   /* PRIMARY - Pantone 7525 C */
+  --retal-copper-500: #B1846F;
+  --retal-copper-300: #CEB4A8;   /* brand 50% tint */
+  --retal-copper-200: #E6DEDB;   /* brand beige */
+  --retal-copper-100: #ECE1DC;   /* brand 20% tint */
+  --retal-copper-50:  #F6F2F0;   /* light beige page background */
+
+  /* ---------- Secondary accents (use only next to a primary colour) ---------- */
+  --retal-sky:   #AABCC4;        /* Pantone 7542 C - pairs with copper */
+  --retal-mist:  #DEE2E2;        /* Pantone 5855 C - pairs with charcoal */
+  --retal-olive: #CCC47D;        /* Pantone 427 C  - pairs with copper */
+
+  /* ---------- Neutrals (charcoal = Pantone Black 7 C) ---------- */
+  --retal-black:   #262626;
+  --retal-ink:     #3F3F3F;      /* CHARCOAL - text, dark blocks */
+  --retal-ink-2:   #595959;
+  --retal-muted:   #737373;      /* 4.7:1 on white - passes WCAG AA */
+  --retal-line-strong: #9F9F9F;  /* charcoal 50% */
+  --retal-line:    #D9D9D9;      /* charcoal 20% */
+  --retal-line-soft: #E8E8E8;
+  --retal-surface: #F2F2F2;
+  --retal-surface-2: #F8F8F8;
+  --retal-white:   #FFFFFF;
+
+  /* ---------- Status (functional, toned to sit with the palette) ---------- */
+  --retal-success: #4E6B4A;  --retal-success-soft: #E8EEE6;
+  --retal-warning: #8A5A12;  --retal-warning-soft: #F7ECDA;
+  --retal-danger:  #A63D33;  --retal-danger-soft:  #F5E3E1;
+  --retal-info:    #4F6772;  --retal-info-soft:    #E6ECEF;   /* from sky #AABCC4 */
+  --retal-suspended: #6B6076; --retal-suspended-soft: #ECE9F0;
+
+  /* ---------- Semantic roles (components use these) ---------- */
+  --retal-primary: var(--retal-copper-600);
+  --retal-primary-hover: var(--retal-copper-700);
+  --retal-primary-active: var(--retal-copper-800);
+  --retal-primary-soft: var(--retal-copper-100);
+  --retal-on-primary: var(--retal-white);
+  --retal-page-bg: var(--retal-copper-50);
+  --retal-card-bg: var(--retal-white);
+  --retal-dark-block: var(--retal-ink);   /* footer, dark bands */
+  --retal-text: var(--retal-ink);
+  --retal-text-secondary: var(--retal-ink-2);
+  --retal-border: var(--retal-line);
+  --retal-focus: var(--retal-copper-600);
+
+  /* ---------- Type ---------- */
+  --retal-font-body: "Retal Favorit", "ABC Favorit Arabic Variable", "Retal Zarid", system-ui, -apple-system, "Segoe UI", Tahoma, sans-serif;
+  --retal-font-display: "Retal SangBleu", "SangBleu Kingdom", "Retal Zarid", Georgia, serif;
+  --retal-font-arabic-display: "Retal Zarid", "29LT Zarid Display", "Retal Favorit", serif;
+  --retal-fs-xs: 12px;  --retal-fs-sm: 13px;  --retal-fs-md: 15px;  --retal-fs-lg: 17px;
+  --retal-fs-xl: 22px;  --retal-fs-2xl: 30px; --retal-fs-3xl: 40px;
+  --retal-lh-body: 1.55; --retal-lh-tight: 1.15;
+  --retal-logo-tracking: .35em;  /* the RETAL wordmark is widely letter-spaced */
+
+  /* ---------- Shape, space, motion ---------- */
+  --retal-radius: 0px;           /* brand uses square blocks */
+  --retal-radius-pill: 999px;    /* status pills only */
+  --retal-space-1: 4px; --retal-space-2: 8px; --retal-space-3: 12px; --retal-space-4: 16px;
+  --retal-space-5: 24px; --retal-space-6: 32px; --retal-space-7: 48px;
+  --retal-control-h: 44px;
+  --retal-shadow-sm: 0 1px 2px rgba(63, 63, 63, .06);
+  --retal-shadow-md: 0 6px 20px rgba(63, 63, 63, .08);
+  --retal-ease: .15s ease-in-out;
+
+  /* ---------- Back-compat aliases (names used by the v1 files) ---------- */
+  --font-title: var(--retal-font-display);
+  --font-body: var(--retal-font-body);
+  --font-arabic: var(--retal-font-body);
+  --font-ar: var(--retal-font-body);
+  --retal-font: var(--retal-font-body);
+  --font-arabic-display: var(--retal-font-arabic-display);
+  --color-primary: var(--retal-primary);
+  --color-primary-hover: var(--retal-primary-hover);
+  --color-primary-light: var(--retal-primary-soft);
+  --color-secondary: var(--retal-surface);
+  --color-secondary-hover: var(--retal-line-soft);
+  --color-success: var(--retal-success);   --color-success-light: var(--retal-success-soft);
+  --color-warning: var(--retal-warning);   --color-warning-light: var(--retal-warning-soft);
+  --color-danger: var(--retal-danger);     --color-danger-light: var(--retal-danger-soft);
+  --color-text: var(--retal-text);
+  --color-text-secondary: var(--retal-text-secondary);
+  --color-text-muted: var(--retal-muted);
+  --color-border: var(--retal-border);
+  --color-border-hover: var(--retal-line-strong);
+  --color-background: var(--retal-page-bg);
+  --color-surface: var(--retal-card-bg);
+  --radius-sm: var(--retal-radius); --radius-md: var(--retal-radius); --radius-lg: var(--retal-radius);
+  --radius-pill: var(--retal-radius-pill);
+  --control-height: var(--retal-control-h);
+  --shadow-sm: var(--retal-shadow-sm); --shadow-md: var(--retal-shadow-md);
+  --transition: var(--retal-ease);
+  --retal-dark: var(--retal-ink);
+  --retal-bg-light: var(--retal-surface);
+  --primary-header-hover: var(--retal-primary-soft);
+  --warn-soft: var(--retal-warning-soft);  --warn-color: var(--retal-warning);
+  --danger-soft: var(--retal-danger-soft); --danger-color: var(--retal-danger);
+  --ok-soft: var(--retal-success-soft);    --ok-color: var(--retal-success);
+  --suspended-soft: var(--retal-suspended-soft); --suspended-color: var(--retal-suspended);
+  --muted-color: var(--retal-muted);
+  --pp-brand: var(--retal-primary); --pp-brand-hover: var(--retal-primary-hover); --pp-brand-dark: var(--retal-copper-900);
+  --pp-btn-border: var(--retal-copper-300); --pp-divider: var(--retal-line-soft); --pp-text: var(--retal-text-secondary);
+  --pp-header-bg: var(--retal-copper-50); --pp-header-text: var(--retal-black);
+}
+

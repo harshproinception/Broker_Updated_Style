@@ -1,0 +1,263 @@
+/* Refactored for Retal K2 Theme v2 from AddCustomer.css - colours, fonts and radii now come from 00-retal-tokens.css; left/right are logical so Arabic mirrors. */
+/* PERF: ".pi-has-*" classes replace ":has(marker)" selectors - set by Global.js.
+   ":is(*, span)" / ":is(*, a)" always match; they only keep the original specificity. */
+body.pi-has-add-cust .form .row {
+    display: flex !important;
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+
+body.pi-has-add-cust [name="CustomerJourney.AddCustomer.Form Area Item"] .root-table {
+    grid-template-columns: 1fr 1fr !important;
+    width: 100% !important;
+}
+
+body.pi-has-add-cust p[name="Decision Info Label"]:not(.hidden),
+body.pi-has-add-cust p[name="Info Label"]:not(.hidden),
+body.pi-has-add-cust p.description.SFC:not(.hidden) {
+    font-size: 13px !important;
+    color: var(--retal-muted) !important;
+    margin: 0 0 14px 0 !important;
+    line-height: 1.4 !important;
+    font-weight: 400 !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: unset !important;
+}
+
+
+body.pi-has-add-cust .control-group-container,
+body.pi-has-add-cust .control-group-container *,
+body.pi-has-add-cust .input-control.control-group-container .input-control-m-c,
+body.pi-has-add-cust .input-control.control-group-container .input-control-m,
+body.pi-has-add-cust .input-control.control-group-container .input-control-t,
+body.pi-has-add-cust .input-control.control-group-container .input-control-b {
+    border: none !important;
+    border-width: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+
+body.pi-has-add-cust .multi-select-box-list-item {
+    margin-bottom: 8px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 0 !important;
+}
+
+
+body.pi-has-add-cust .multi-select-box-list-item label.radio {
+    display: flex !important;
+    align-items: flex-start !important;
+    padding: 12px 16px !important;
+    background-color: var(--retal-white) !important;
+    border: 1.5px solid var(--retal-info-soft) !important;
+    border-radius: 0px !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+}
+
+
+body.pi-has-add-cust .multi-select-box-list-item label.radio:has(input:checked) {
+    border-color: var(--retal-copper-600) !important;
+    background-color: var(--retal-copper-50) !important;
+}
+
+
+
+body.pi-has-add-cust .multi-select-box-list-item label.radio svg {
+    margin-top: 2px !important;
+    margin-inline-end: 10px !important;
+    flex-shrink: 0 !important;
+    width: 16px !important;
+    height: 16px !important;
+}
+
+
+body.pi-has-add-cust .multi-select-box-list-item label.radio:has(input:checked) .svg-radio-btn-checked {
+    fill: var(--retal-copper-600) !important;
+}
+
+
+body.pi-has-add-cust .multi-select-box-list-item label.radio .input-control-text {
+    font-size: 13px !important;
+    color: var(--retal-ink) !important;
+    line-height: 1.4 !important;
+    font-weight: 500 !important;
+    white-space: normal !important;
+}
+
+
+
+body.pi-has-add-cust input.SourceCode-Forms-Controls-Web-TextBox:focus {
+    border-color: var(--retal-copper-600) !important;
+    box-shadow: 0 0 0 3px rgba(158, 90, 68, 0.12) !important;
+}
+
+
+body.pi-has-add-cust .input-control.select-box.dropdown-box.watermark a.input-control.styling-font span {
+    color: var(--retal-line-strong) !important;
+    font-weight: 400 !important;
+}
+
+
+body.pi-has-add-cust .drop-menu.style-aware li[role="option"]:hover,
+body.pi-has-add-cust .drop-menu.style-aware li[role="option"].selected {
+    background-color: var(--retal-copper-600) !important;
+}
+
+
+body.pi-has-add-cust .drop-menu.style-aware li[role="option"]:hover a,
+body.pi-has-add-cust .drop-menu.style-aware li[role="option"]:hover a span,
+body.pi-has-add-cust .drop-menu.style-aware li[role="option"].selected a,
+body.pi-has-add-cust .drop-menu.style-aware li[role="option"].selected a span {
+    color: var(--retal-white) !important;
+    background: transparent !important;
+}
+
+body.pi-has-add-cust .form .row:not(.pi-has-header-layout):not(.pi-has-home-btn:is(*, a)) > .view:not(.hidden) {
+    width: 100% !important;
+    max-width: 900px !important;
+    margin: 8px auto !important;
+    background: var(--retal-white) !important;
+    border-radius: var(--retal-radius) !important;
+    border: 1px solid var(--retal-copper-100) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03) !important;
+    padding: 24px 32px !important;
+    box-sizing: border-box !important;
+}
+
+body.pi-has-add-cust .form .row:has(.view:not(.hidden) a[name="Continue Button"]) {
+    margin-top: -10px !important;
+}
+
+body.pi-has-add-cust .form .row:has(.view:not(.hidden) a[name="Continue Button"]) > .view:not(.hidden) {
+    margin-top: 0 !important;
+}
+
+body.pi-has-add-cust .form .row > .view:has([name="CustomerJourney.AddCustomer.Form Area Item9"].hidden) {
+    display: none !important;
+}
+
+/* Generic High Power Hide */
+html body .theme-entry .hidden,
+html body .theme-entry [style*="display: none"],
+html body .theme-entry [style*="display:none"],
+html body .theme-entry .input-control.hidden {
+    display: none !important;
+}
+
+html body .theme-entry .view:has(> .innerpanel > .panel.hidden),
+html body .theme-entry .view:has(> .innerpanel > .panel[style*="display: none"]),
+html body .theme-entry .view:has(> .innerpanel > .panel[style*="display:none"]) {
+    display: none !important;
+}
+
+
+/* adding the custom margins to the mobile number table */
+.theme-entry .runtime-form [name="custom_table"] {
+    margin-top: -15px !important;
+    margin-inline-start: -10px !important;
+}
+
+
+
+body.pi-has-add-cust .control-group-container,
+body.pi-has-add-cust .control-group-container *,
+body.pi-has-add-cust .input-control.control-group-container .input-control-m-c,
+body.pi-has-add-cust .input-control.control-group-container .input-control-m,
+body.pi-has-add-cust .input-control.control-group-container .input-control-t,
+body.pi-has-add-cust .input-control.control-group-container .input-control-b {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+body.pi-has-add-cust .multi-select-box-list-item {
+    margin-bottom: 8px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 0 !important;
+}
+
+body.pi-has-add-cust .control-group-container,
+body.pi-has-add-cust .control-group-container *,
+body.pi-has-add-cust .input-control.control-group-container .input-control-m-c,
+body.pi-has-add-cust .input-control.control-group-container .input-control-m,
+body.pi-has-add-cust .input-control.control-group-container .input-control-t,
+body.pi-has-add-cust .input-control.control-group-container .input-control-b {
+    border: none !important;
+    border-width: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+body.pi-has-add-cust .multi-select-box-list-item label.radio {
+    display: flex !important;
+    align-items: flex-start !important;
+    padding: 12px 16px !important;
+    background-color: var(--retal-white) !important;
+    border: 1.5px solid var(--retal-info-soft) !important;
+    border-radius: 0px !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+}
+
+body.pi-has-add-cust .multi-select-box-list-item label.radio:has(input:checked) .svg-radio-btn-circle {
+    stroke: var(--retal-copper-600) !important;
+}
+
+body.pi-has-add-cust .drop-menu.style-aware li[role="option"]:hover,
+body.pi-has-add-cust .drop-menu.style-aware li[role="option"].selected {
+    background-color: var(--retal-copper-600) !important;
+}
+
+
+
+body.pi-has-add-cust .control-group-container,
+body.pi-has-add-cust .control-group-container *,
+body.pi-has-add-cust .input-control.control-group-container .input-control-m-c,
+body.pi-has-add-cust .input-control.control-group-container .input-control-m,
+body.pi-has-add-cust .input-control.control-group-container .input-control-t,
+body.pi-has-add-cust .input-control.control-group-container .input-control-b {
+    border: none !important;
+}
+
+/* Apply red border to invalid textboxes */
+body.pi-has-add-cust input.SourceCode-Forms-Controls-Web-TextBox.invalid {
+    border: 1px solid var(--retal-danger) !important; /* Standard invalid red */
+}
+
+/* Optional: Keep the red styling when the user focuses on an invalid textbox */
+body.pi-has-add-cust input.SourceCode-Forms-Controls-Web-TextBox.invalid:focus {
+    border-color: var(--retal-danger) !important;
+    box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.12) !important; 
+}
+
+/* Apply red border to radio options when the group is invalid */
+body.pi-has-add-cust .control-group-container.invalid .multi-select-box-list-item label.radio {
+    border-color: var(--retal-danger) !important;
+}
+
+/* Optional: Subtle red background to make the error state more obvious */
+body.pi-has-add-cust .control-group-container.invalid .multi-select-box-list-item label.radio {
+    background-color: var(--retal-danger-soft) !important; 
+}
+
+/* Keep the normal selected state styling even if it was flagged invalid */
+body.pi-has-add-cust .control-group-container.invalid .multi-select-box-list-item label.radio:has(input:checked) {
+    border-color: var(--retal-copper-600) !important;
+    background-color: var(--retal-copper-50) !important;
+}
+
+body.pi-has-add-cust .theme-entry [name="Country Label"]:not(:has(span))::after {
+    content: "*";
+    color: red;
+}

@@ -1,0 +1,1308 @@
+/* =========================================================================
+   RETAL K2 THEME v2 - 00 DESIGN TOKENS
+   Single source of truth for colour, type, spacing and shape.
+   Source: RETAL BRAND 2026 guidelines (Retal_Brand_Small.pdf)
+     Primary  #9E6850 (Pantone 7525 C)   - usage ~50%
+     Charcoal #3F3F3F (Pantone Black 7 C) - usage ~20%
+     Beige    #E6DEDB                     - usage ~15%
+     White    #FFFFFF                     - usage ~15%
+     Secondary (accents only, with a primary): #AABCC4 (7542 C), #DEE2E2 (5855 C), #CCC47D (427 C)
+     Title font SangBleu Kingdom, body font ABC Favorit, Arabic 29LT Zarid Display.
+     Square blocks - no rounded corners.
+   Every other file reads these variables. Never hard-code a hex colour in a component file.
+   ========================================================================= */
+
+/* ---------- Brand fonts (WOFF2, served from ../fonts relative to this CSS) ---------- */
+@font-face { font-family: "Retal SangBleu"; src: url("../fonts/SangBleuKingdom-Regular-WebXL.woff2") format("woff2"); font-weight: 300 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Retal Favorit";  src: url("../fonts/ABCFavoritArabicVariable.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Retal Zarid"; src: url("../fonts/29LTZaridDisplay-Regular.woff2") format("woff2"); font-weight: 300 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Retal Zarid"; src: url("../fonts/29LTZaridDisplay-Medium.woff2")  format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Retal Zarid"; src: url("../fonts/29LTZaridDisplay-Bold.woff2")    format("woff2"); font-weight: 600 800; font-style: normal; font-display: swap; }
+
+:root {
+  /* ---------- Primary: copper (600 = brand #9E6850) ---------- */
+  --retal-copper-900: #4A2F23;
+  --retal-copper-800: #6B4433;
+  --retal-copper-700: #85563F;   /* hover */
+  --retal-copper-600: #9E6850;   /* PRIMARY - Pantone 7525 C */
+  --retal-copper-500: #B1846F;
+  --retal-copper-300: #CEB4A8;   /* brand 50% tint */
+  --retal-copper-200: #E6DEDB;   /* brand beige */
+  --retal-copper-100: #ECE1DC;   /* brand 20% tint */
+  --retal-copper-50:  #F6F2F0;   /* light beige page background */
+
+  /* ---------- Secondary accents (use only next to a primary colour) ---------- */
+  --retal-sky:   #AABCC4;        /* Pantone 7542 C - pairs with copper */
+  --retal-mist:  #DEE2E2;        /* Pantone 5855 C - pairs with charcoal */
+  --retal-olive: #CCC47D;        /* Pantone 427 C  - pairs with copper */
+
+  /* ---------- Neutrals (charcoal = Pantone Black 7 C) ---------- */
+  --retal-black:   #262626;
+  --retal-ink:     #3F3F3F;      /* CHARCOAL - text, dark blocks */
+  --retal-ink-2:   #595959;
+  --retal-muted:   #737373;      /* 4.7:1 on white - passes WCAG AA */
+  --retal-line-strong: #9F9F9F;  /* charcoal 50% */
+  --retal-line:    #D9D9D9;      /* charcoal 20% */
+  --retal-line-soft: #E8E8E8;
+  --retal-surface: #F2F2F2;
+  --retal-surface-2: #F8F8F8;
+  --retal-white:   #FFFFFF;
+
+  /* ---------- Status (functional, toned to sit with the palette) ---------- */
+  --retal-success: #4E6B4A;  --retal-success-soft: #E8EEE6;
+  --retal-warning: #8A5A12;  --retal-warning-soft: #F7ECDA;
+  --retal-danger:  #A63D33;  --retal-danger-soft:  #F5E3E1;
+  --retal-info:    #4F6772;  --retal-info-soft:    #E6ECEF;   /* from sky #AABCC4 */
+  --retal-suspended: #6B6076; --retal-suspended-soft: #ECE9F0;
+
+  /* ---------- Semantic roles (components use these) ---------- */
+  --retal-primary: var(--retal-copper-600);
+  --retal-primary-hover: var(--retal-copper-700);
+  --retal-primary-active: var(--retal-copper-800);
+  --retal-primary-soft: var(--retal-copper-100);
+  --retal-on-primary: var(--retal-white);
+  --retal-page-bg: var(--retal-copper-50);
+  --retal-card-bg: var(--retal-white);
+  --retal-dark-block: var(--retal-ink);   /* footer, dark bands */
+  --retal-text: var(--retal-ink);
+  --retal-text-secondary: var(--retal-ink-2);
+  --retal-border: var(--retal-line);
+  --retal-focus: var(--retal-copper-600);
+
+  /* ---------- Type ---------- */
+  --retal-font-body: "Retal Favorit", "ABC Favorit Arabic Variable", "Retal Zarid", system-ui, -apple-system, "Segoe UI", Tahoma, sans-serif;
+  --retal-font-display: "Retal SangBleu", "SangBleu Kingdom", "Retal Zarid", Georgia, serif;
+  --retal-font-arabic-display: "Retal Zarid", "29LT Zarid Display", "Retal Favorit", serif;
+  --retal-fs-xs: 12px;  --retal-fs-sm: 13px;  --retal-fs-md: 15px;  --retal-fs-lg: 17px;
+  --retal-fs-xl: 22px;  --retal-fs-2xl: 30px; --retal-fs-3xl: 40px;
+  --retal-lh-body: 1.55; --retal-lh-tight: 1.15;
+  --retal-logo-tracking: .35em;  /* the RETAL wordmark is widely letter-spaced */
+
+  /* ---------- Shape, space, motion ---------- */
+  --retal-radius: 0px;           /* brand uses square blocks */
+  --retal-radius-pill: 999px;    /* status pills only */
+  --retal-space-1: 4px; --retal-space-2: 8px; --retal-space-3: 12px; --retal-space-4: 16px;
+  --retal-space-5: 24px; --retal-space-6: 32px; --retal-space-7: 48px;
+  --retal-control-h: 44px;
+  --retal-shadow-sm: 0 1px 2px rgba(63, 63, 63, .06);
+  --retal-shadow-md: 0 6px 20px rgba(63, 63, 63, .08);
+  --retal-ease: .15s ease-in-out;
+
+  /* ---------- Back-compat aliases (names used by the v1 files) ---------- */
+  --font-title: var(--retal-font-display);
+  --font-body: var(--retal-font-body);
+  --font-arabic: var(--retal-font-body);
+  --font-ar: var(--retal-font-body);
+  --retal-font: var(--retal-font-body);
+  --font-arabic-display: var(--retal-font-arabic-display);
+  --color-primary: var(--retal-primary);
+  --color-primary-hover: var(--retal-primary-hover);
+  --color-primary-light: var(--retal-primary-soft);
+  --color-secondary: var(--retal-surface);
+  --color-secondary-hover: var(--retal-line-soft);
+  --color-success: var(--retal-success);   --color-success-light: var(--retal-success-soft);
+  --color-warning: var(--retal-warning);   --color-warning-light: var(--retal-warning-soft);
+  --color-danger: var(--retal-danger);     --color-danger-light: var(--retal-danger-soft);
+  --color-text: var(--retal-text);
+  --color-text-secondary: var(--retal-text-secondary);
+  --color-text-muted: var(--retal-muted);
+  --color-border: var(--retal-border);
+  --color-border-hover: var(--retal-line-strong);
+  --color-background: var(--retal-page-bg);
+  --color-surface: var(--retal-card-bg);
+  --radius-sm: var(--retal-radius); --radius-md: var(--retal-radius); --radius-lg: var(--retal-radius);
+  --radius-pill: var(--retal-radius-pill);
+  --control-height: var(--retal-control-h);
+  --shadow-sm: var(--retal-shadow-sm); --shadow-md: var(--retal-shadow-md);
+  --transition: var(--retal-ease);
+  --retal-dark: var(--retal-ink);
+  --retal-bg-light: var(--retal-surface);
+  --primary-header-hover: var(--retal-primary-soft);
+  --warn-soft: var(--retal-warning-soft);  --warn-color: var(--retal-warning);
+  --danger-soft: var(--retal-danger-soft); --danger-color: var(--retal-danger);
+  --ok-soft: var(--retal-success-soft);    --ok-color: var(--retal-success);
+  --suspended-soft: var(--retal-suspended-soft); --suspended-color: var(--retal-suspended);
+  --muted-color: var(--retal-muted);
+  --pp-brand: var(--retal-primary); --pp-brand-hover: var(--retal-primary-hover); --pp-brand-dark: var(--retal-copper-900);
+  --pp-btn-border: var(--retal-copper-300); --pp-divider: var(--retal-line-soft); --pp-text: var(--retal-text-secondary);
+  --pp-header-bg: var(--retal-copper-50); --pp-header-text: var(--retal-black);
+}
+
+
+/* =========================================================================
+   RETAL K2 THEME v2 - 01 BASE
+   Brand look for standard K2 SmartForms controls on every form.
+   Loads after 00-retal-tokens.css and before the module files.
+   ========================================================================= */
+
+/* ---------- Page and type ---------- */
+.theme-entry,
+.theme-entry .runtime-form,
+.theme-entry .SourceCode-Forms-Controls-Web-Control,
+.theme-entry input, .theme-entry select, .theme-entry textarea, .theme-entry p {
+  font-family: var(--retal-font-body) !important;
+  color: var(--retal-text);
+  line-height: var(--retal-lh-body);
+  -webkit-font-smoothing: antialiased;
+}
+.theme-entry { background: var(--retal-page-bg) !important; }
+
+.theme-entry h1, .theme-entry h2, .theme-entry h3, .theme-entry h4,
+.theme-entry .form-title, .theme-entry .view-title,
+.theme-entry .panel-header-text, .theme-entry .window-header {
+  font-family: var(--retal-font-display) !important;
+  font-weight: 500 !important;
+  color: var(--retal-text) !important;
+  line-height: var(--retal-lh-tight);
+  letter-spacing: 0;
+}
+.theme-entry h1 { font-size: var(--retal-fs-3xl) !important; }
+.theme-entry h2 { font-size: var(--retal-fs-2xl) !important; }
+.theme-entry h3 { font-size: var(--retal-fs-xl) !important; }
+
+/* ---------- Labels ---------- */
+.theme-entry .SourceCode-Forms-Controls-Web-Label {
+  color: var(--retal-text);
+  font-size: var(--retal-fs-sm);
+}
+
+/* ---------- Buttons ----------
+   K2 marks buttons with .button-primary / .button-quiet (Button control > Style).
+   Brand: square copper block with white text; quiet = white with copper outline. */
+.theme-entry a.SourceCode-Forms-Controls-Web-Button {
+  border-radius: var(--retal-radius) !important;
+  font-family: var(--retal-font-body) !important;
+  box-shadow: none !important;
+  transition: background-color var(--retal-ease), border-color var(--retal-ease), color var(--retal-ease) !important;
+}
+.theme-entry a.SourceCode-Forms-Controls-Web-Button.button-primary,
+.theme-entry a.SourceCode-Forms-Controls-Web-Button.retal-btn-primary {
+  min-height: var(--retal-control-h) !important;
+  padding: 12px 28px !important;
+  background: var(--retal-primary) !important;
+  border: 1px solid var(--retal-primary) !important;
+  color: var(--retal-on-primary) !important;
+  font-size: var(--retal-fs-md) !important;
+  font-weight: 500 !important;
+}
+.theme-entry a.SourceCode-Forms-Controls-Web-Button.button-primary *,
+.theme-entry a.SourceCode-Forms-Controls-Web-Button.retal-btn-primary * { color: var(--retal-on-primary) !important; }
+.theme-entry a.SourceCode-Forms-Controls-Web-Button.button-primary:hover,
+.theme-entry a.SourceCode-Forms-Controls-Web-Button.retal-btn-primary:hover { background: var(--retal-primary-hover) !important; border-color: var(--retal-primary-hover) !important; }
+
+.theme-entry a.SourceCode-Forms-Controls-Web-Button.button-quiet,
+.theme-entry a.SourceCode-Forms-Controls-Web-Button.retal-btn-secondary {
+  min-height: var(--retal-control-h) !important;
+  padding: 12px 28px !important;
+  background: var(--retal-white) !important;
+  border: 1px solid var(--retal-primary) !important;
+  color: var(--retal-primary) !important;
+  font-size: var(--retal-fs-md) !important;
+  font-weight: 500 !important;
+}
+.theme-entry a.SourceCode-Forms-Controls-Web-Button.button-quiet *,
+.theme-entry a.SourceCode-Forms-Controls-Web-Button.retal-btn-secondary * { color: var(--retal-primary) !important; }
+.theme-entry a.SourceCode-Forms-Controls-Web-Button.button-quiet:hover,
+.theme-entry a.SourceCode-Forms-Controls-Web-Button.retal-btn-secondary:hover { background: var(--retal-primary-soft) !important; }
+
+/* Text-link buttons (e.g. "Cancel", "Back to home"): give the button the style class retal-btn-link */
+.theme-entry a.SourceCode-Forms-Controls-Web-Button.retal-btn-link {
+  background: none !important; border: 0 !important; padding: 0 !important; min-height: 0 !important; color: var(--retal-primary) !important;
+}
+.theme-entry a.SourceCode-Forms-Controls-Web-Button.disabled,
+.theme-entry a.SourceCode-Forms-Controls-Web-Button[disabled] {
+  background: var(--retal-surface) !important; color: var(--retal-muted) !important; border-color: var(--retal-line) !important; cursor: not-allowed !important;
+}
+
+/* ---------- Inputs ---------- */
+.theme-entry input.SFC.SourceCode-Forms-Controls-Web-TextBox,
+.theme-entry textarea.SFC,
+.theme-entry .input-control.select-box .styling-outer-wrapper,
+.theme-entry .input-control.calendar-control .styling-outer-wrapper {
+  min-height: var(--retal-control-h) !important;
+  border: 1px solid var(--retal-border) !important;
+  border-radius: var(--retal-radius) !important;
+  background: var(--retal-white) !important;
+  color: var(--retal-text) !important;
+  font-size: var(--retal-fs-md) !important;
+  padding-inline: var(--retal-space-3) !important;
+  box-shadow: none !important;
+  transition: border-color var(--retal-ease), box-shadow var(--retal-ease) !important;
+}
+.theme-entry textarea.SFC { padding-block: var(--retal-space-2) !important; }
+.theme-entry input.SFC:hover, .theme-entry textarea.SFC:hover { border-color: var(--retal-line-strong) !important; }
+
+/* Placeholder / watermark stays grey, also when the field is invalid */
+.theme-entry input::placeholder, .theme-entry textarea::placeholder,
+.theme-entry .watermark, .theme-entry .input-control-watermark,
+.theme-entry .input-control.invalid .input-control-watermark,
+.theme-entry .SFC.SourceCode-Forms-Controls-Web-TextBox.invalid.watermark {
+  color: var(--retal-muted) !important;
+  opacity: 1;
+}
+
+/* ---------- Keyboard focus (visible, brand coloured) ---------- */
+.theme-entry a:focus-visible,
+.theme-entry input:focus-visible, .theme-entry textarea:focus-visible, .theme-entry select:focus-visible,
+.theme-entry [tabindex]:focus-visible {
+  outline: 2px solid var(--retal-focus) !important;
+  outline-offset: 2px !important;
+}
+.theme-entry input.SFC:focus, .theme-entry textarea.SFC:focus {
+  border-color: var(--retal-primary) !important;
+  box-shadow: 0 0 0 3px var(--retal-primary-soft) !important;
+}
+
+/* ---------- Validation (CSS only - replaces the MutationObserver script) ---------- */
+.theme-entry .input-control.invalid input,
+.theme-entry .input-control.invalid textarea,
+.theme-entry .input-control.invalid select,
+.theme-entry input.SFC.invalid, .theme-entry textarea.SFC.invalid,
+.theme-entry .input-control.invalid .styling-outer-wrapper {
+  border-color: var(--retal-danger) !important;
+  box-shadow: 0 0 0 2px var(--retal-danger-soft) !important;
+}
+.theme-entry .validation-error,
+.theme-entry .error-message,
+.theme-entry .SourceCode-Forms-Controls-Web-Label.retal-field-error {
+  display: block;
+  margin-block-start: var(--retal-space-1);
+  color: var(--retal-danger) !important;
+  font-size: var(--retal-fs-xs) !important;
+}
+
+/* ---------- Cards / panels ---------- */
+.theme-entry .retal-card,
+.theme-entry .form .view .innerpanel > .panel {
+  background: var(--retal-card-bg) !important;
+  border: 1px solid var(--retal-line-soft) !important;
+  border-radius: var(--retal-radius) !important;
+  box-shadow: none !important;
+}
+
+/* ---------- Status pills (classes set by retal-runtime.js) ---------- */
+.theme-entry .status-ok, .theme-entry .status-warn, .theme-entry .status-danger, .theme-entry .status-suspended {
+  display: inline-block; padding: 2px 12px; border-radius: var(--retal-radius-pill); font-size: var(--retal-fs-xs); font-weight: 500;
+}
+.theme-entry .status-ok { background: var(--retal-success-soft) !important; color: var(--retal-success) !important; }
+.theme-entry .status-warn { background: var(--retal-warning-soft) !important; color: var(--retal-warning) !important; }
+.theme-entry .status-danger { background: var(--retal-danger-soft) !important; color: var(--retal-danger) !important; }
+.theme-entry .status-suspended { background: var(--retal-suspended-soft) !important; color: var(--retal-suspended) !important; }
+
+/* ---------- Links ---------- */
+.theme-entry a:not(.SourceCode-Forms-Controls-Web-Button) { color: var(--retal-primary); }
+.theme-entry a:not(.SourceCode-Forms-Controls-Web-Button):hover { color: var(--retal-primary-hover); }
+
+/* ---------- Sticky footer: no gap under the footer on short pages ---------- */
+/* retal-runtime.js adds .retal-sticky-footer to <body> only when a footer view is on the page */
+body.theme-entry.retal-sticky-footer { min-height: 100vh; background: var(--retal-page-bg) !important; }
+body.retal-sticky-footer .runtime-form { min-height: 100vh; display: flex; flex-direction: column; }
+body.retal-sticky-footer .runtime-form > .form { flex: 1 0 auto; }
+
+/* ---------- Responsive: one column on phones ---------- */
+@media (max-width: 767px) {
+  .theme-entry .editor-table, .theme-entry .editor-table > .editor-body,
+  .theme-entry .editor-row, .theme-entry .Grid-Layout .grid-row {
+    display: block !important; width: 100% !important;
+  }
+  .theme-entry .editor-cell, .theme-entry .Grid-Layout .grid-cell {
+    display: block !important; width: 100% !important; max-width: 100% !important;
+    padding-inline: 0 !important;
+  }
+  .theme-entry .form, .theme-entry .view { padding-inline: var(--retal-space-4) !important; }
+  .theme-entry a.SourceCode-Forms-Controls-Web-Button { width: 100% !important; justify-content: center; }
+  .theme-entry h1 { font-size: var(--retal-fs-2xl) !important; }
+  .theme-entry h2 { font-size: var(--retal-fs-xl) !important; }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .theme-entry * { transition: none !important; animation: none !important; }
+}
+
+/* =========================================================================
+   RETAL K2 THEME v2 - 02 RIGHT-TO-LEFT
+   Active when retal-runtime.js sets <html dir="rtl" lang="ar"> (Arabic culture).
+   The module files were converted to logical properties (margin-inline-start,
+   inset-inline-end, text-align:start ...), so most layout mirrors on its own.
+   This file covers what logical properties cannot.
+   ========================================================================= */
+
+html[dir="rtl"] body.theme-entry { direction: rtl; text-align: start; }
+
+/* Arabic reads better slightly larger and with more line height */
+html[lang^="ar"] .theme-entry { --retal-lh-body: 1.7; --retal-font-display: var(--retal-font-arabic-display); --font-title: var(--retal-font-arabic-display); }
+html[lang^="ar"] .theme-entry input, html[lang^="ar"] .theme-entry textarea { font-size: 16px !important; }
+
+/* Directional icons flip (arrows, chevrons, back buttons) */
+html[dir="rtl"] .theme-entry .retal-icon-dir,
+html[dir="rtl"] .theme-entry [class*="arrow"]:not([class*="up"]):not([class*="down"]),
+html[dir="rtl"] .theme-entry .icon-chevron-right,
+html[dir="rtl"] .theme-entry .icon-chevron-left { transform: scaleX(-1); }
+
+/* Numbers, emails, phone numbers, IDs and reference codes stay left-to-right */
+html[dir="rtl"] .theme-entry input[type="email"],
+html[dir="rtl"] .theme-entry input[type="tel"],
+html[dir="rtl"] .theme-entry input[name*="Email" i],
+html[dir="rtl"] .theme-entry input[name*="Mobile" i],
+html[dir="rtl"] .theme-entry input[name*="Phone" i],
+html[dir="rtl"] .theme-entry input[name*="Reference" i],
+html[dir="rtl"] .theme-entry input[name*="IBAN" i],
+html[dir="rtl"] .theme-entry .retal-ltr {
+  direction: ltr; text-align: end; unicode-bidi: plaintext;
+}
+
+/* K2 grids and list views */
+html[dir="rtl"] .theme-entry .grid-content-table td,
+html[dir="rtl"] .theme-entry .grid-column-header-table th { text-align: start !important; }
+
+/* K2 drop-down arrow sits on the left in Arabic */
+html[dir="rtl"] .theme-entry .input-control.select-box .input-control-buttons { inset-inline-end: 0; inset-inline-start: auto; }
+
+/* Flex rows (stepper, card groups, header) already run right-to-left under dir="rtl";
+   do not add row-reverse, or they flip back. */
+
+/* =========================================================================
+   RETAL K2 THEME v2 - 03 K2 THEME VARIABLES
+   K2's base theme (Lithium, dynamic) styles every built-in control - calendars,
+   lists, drop-downs, tabs, worklist, dialogs, progress steps - from ~475 CSS
+   variables generated from the style-profile accent colour. Left alone it
+   produces off-brand browns, grey buttons, blue/green chart series and the
+   Poppins font (an extra 155 KB+ download). Mapping them to the Retal tokens
+   brands the native controls without !important.
+   The doubled class beats K2's own ".theme-entry" rule whatever the load order.
+   ========================================================================= */
+.theme-entry.theme-entry {
+  /* ---- Fonts: stops Poppins from being used or downloaded ---- */
+  --main-font-family: var(--retal-font-body);
+  --heading-font-family: var(--retal-font-display);
+  --button-font-family: var(--retal-font-body);
+
+  /* ---- Core ---- */
+  --k2-main-accent-color: var(--retal-primary);
+  --k2-content-background-color: var(--retal-page-bg);
+  --k2-panel-background-color: var(--retal-white);
+  --k2-error-color: var(--retal-danger);
+  --page-background-color: var(--retal-page-bg);
+  --form-background-color: var(--retal-page-bg);
+  --panel-background-color: var(--retal-white);
+  --view-background-color: var(--retal-white);
+  --panel-border-color: var(--retal-line-soft);
+  --view-header-background-color: var(--retal-copper-50);
+  --view-text-color: var(--retal-text);
+  --view-shadow: none;
+
+  /* ---- Square blocks (brand) ---- */
+  --control-rounding: 0; --panel-rounding: 0; --view-rounding: 0; --input-rounding: 0; --textbox-rounding: 0;
+  --button-rounding: 0; --calendar-item-rounding: 0; --tooltip-rounding: 0; --tree-item-rounding: 0;
+  --chart-rounding: 0; --tab-rounding: 0; --popover-rounding: 0; --menu-rounding: 0; --dialog-rounding: 0;
+
+  /* ---- Text ---- */
+  --normal-text-color: var(--retal-text);
+  --disabled-normal-text-color: var(--retal-muted);
+  --description-text-color: var(--retal-text-secondary);
+  --paragraph-text-color: var(--retal-text);
+  --page-title-text-color: var(--retal-text);
+  --page-subtitle-text-color: var(--retal-text-secondary);
+  --heading1-text-color: var(--retal-text); --heading2-text-color: var(--retal-text);
+  --heading3-text-color: var(--retal-text); --heading4-text-color: var(--retal-text);
+  --error-text-color: var(--retal-danger);
+  --hyperlink-text-color: var(--retal-primary);
+  --hyperlink-focus-border-color: var(--retal-primary);
+
+  /* ---- Inputs ---- */
+  --input-background-color: var(--retal-white);
+  --input-border-color: var(--retal-line);
+  --input-text-color: var(--retal-text);
+  --input-watermark-text-color: var(--retal-muted);
+  --input-focus-border-color: var(--retal-primary);
+  --input-disabled-background-color: var(--retal-surface);
+  --input-disabled-border-color: var(--retal-line);
+  --input-disabled-text-color: var(--retal-muted);
+  --input-readonly-background-color: var(--retal-surface-2);
+  --input-readonly-border-color: var(--retal-line);
+  --input-readonly-text-color: var(--retal-text-secondary);
+  --input-error-background-color: var(--retal-white);
+  --input-error-border-color: var(--retal-danger);
+  --input-error-text-color: var(--retal-danger);
+  --input-error-watermark-text-color: var(--retal-muted);
+  --input-text-highlight-background-color: var(--retal-primary);
+  --input-button-text-color: var(--retal-text-secondary);
+  --input-button-hover-background-color: var(--retal-primary);
+  --required-indicator-background-color: var(--retal-danger);
+  --radio-checked-color: var(--retal-primary);
+  --checkbox-checked-color: var(--retal-primary);
+  --radio-border-color: var(--retal-line-strong);
+  --checkbox-border-color: var(--retal-line-strong);
+  --file-upload-border-color: var(--retal-line-strong);
+  --file-upload-empty-border-color: var(--retal-line-strong);
+  --file-upload-text-color: var(--retal-text);
+  --file-upload-empty-text-color: var(--retal-text-secondary);
+  --file-upload-empty-hover-background-color: var(--retal-primary-soft);
+  --smartfield-text-color: var(--retal-text);
+
+  /* ---- Buttons ---- */
+  --button-background-color: var(--retal-white);
+  --button-border-color: var(--retal-primary);
+  --button-text-color: var(--retal-primary);
+  --button-hover-background-color: var(--retal-primary-soft);
+  --button-hover-border-color: var(--retal-primary);
+  --button-hover-text-color: var(--retal-primary);
+  --button-focus-background-color: var(--retal-white);
+  --button-focus-text-color: var(--retal-primary);
+  --button-disabled-background-color: var(--retal-surface);
+  --button-disabled-border-color: var(--retal-line);
+  --button-disabled-text-color: var(--retal-muted);
+  --primary-button-background-color: var(--retal-primary);
+  --primary-button-border-color: var(--retal-primary);
+  --primary-button-text-color: var(--retal-white);
+  --primary-button-hover-background-color: var(--retal-primary-hover);
+  --primary-button-hover-border-color: var(--retal-primary-hover);
+  --primary-button-hover-text-color: var(--retal-white);
+  --primary-button-focus-background-color: var(--retal-primary-hover);
+  --primary-button-focus-text-color: var(--retal-white);
+  --quiet-button-background-color: var(--retal-white);
+  --quiet-button-border-color: var(--retal-primary);
+  --quiet-button-text-color: var(--retal-primary);
+  --quiet-button-hover-background-color: var(--retal-primary-soft);
+  --quiet-button-hover-border-color: var(--retal-primary);
+  --quiet-button-hover-text-color: var(--retal-primary);
+  --quiet-button-focus-text-color: var(--retal-primary);
+  --destructive-button-background-color: var(--retal-danger);
+  --destructive-button-border-color: var(--retal-danger);
+  --destructive-button-hover-background-color: #8C332B;
+  --destructive-button-hover-border-color: #8C332B;
+
+  /* ---- Menus, dialogs, tooltips ---- */
+  --menu-text-color: var(--retal-text);
+  --menu-item-hover-background-color: var(--retal-primary-soft);
+  --menu-item-selected-background-color: var(--retal-primary);
+  --dialog-header-text-color: var(--retal-text);
+  --dialog-separator-line-color: var(--retal-line-soft);
+  --dialog-shadow: var(--retal-shadow-md);
+  --tooltip-text-color: var(--retal-text);
+  --tooltip-border-color: var(--retal-line);
+
+  /* ---- Lists and grids ---- */
+  --list-border-color: var(--retal-line);
+  --list-column-header-background-color: var(--retal-copper-50);
+  --list-column-header-text-color: var(--retal-text-secondary);
+  --list-column-header-border-color: var(--retal-line-soft);
+  --list-item-text-color: var(--retal-text);
+  --list-item-hover-background-color: var(--retal-primary-soft);
+  --list-item-hover-text-color: var(--retal-text);
+  --list-item-selected-background-color: var(--retal-primary);
+  --list-item-background-color-even-zebra: var(--retal-surface-2);
+  --list-action-button-background-color: var(--retal-copper-50);
+  --list-action-button-text-color: var(--retal-text);
+  --list-error-background-color: var(--retal-danger-soft);
+  --list-error-text-color: var(--retal-danger);
+
+  /* ---- Tabs ---- */
+  --tab-text-color: var(--retal-text-secondary);
+  --tab-selected-text-color: var(--retal-text);
+  --tab-selected-background-color: var(--retal-white);
+  --tab-body-background-color: var(--retal-white);
+  --main-tab-selected-text-color: var(--retal-text);
+
+  /* ---- Toolbars ---- */
+  --toolbar-text-color: var(--retal-text);
+  --toolbar-button-text-color: var(--retal-text);
+  --toolbar-button-hover-background-color: var(--retal-primary-soft);
+  --toolbar-button-hover-border-color: var(--retal-primary-soft);
+  --toolbar-border-color: var(--retal-line-soft);
+  --toolbar-separator-line-color: var(--retal-line-soft);
+
+  /* ---- Calendar ---- */
+  --calendar-text-color: var(--retal-text);
+  --calendar-item-text-color: var(--retal-text);
+  --calendar-item-hover-background-color: var(--retal-primary-soft);
+  --calendar-item-hover-border-color: var(--retal-primary-soft);
+  --calendar-selected-item-background-color: var(--retal-primary);
+  --calendar-today-border-color: var(--retal-primary);
+
+  /* ---- Pills, badges, icons ---- */
+  --pill-background-color: var(--retal-primary-soft);
+  --pill-text-color: var(--retal-text);
+  --badge-warning-background-color: var(--retal-warning);
+  --icon-base-color: var(--retal-text);
+  --icon-accent-color: var(--retal-primary);
+
+  /* ---- Progress steps (registration stepper) ---- */
+  --progress-rail-color: var(--retal-line);
+  --progress-rail-completed-color: var(--retal-success);
+  --progress-step-completed-background-color: var(--retal-success);
+  --progress-step-in-progress-background-color: var(--retal-primary);
+  --progress-step-selected-background-color: var(--retal-primary);
+  --progress-step-icon-color: var(--retal-white);
+  --progress-text-color: var(--retal-text);
+
+  /* ---- Charts: brand-led series instead of K2's green/blue ramp ---- */
+  --chart-series-0: var(--retal-copper-600);
+  --chart-series-1: var(--retal-ink);
+  --chart-series-2: var(--retal-sky);
+  --chart-series-3: var(--retal-olive);
+  --chart-series-4: var(--retal-copper-300);
+  --chart-series-5: var(--retal-line-strong);
+  --chart-background-color: var(--retal-white);
+  --chart-title-text-color: var(--retal-text);
+  --chart-label-text-color: var(--retal-text-secondary);
+
+  /* ---- Search highlight ---- */
+  --search-highlight-background-color: var(--retal-cream, #F3E7C9);
+}
+
+/* Refactored for Retal K2 Theme v2 from BroucherForm.css - colours, fonts and radii now come from 00-retal-tokens.css; left/right are logical so Arabic mirrors. */
+.theme-entry .runtime-form.pi-has-brochure-form {
+    --retal-ink: var(--retal-copper-900);
+    --retal-brown: var(--retal-copper-800);
+    --retal-copper: var(--retal-copper-600);
+    --retal-copper-deep: var(--retal-copper-700);
+    --retal-cream: var(--retal-copper-50);
+    --retal-paper: var(--retal-copper-100);
+    --retal-muted: var(--retal-muted);
+    --retal-line: var(--retal-copper-200);
+    color: var(--retal-ink) !important;
+    font-family: var(--retal-font-body) !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .form {
+    /* background: transparent !important; */
+    background-color: var(--retal-copper-50) !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"],
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item1"] {
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .panel-body,
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .panel-body-wrapper,
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item1"] .panel-body,
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item1"] .panel-body-wrapper {
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .panel-body-t,
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .panel-body-m,
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .panel-body-b,
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item1"] .panel-body-t,
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item1"] .panel-body-m,
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item1"] .panel-body-b {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .form > .row:first-child {
+    position: fixed !important;
+    top: 0 !important;
+    inset-inline-start: 0 !important;
+    inset-inline-start: 0 !important;
+    inset-inline-end: 0 !important;
+    z-index: 2000 !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 112px !important;
+    min-height: 112px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-bottom: 1px solid var(--retal-copper-100) !important;
+    border-radius: 0 !important;
+    background: var(--retal-white) !important;
+    box-shadow: 0 2px 12px rgba(43, 31, 24, 0.035) !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .form > .row:first-child > .view,
+.theme-entry .runtime-form.pi-has-brochure-form .form > .row:first-child > .formcontrol {
+    display: block !important;
+    width: 100% !important;
+    height: 112px !important;
+    min-height: 112px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .innerpanel,
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .panel-body,
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .panel-body-m,
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .panel-body-m-c,
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .panel-body-wrapper {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: var(--retal-white) !important;
+    box-shadow: none !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .root-table[name="Table"] {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: clamp(18px, 2vw, 34px) !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 112px !important;
+    min-height: 112px !important;
+    margin: 0 !important;
+    padding: 0 clamp(20px, 2.2vw, 42px) !important;
+    overflow: hidden !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: var(--retal-white) !important;
+    box-shadow: none !important;
+    grid-template-columns: none !important;
+    grid-template-rows: none !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .root-table[name="Table"] > span[name="Cell logo"] {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    flex: 0 0 auto !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: 300px !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] img[name="RETAL_primary_logo"] {
+    display: block !important;
+    width: auto !important;
+    height: 48px !important;
+    max-width: min(24vw, 280px) !important;
+    max-height: 48px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    object-fit: contain !important;
+    object-position: left center !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .root-table[name="Table"] > span[name="Cell middle section"] {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    flex: 1 1 auto !important;
+    width: auto !important;
+    min-width: 0 !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .root-table[name="Table"] > span[name="Cell middle section"] [name="Table1"] {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    flex: 1 1 auto !important;
+    width: auto !important;
+    min-width: 0 !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    grid-template-columns: none !important;
+    grid-template-rows: none !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] [name="Table1"] > span[name="Cell Cell2"] {
+    display: flex !important;
+    flex: 1 1 auto !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    width: auto !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] h1[name="header_name_dlb"] {
+    display: block !important;
+    width: auto !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: var(--retal-copper-900) !important;
+    font-family: var(--retal-font-display) !important;
+    font-size: clamp(30px, 2.25vw, 42px) !important;
+    font-weight: 400 !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.55px !important;
+    text-align: start !important;
+    overflow-wrap: normal !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] span[name="header_desc_dlb"] {
+    display: none !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] span[name="Header_style_dbl"],
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] a[name="btnEnglish"],
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] a[name="btnArabic"],
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] [name="Table1"] > span[name="Cell Cell6"] {
+    display: none !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .root-table[name="Table"] > span[name="Cell header2"] {
+    display: none !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .root-table[name="Table"] > span[name="Cell header3"] {
+    display: flex !important;
+    flex: 0 0 auto !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: 290px !important;
+    margin: 0 0 0 auto !important;
+    padding: 0 0 0 clamp(12px, 2vw, 30px) !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] span[name="profile_name_dlb"]:not(.empty) {
+    display: block !important;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: var(--retal-black) !important;
+    font-family: var(--retal-font-body) !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+    white-space: nowrap !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] span[name="profile_desc_label"] {
+    display: block !important;
+    width: auto !important;
+    margin: 3px 0 0 !important;
+    padding: 0 !important;
+    color: var(--retal-muted) !important;
+    font-family: var(--retal-font-body) !important;
+    font-size: 13px !important;
+    font-weight: 400 !important;
+    line-height: 1.4 !important;
+    white-space: nowrap !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .form > .row:not(:first-child) {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-inline-start: 0 !important;
+    margin-inline-start: 0 !important;
+    margin-inline-end: 0 !important;
+    padding: 0 16px !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .form > .row:nth-child(2) {
+    margin-top: 112px !important;
+    padding-top: 14px !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .form > .row:nth-child(n+3) {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .form > .row:nth-child(2) > .view,
+.theme-entry .runtime-form.pi-has-brochure-form .form > .row:nth-child(2) > .formcontrol,
+.theme-entry .runtime-form.pi-has-brochure-form .form > .row:nth-child(n+3) > .view,
+.theme-entry .runtime-form.pi-has-brochure-form .form > .row:nth-child(n+3) > .formcontrol {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item1"] {
+    padding: clamp(20px, 2.7vw, 38px) !important;
+    border: 1px solid rgba(175, 130, 99, 0.16) !important;
+    border-radius: var(--retal-radius) !important;
+    background: linear-gradient(180deg, var(--retal-copper-50) 0%, var(--retal-copper-100) 100%) !important;
+    box-shadow: 0 15px 40px rgba(58, 39, 27, 0.08) !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item1"] .root-table[name="Table"] {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    grid-template-rows: none !important;
+    grid-auto-flow: row !important;
+    grid-auto-rows: auto !important;
+    align-items: stretch !important;
+    gap: 22px 18px !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-section-heading {
+    display: block !important;
+    grid-column: 1 / -1 !important;
+    grid-row: auto !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+    margin: 4px 0 -2px !important;
+    padding: 8px 2px 0 !important;
+    overflow: visible !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form [name="Riyadh"],
+.theme-entry .runtime-form.pi-has-brochure-form [name="Jeddah"],
+.theme-entry .runtime-form.pi-has-brochure-form [name="Alkhobar"] {
+    display: block !important;
+    width: auto !important;
+    margin: 0 0 5px !important;
+    padding: 0 !important;
+    color: var(--retal-copper-600) !important;
+    font-family: var(--retal-font-body) !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    line-height: 1.4 !important;
+    letter-spacing: 2.8px !important;
+    text-transform: uppercase !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form h2[name="Riyadh_projects"],
+.theme-entry .runtime-form.pi-has-brochure-form h2[name="Jrddah_projects"],
+.theme-entry .runtime-form.pi-has-brochure-form h2[name="Alkhobarprojects"] {
+    display: block !important;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: var(--retal-copper-700) !important;
+    font-family: var(--retal-font-display) !important;
+    font-size: clamp(28px, 2.7vw, 38px) !important;
+    font-weight: 500 !important;
+    line-height: 1.14 !important;
+    letter-spacing: -0.6px !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form [name="Arabic_riyad"],
+.theme-entry .runtime-form.pi-has-brochure-form [name="Arabic_jeddah"],
+.theme-entry .runtime-form.pi-has-brochure-form [name="Arabic_Alkhobar"] {
+    display: block !important;
+    width: 100% !important;
+    margin: 8px 0 0 !important;
+    padding: 7px 0 0 !important;
+    border-top: 1px solid var(--retal-copper-200) !important;
+    color: var(--retal-copper-600) !important;
+    font-family: var(--retal-font-body) !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    line-height: 1.6 !important;
+    text-align: end !important;
+    direction: rtl !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+    float: none !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 0 20px !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(160, 112, 82, 0.17) !important;
+    border-radius: var(--retal-radius) !important;
+    background: linear-gradient(150deg, var(--retal-white) 0%, var(--retal-copper-50) 100%) !important;
+    box-shadow: 0 7px 20px rgba(57, 37, 24, 0.075) !important;
+    cursor: pointer !important;
+    transform: translate3d(0, 0, 0) scale(1);
+    transform-origin: center center !important;
+    transition: transform 420ms cubic-bezier(0.2, 0.75, 0.25, 1), box-shadow 420ms cubic-bezier(0.2, 0.75, 0.25, 1), border-color 350ms ease !important;
+    animation: retalBrochureCardEnter 620ms cubic-bezier(0.2, 0.72, 0.22, 1) both !important;
+    will-change: transform, box-shadow !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card:nth-of-type(2) {
+    animation-delay: 60ms !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card:nth-of-type(3) {
+    animation-delay: 110ms !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card:nth-of-type(4) {
+    animation-delay: 160ms !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card:nth-of-type(5) {
+    animation-delay: 210ms !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-image {
+    position: relative !important;
+    display: block !important;
+    flex: 0 0 clamp(175px, 18vw, 228px) !important;
+    width: 100% !important;
+    height: clamp(175px, 18vw, 228px) !important;
+    min-height: clamp(175px, 18vw, 228px) !important;
+    max-height: 228px !important;
+    margin: 0 0 17px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    border: 0 !important;
+    border-radius: 14px 14px 0 0 !important;
+    background: var(--retal-copper-200) !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-image::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    display: block !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+    transform: scale(1) !important;
+    transition: transform 700ms cubic-bezier(0.2, 0.7, 0.2, 1), filter 700ms ease !important;
+    will-change: transform !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form [name="Edwansedara_phase4_img"].retal-project-image::before {
+    background-image: url("../img/ewan-sedra-phase-4-img.webp") !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form [name="Edwansedara_phase5_img"].retal-project-image::before {
+    background-image: url("../img/ewan-sedra-phase-5.webp") !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form [name="Ayalasedara_img"].retal-project-image::before {
+    background-image: url("../img/ayala-sedra-img.webp") !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form [name="RoyaSedaraCompound_img"].retal-project-image::before {
+    background-image: url("../img/roya-sedra-compound-img.webp") !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form [name="RejanHillsCompound_img"].retal-project-image::before {
+    background-image: url("../img/rejan-hills-compound-img.webp") !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form [name="ayalaalmohammadiyah_img"].retal-project-image::before {
+    background-image: url("../img/ayala-al-mohammadiyah-img.webp") !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form [name="Noburesidences_img"].retal-project-image::before {
+    background-image: url("../img/nobu-residences-img.webp") !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form [name="Retalrise_img"].retal-project-image::before {
+    background-image: url("../img/retal-rise-img.webp") !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card h4[name="Edwanasedara_phase_4_lbl"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card h4[name="Edwanasedara_phase_5_lbl"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card h4[name="Ayala_sedara_lbl"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card h4[name="Roya_sedra_compound_lbl"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card h4[name="Rejanhillscompound_lbl"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card h4[name="ayalaalmohammadiyah_lbl"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card h4[name="Noburesidences_lbl"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card h4[name="Label24"] {
+    display: block !important;
+    width: auto !important;
+    min-width: 0 !important;
+    margin: 0 22px 8px !important;
+    padding: 0 !important;
+    color: var(--retal-copper-800) !important;
+    font-family: var(--retal-font-display) !important;
+    font-size: clamp(19px, 1.45vw, 24px) !important;
+    font-weight: 500 !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.25px !important;
+    text-align: start !important;
+    overflow-wrap: anywhere !important;
+    transition: color 300ms ease !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Riyadhresedential_lbl"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Riyadhresedential_lbl2"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Riyadhresedential_lbl3"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Riyadhresedential_lbl4"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Riyadhresedential_lbl5"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Jeddahresedential_lbl"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Alkhobarresidence_lbl"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Label25"] {
+    display: block !important;
+    width: auto !important;
+    margin: 0 22px 10px !important;
+    padding: 0 !important;
+    color: var(--retal-muted) !important;
+    font-family: var(--retal-font-body) !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    line-height: 1.5 !important;
+    letter-spacing: 1.8px !important;
+    text-transform: uppercase !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Edwanasedaraphase4_link"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Edwanasedaraphase5_link"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Ayalasedara_link"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Royasedaracompound_link"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="rejanhillscompound_link"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="ayalaalmohammadiyah_lbl_link"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Noburesidence_link"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Retalrise_link"] {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    width: fit-content !important;
+    max-width: calc(100% - 44px) !important;
+    margin: auto 22px 0 !important;
+    padding: 8px 0 0 !important;
+    color: var(--retal-copper-600) !important;
+    font-family: var(--retal-font-body) !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    line-height: 1.5 !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    transition: color 250ms ease, transform 300ms cubic-bezier(0.2, 0.7, 0.2, 1) !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Edwanasedaraphase4_link"]::after,
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Edwanasedaraphase5_link"]::after,
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Ayalasedara_link"]::after,
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Royasedaracompound_link"]::after,
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="rejanhillscompound_link"]::after,
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="ayalaalmohammadiyah_lbl_link"]::after,
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Noburesidence_link"]::after,
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Retalrise_link"]::after {
+    content: "↗" !important;
+    display: inline-block !important;
+    font-family: var(--retal-font-body) !important;
+    font-size: 17px !important;
+    line-height: 1 !important;
+    transition: transform 300ms cubic-bezier(0.2, 0.7, 0.2, 1) !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card:hover,
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card:focus-within {
+    z-index: 5 !important;
+    transform: translate3d(0, -7px, 0) scale(1.025) !important;
+    border-color: rgba(157, 97, 65, 0.55) !important;
+    box-shadow: 0 22px 44px rgba(57, 37, 24, 0.19) !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card:hover .retal-project-image::before,
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card:focus-within .retal-project-image::before {
+    transform: scale(1.075) !important;
+    filter: saturate(1.06) contrast(1.02) !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card:hover h4,
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card:focus-within h4 {
+    color: var(--retal-copper-700) !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card:hover [name$="_link"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card:focus-within [name$="_link"] {
+    color: var(--retal-copper-700) !important;
+    transform: translateX(3px) !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card:hover [name$="_link"]::after,
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card:focus-within [name$="_link"]::after {
+    transform: translate(3px, -1px) !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card:active {
+    transform: translate3d(0, -2px, 0) scale(0.995) !important;
+    transition-duration: 120ms !important;
+}
+
+@keyframes retalBrochureCardEnter {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 14px, 0) scale(0.99);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+}
+
+@media (max-width: 1100px) {
+    .theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item1"] .root-table[name="Table"] {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 20px 16px !important;
+    }
+
+    .theme-entry .runtime-form.pi-has-brochure-form .retal-project-image {
+        flex-basis: 205px !important;
+        height: 205px !important;
+        min-height: 205px !important;
+    }
+}
+
+@media (max-width: 650px) {
+    .theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .root-table[name="Table"],
+    .theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .retal-brochure-header {
+        border-radius: var(--retal-radius) !important;
+    }
+
+    .theme-entry .runtime-form.pi-has-brochure-form .retal-brochure-header {
+        height: 76px !important;
+        min-height: 76px !important;
+        background-position: center !important;
+    }
+
+    .theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item1"] {
+        padding: 18px 14px !important;
+        border-radius: var(--retal-radius) !important;
+    }
+
+    .theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item1"] .root-table[name="Table"] {
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 18px !important;
+    }
+
+    .theme-entry .runtime-form.pi-has-brochure-form .retal-project-section-heading {
+        margin-top: 7px !important;
+    }
+
+    .theme-entry .runtime-form.pi-has-brochure-form .retal-project-image {
+        flex-basis: 220px !important;
+        height: 220px !important;
+        min-height: 220px !important;
+    }
+
+    .theme-entry .runtime-form.pi-has-brochure-form .retal-project-card:hover,
+    .theme-entry .runtime-form.pi-has-brochure-form .retal-project-card:focus-within {
+        transform: translate3d(0, -3px, 0) scale(1.008) !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .theme-entry .runtime-form.pi-has-brochure-form .retal-project-card,
+    .theme-entry .runtime-form.pi-has-brochure-form .retal-project-image::before,
+    .theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name$="_link"],
+    .theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name$="_link"]::after {
+        animation: none !important;
+        transition: none !important;
+        transform: none !important;
+    }
+}
+
+@media (max-width: 760px) {
+    .theme-entry .runtime-form.pi-has-brochure-form .form > .row:first-child,
+    .theme-entry .runtime-form.pi-has-brochure-form .form > .row:first-child > .view,
+    .theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .root-table[name="Table"] {
+        height: 88px !important;
+        min-height: 88px !important;
+        border-radius: 0 !important;
+    }
+
+    .theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .root-table[name="Table"] {
+        gap: 14px !important;
+        padding: 0 16px !important;
+    }
+
+    .theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] img[name="RETAL_primary_logo"] {
+        height: 36px !important;
+        max-height: 36px !important;
+        max-width: 35vw !important;
+    }
+
+    .theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] h1[name="header_name_dlb"] {
+        font-size: clamp(24px, 5vw, 32px) !important;
+    }
+
+    .theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .root-table[name="Table"] > span[name="Cell header3"] {
+        max-width: 42vw !important;
+        padding-inline-start: 8px !important;
+    }
+
+    .theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] span[name="profile_name_dlb"]:not(.empty) {
+        font-size: 13px !important;
+    }
+
+    .theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] span[name="profile_desc_label"] {
+        font-size: 11px !important;
+    }
+
+    .theme-entry .runtime-form.pi-has-brochure-form .form > .row:nth-child(2) {
+        margin-top: 88px !important;
+        padding: 10px 10px 0 !important;
+    }
+}
+
+/* Adding this code to place the hyperlink in the center */
+.theme-entry .runtime-form.pi-has-brochure-form .hyperlinkTopPanel {
+    margin-inline-start: 85px !important;
+}

@@ -1,0 +1,565 @@
+/* Refactored for Retal K2 Theme v2 from Card.css - colours, fonts and radii now come from 00-retal-tokens.css; left/right are logical so Arabic mirrors. */
+/* PERF: ".pi-has-*" classes replace ":has(marker)" selectors - set by Global.js.
+   ":is(*, span)" / ":is(*, a)" always match; they only keep the original specificity. */
+.theme-entry .form .row { margin: 0 !important; }
+.theme-entry .form .row > .view > * { margin: 0 !important; }
+.theme-entry .form .view { margin: 0 !important; padding: 0 !important; }
+.runtime-content { margin-top: -18px !important; }
+body, .theme-entry, .runtime-content, .runtime-view, .panel, .panel-body, .panel-body-wrapper, .scroll-contents {
+    background-color: var(--retal-copper-50) !important;
+    background-image: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    font-family: var(--retal-font-body) !important;
+}
+.theme-entry span[name="Cell Notification"] {
+    background-color: var(--retal-copper-600) !important;
+    border-radius: var(--retal-radius) !important;
+    padding: 24px 32px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    margin-bottom: 24px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+.banner-left-group {
+    display: flex !important;
+    align-items: center !important;
+    gap: 20px !important;
+}
+.theme-entry .banner-icon-wrapper {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    border-radius: var(--retal-radius) !important;
+    width: 48px !important;
+    height: 48px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+}
+.theme-entry .banner-text-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+}
+.theme-entry .banner-title {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    color: var(--retal-white) !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+}
+.theme-entry .banner-title * {
+    color: var(--retal-white) !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+}
+.theme-entry span[name="NotificationDesc_label"] {
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-size: 14px !important;
+}
+.theme-entry .custom-btn {
+    background-color: var(--retal-white) !important;
+    color: var(--retal-ink) !important;
+    border: none !important;
+    border-radius: var(--retal-radius) !important;
+    padding: 10px 20px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    display: flex !important;
+    align-items: center !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
+    transition: all 0.2s ease !important;
+    white-space: nowrap !important;
+}
+.theme-entry .custom-btn:hover {
+    background-color: var(--retal-surface) !important;
+}
+.theme-entry div[name="Table cards"] {
+    display: flex !important;
+    gap: 20px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+.theme-entry div[name="Table cards"] > span,
+.theme-entry div[name="Table cards"] .editor-cell {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 !important;
+    min-width: 0 !important;
+}
+.theme-entry .custom-card {
+    background-color: var(--retal-white) !important;
+    border-radius: var(--retal-radius) !important;
+    padding: 24px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03) !important;
+    box-sizing: border-box !important;
+    cursor: pointer !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+.theme-entry .custom-card:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06) !important;
+}
+.theme-entry .card-icon-wrapper {
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: var(--retal-radius) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-bottom: 20px !important;
+    flex-shrink: 0 !important;
+}
+.theme-entry .bg-icon-0 { background-color: var(--retal-copper-50) !important; }
+.theme-entry .bg-icon-1 { background-color: var(--retal-copper-50) !important; }
+.theme-entry .bg-icon-2 { background-color: var(--retal-copper-50) !important; }
+.theme-entry .bg-icon-3 { background-color: var(--retal-success-soft) !important; }
+ 
+.theme-entry .custom-card a.SFC.SourceCode-Forms-Controls-Web-Button,
+.theme-entry .custom-card .card-number-btn {
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 0 8px 0 !important;
+    text-align: start !important;
+    text-decoration: none !important;
+    font-family: var(--retal-font-body) !important;
+    font-size: 32px !important;
+    font-weight: 700 !important;
+    color: var(--retal-black) !important;
+    display: block !important;
+    line-height: 1.2 !important;
+    cursor: pointer !important;
+    height: auto !important;
+    min-height: 0 !important;
+    width: auto !important;
+}
+.theme-entry .custom-card .card-label {
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    color: var(--retal-muted) !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.4 !important;
+}
+
+/* Ops portal cards css code */
+
+.theme-entry .form .row { margin: 0 !important; }
+.theme-entry .form .row > .view > * { margin: 0 !important; }
+.theme-entry .form .view { margin: 0 !important; padding: 0 !important; }
+.runtime-content { margin-top: -18px !important; }
+body, .theme-entry, .runtime-content, .runtime-view, .panel, .panel-body, .panel-body-wrapper, .scroll-contents {
+    background-color: var(--retal-copper-50) !important;
+    background-image: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    font-family: var(--retal-font-body) !important;
+}
+.theme-entry span[name="Cell Notification"] {
+    background-color: var(--retal-copper-600) !important;
+    border-radius: var(--retal-radius) !important;
+    padding: 24px 32px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    margin-bottom: 24px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+.banner-left-group {
+    display: flex !important;
+    align-items: center !important;
+    gap: 20px !important;
+}
+.theme-entry .banner-icon-wrapper {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    border-radius: var(--retal-radius) !important;
+    width: 48px !important;
+    height: 48px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+}
+.theme-entry .banner-text-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+}
+.theme-entry .banner-title {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    color: var(--retal-white) !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+}
+.theme-entry .banner-title * {
+    color: var(--retal-white) !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+}
+.theme-entry span[name="NotificationDesc_label"] {
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-size: 14px !important;
+}
+.theme-entry .custom-btn {
+    background-color: var(--retal-white) !important;
+    color: var(--retal-ink) !important;
+    border: none !important;
+    border-radius: var(--retal-radius) !important;
+    padding: 10px 20px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    display: flex !important;
+    align-items: center !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
+    transition: all 0.2s ease !important;
+    white-space: nowrap !important;
+}
+.theme-entry .custom-btn:hover {
+    background-color: var(--retal-surface) !important;
+}
+.theme-entry div[name="Table cards"] {
+    display: flex !important;
+    gap: 20px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+.theme-entry div[name="Table cards"] > span,
+.theme-entry div[name="Table cards"] .editor-cell {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 !important;
+    min-width: 0 !important;
+}
+.theme-entry .custom-card {
+    background-color: var(--retal-white) !important;
+    border-radius: var(--retal-radius) !important;
+    padding: 24px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03) !important;
+    box-sizing: border-box !important;
+    cursor: pointer !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+.theme-entry .custom-card:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06) !important;
+}
+.theme-entry .card-icon-wrapper {
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: var(--retal-radius) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-bottom: 20px !important;
+    flex-shrink: 0 !important;
+}
+.theme-entry .bg-icon-0 { background-color: var(--retal-copper-50) !important; }
+.theme-entry .bg-icon-1 { background-color: var(--retal-copper-50) !important; }
+.theme-entry .bg-icon-2 { background-color: var(--retal-copper-50) !important; }
+.theme-entry .bg-icon-3 { background-color: var(--retal-success-soft) !important; }
+ 
+.theme-entry .custom-card a.SFC.SourceCode-Forms-Controls-Web-Button,
+.theme-entry .custom-card .card-number-btn {
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 0 8px 0 !important;
+    text-align: start !important;
+    text-decoration: none !important;
+    font-family: var(--retal-font-body) !important;
+    font-size: 32px !important;
+    font-weight: 700 !important;
+    color: var(--retal-black) !important;
+    display: block !important;
+    line-height: 1.2 !important;
+    cursor: pointer !important;
+    height: auto !important;
+    min-height: 0 !important;
+    width: auto !important;
+}
+.theme-entry .custom-card .card-label {
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    color: var(--retal-muted) !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.4 !important;
+}
+/* =========================================
+   OPS DASHBOARD CARDS
+   Scoped to Ops_cards_style_dlb
+========================================= */
+
+.theme-entry .view.pi-has-ops-cards:is(*, span) {
+    background: var(--retal-copper-50) !important;
+    /* padding: 28px 36px !important; */
+    box-sizing: border-box !important;
+}
+
+.theme-entry .view.pi-has-ops-cards:is(*, span) .panel-toolbars,
+.theme-entry .view.pi-has-ops-cards:is(*, span) .toolbar {
+    display: none !important;
+}
+
+.theme-entry .view.pi-has-ops-cards:is(*, span) .panel-body,
+.theme-entry .view.pi-has-ops-cards:is(*, span) .panel-body-m,
+.theme-entry .view.pi-has-ops-cards:is(*, span) .panel-body-m-c,
+.theme-entry .view.pi-has-ops-cards:is(*, span) .panel-body-wrapper {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Cards table */
+.theme-entry .view.pi-has-ops-cards:is(*, span)
+.detail-table[name="Dashboard_cards_table"] {
+    display: grid !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    gap: 20px !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* Individual card */
+.theme-entry .view.pi-has-ops-cards:is(*, span)
+.detail-table[name="Dashboard_cards_table"] > .editor-cell {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    position: relative !important;
+    min-width: 0 !important;
+    min-height: 208px !important;
+    margin: 0 !important;
+    /* padding: 28px 28px 24px !important; */
+    /* background: #FFFFFF !important; */
+    border: 1px solid var(--retal-copper-100) !important;
+    border-radius: var(--retal-radius) !important;
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.035) !important; */
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    transition: box-shadow 0.25s ease, transform 0.25s ease !important;
+}
+
+/* Hover effect */
+.theme-entry .view.pi-has-ops-cards:is(*, span)
+.detail-table[name="Dashboard_cards_table"] > .editor-cell:hover {
+    box-shadow: 0 8px 22px rgba(91, 62, 44, 0.10) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Icon container */
+.theme-entry .view.pi-has-ops-cards:is(*, span)
+.detail-table[name="Dashboard_cards_table"] > .editor-cell::before {
+    content: "" !important;
+    display: block !important;
+    width: 52px !important;
+    height: 52px !important;
+    min-width: 52px !important;
+    margin: 0 0 24px 0 !important;
+    border-radius: var(--retal-radius) !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 26px 26px !important;
+    box-sizing: border-box !important;
+}
+
+/* Card 1 - Registered customers */
+.theme-entry .view.pi-has-ops-cards:is(*, span)
+.detail-table[name="Dashboard_cards_table"] > .editor-cell:nth-child(1)::before {
+    background-color: var(--retal-copper-50) !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238D624B' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2'/%3E%3Ccircle cx='10' cy='7' r='4'/%3E%3Cpath d='M21 21v-2a4 4 0 0 0-3-3.87'/%3E%3Cpath d='M16 3.13a4 4 0 0 1 0 7.75'/%3E%3C/svg%3E") !important;
+}
+
+/* Card 2 - Accounts created */
+.theme-entry .view.pi-has-ops-cards:is(*, span)
+.detail-table[name="Dashboard_cards_table"] > .editor-cell:nth-child(2)::before {
+    background-color: var(--retal-copper-50) !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C47B35' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpolyline points='12 6 12 12 16 14'/%3E%3C/svg%3E") !important;
+}
+
+/* Card 3 - Expiring soon */
+.theme-entry .view.pi-has-ops-cards:is(*, span)
+.detail-table[name="Dashboard_cards_table"] > .editor-cell:nth-child(3)::before {
+    background-color: var(--retal-copper-50) !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D97706' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10.3 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.7 3.86a2 2 0 0 0-3.4 0Z'/%3E%3Cline x1='12' y1='9' x2='12' y2='13'/%3E%3Cline x1='12' y1='17' x2='12.01' y2='17'/%3E%3C/svg%3E") !important;
+}
+
+/* Card 4 - Sales complete */
+.theme-entry .view.pi-has-ops-cards:is(*, span)
+.detail-table[name="Dashboard_cards_table"] > .editor-cell:nth-child(4)::before {
+    background-color: var(--retal-success-soft) !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2350935A' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") !important;
+}
+
+/* Card 5 - Expired or cancelled */
+.theme-entry .view.pi-has-ops-cards:is(*, span)
+.detail-table[name="Dashboard_cards_table"] > .editor-cell:nth-child(5)::before {
+    background-color: var(--retal-danger-soft) !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23B86557' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='18' y1='6' x2='6' y2='18'/%3E%3Cline x1='6' y1='6' x2='18' y2='18'/%3E%3C/svg%3E") !important;
+}
+
+/* Count button */
+.theme-entry .view.pi-has-ops-cards:is(*, span)
+.detail-table[name="Dashboard_cards_table"] > .editor-cell > a[name^="Button "] {
+    display: block !important;
+    width: auto !important;
+    min-height: 0 !important;
+    margin: 0 0 14px 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+    color: var(--retal-black) !important;
+    font-family: var(--retal-font-body) !important;
+    font-size: 36px !important;
+    font-weight: 700 !important;
+    line-height: 1.1 !important;
+    text-align: start !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    box-sizing: border-box !important;
+}
+
+/* Card label */
+.theme-entry .view.pi-has-ops-cards:is(*, span)
+.detail-table[name="Dashboard_cards_table"] > .editor-cell > span.SFC.SourceCode-Forms-Controls-Web-Label {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: var(--retal-muted) !important;
+    font-family: var(--retal-font-body) !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 1.5 !important;
+    text-align: start !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+    box-sizing: border-box !important;
+}
+
+/* Keep hidden count data labels hidden */
+.theme-entry .view.pi-has-ops-cards:is(*, span)
+.detail-table[name="Dashboard_cards_table"] > .editor-cell > .SFC.SourceCode-Forms-Controls-Web-DataLabel.hidden {
+    display: none !important;
+}
+
+/* Tablet */
+@media (max-width: 1100px) {
+    .theme-entry .view.pi-has-ops-cards:is(*, span) {
+        padding: 24px !important;
+    }
+
+    .theme-entry .view.pi-has-ops-cards:is(*, span)
+    .detail-table[name="Dashboard_cards_table"] {
+        gap: 16px !important;
+    }
+
+    .theme-entry .view.pi-has-ops-cards:is(*, span)
+    .detail-table[name="Dashboard_cards_table"] > .editor-cell {
+        padding: 24px 20px !important;
+    }
+}
+
+/* Smaller screens */
+@media (max-width: 850px) {
+    .theme-entry .view.pi-has-ops-cards:is(*, span)
+    .detail-table[name="Dashboard_cards_table"] {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 16px !important;
+    }
+
+    .theme-entry .view.pi-has-ops-cards:is(*, span)
+    .detail-table[name="Dashboard_cards_table"] > .editor-cell {
+        min-height: 190px !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+    .theme-entry .view.pi-has-ops-cards:is(*, span) {
+        padding: 16px !important;
+    }
+
+    .theme-entry .view.pi-has-ops-cards:is(*, span)
+    .detail-table[name="Dashboard_cards_table"] {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+    }
+
+    .theme-entry .view.pi-has-ops-cards:is(*, span)
+    .detail-table[name="Dashboard_cards_table"] > .editor-cell {
+        min-height: 180px !important;
+        padding: 24px !important;
+    }
+}
+
+
+.custom-card .card-number-btn {
+    cursor: pointer !important;
+}
+
+/* 1. Ensure the card container clips the stretched overlay */
+.theme-entry .view.pi-has-ops-cards:is(*, span)
+.detail-table[name="Dashboard_cards_table"] > .editor-cell {
+    position: relative !important;
+    cursor: pointer !important;
+}
+
+/* 2. Stretch the button's click boundary over the entire card */
+.theme-entry .view.pi-has-ops-cards:is(*, span)
+.detail-table[name="Dashboard_cards_table"] > .editor-cell > a[name^="Button "]::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    inset-inline-start: 0 !important;
+    inset-inline-end: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 10 !important;
+    cursor: pointer !important;
+}
+
+/* 3. Keep text and inner labels interactive or visible beneath the click layer */
+.theme-entry .view.pi-has-ops-cards:is(*, span)
+.detail-table[name="Dashboard_cards_table"] > .editor-cell > span.SFC.SourceCode-Forms-Controls-Web-Label {
+    pointer-events: none !important;
+}
+
+/* This code bypaas the generic code for making the first child of editor cell behave differently */
+.theme-entry .view.pi-has-ops-cards
+.detail-table[name="Dashboard_cards_table"] > .editor-cell:first-child {
+    background-color: var(--retal-white) !important;
+    grid-column: auto !important;
+}
+

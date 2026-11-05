@@ -1,0 +1,190 @@
+/* =========================================================================
+   RETAL K2 THEME v2 - 01 BASE
+   Brand look for standard K2 SmartForms controls on every form.
+   Loads after 00-retal-tokens.css and before the module files.
+   ========================================================================= */
+
+/* ---------- Page and type ---------- */
+.theme-entry,
+.theme-entry .runtime-form,
+.theme-entry .SourceCode-Forms-Controls-Web-Control,
+.theme-entry input, .theme-entry select, .theme-entry textarea, .theme-entry p {
+  font-family: var(--retal-font-body) !important;
+  color: var(--retal-text);
+  line-height: var(--retal-lh-body);
+  -webkit-font-smoothing: antialiased;
+}
+.theme-entry { background: var(--retal-page-bg) !important; }
+
+.theme-entry h1, .theme-entry h2, .theme-entry h3, .theme-entry h4,
+.theme-entry .form-title, .theme-entry .view-title,
+.theme-entry .panel-header-text, .theme-entry .window-header {
+  font-family: var(--retal-font-display) !important;
+  font-weight: 500 !important;
+  color: var(--retal-text) !important;
+  line-height: var(--retal-lh-tight);
+  letter-spacing: 0;
+}
+.theme-entry h1 { font-size: var(--retal-fs-3xl) !important; }
+.theme-entry h2 { font-size: var(--retal-fs-2xl) !important; }
+.theme-entry h3 { font-size: var(--retal-fs-xl) !important; }
+
+/* ---------- Labels ---------- */
+.theme-entry .SourceCode-Forms-Controls-Web-Label {
+  color: var(--retal-text);
+  font-size: var(--retal-fs-sm);
+}
+
+/* ---------- Buttons ----------
+   K2 marks buttons with .button-primary / .button-quiet (Button control > Style).
+   Brand: square copper block with white text; quiet = white with copper outline. */
+.theme-entry a.SourceCode-Forms-Controls-Web-Button {
+  border-radius: var(--retal-radius) !important;
+  font-family: var(--retal-font-body) !important;
+  box-shadow: none !important;
+  transition: background-color var(--retal-ease), border-color var(--retal-ease), color var(--retal-ease) !important;
+}
+.theme-entry a.SourceCode-Forms-Controls-Web-Button.button-primary,
+.theme-entry a.SourceCode-Forms-Controls-Web-Button.retal-btn-primary {
+  min-height: var(--retal-control-h) !important;
+  padding: 12px 28px !important;
+  background: var(--retal-primary) !important;
+  border: 1px solid var(--retal-primary) !important;
+  color: var(--retal-on-primary) !important;
+  font-size: var(--retal-fs-md) !important;
+  font-weight: 500 !important;
+}
+.theme-entry a.SourceCode-Forms-Controls-Web-Button.button-primary *,
+.theme-entry a.SourceCode-Forms-Controls-Web-Button.retal-btn-primary * { color: var(--retal-on-primary) !important; }
+.theme-entry a.SourceCode-Forms-Controls-Web-Button.button-primary:hover,
+.theme-entry a.SourceCode-Forms-Controls-Web-Button.retal-btn-primary:hover { background: var(--retal-primary-hover) !important; border-color: var(--retal-primary-hover) !important; }
+
+.theme-entry a.SourceCode-Forms-Controls-Web-Button.button-quiet,
+.theme-entry a.SourceCode-Forms-Controls-Web-Button.retal-btn-secondary {
+  min-height: var(--retal-control-h) !important;
+  padding: 12px 28px !important;
+  background: var(--retal-white) !important;
+  border: 1px solid var(--retal-primary) !important;
+  color: var(--retal-primary) !important;
+  font-size: var(--retal-fs-md) !important;
+  font-weight: 500 !important;
+}
+.theme-entry a.SourceCode-Forms-Controls-Web-Button.button-quiet *,
+.theme-entry a.SourceCode-Forms-Controls-Web-Button.retal-btn-secondary * { color: var(--retal-primary) !important; }
+.theme-entry a.SourceCode-Forms-Controls-Web-Button.button-quiet:hover,
+.theme-entry a.SourceCode-Forms-Controls-Web-Button.retal-btn-secondary:hover { background: var(--retal-primary-soft) !important; }
+
+/* Text-link buttons (e.g. "Cancel", "Back to home"): give the button the style class retal-btn-link */
+.theme-entry a.SourceCode-Forms-Controls-Web-Button.retal-btn-link {
+  background: none !important; border: 0 !important; padding: 0 !important; min-height: 0 !important; color: var(--retal-primary) !important;
+}
+.theme-entry a.SourceCode-Forms-Controls-Web-Button.disabled,
+.theme-entry a.SourceCode-Forms-Controls-Web-Button[disabled] {
+  background: var(--retal-surface) !important; color: var(--retal-muted) !important; border-color: var(--retal-line) !important; cursor: not-allowed !important;
+}
+
+/* ---------- Inputs ---------- */
+.theme-entry input.SFC.SourceCode-Forms-Controls-Web-TextBox,
+.theme-entry textarea.SFC,
+.theme-entry .input-control.select-box .styling-outer-wrapper,
+.theme-entry .input-control.calendar-control .styling-outer-wrapper {
+  min-height: var(--retal-control-h) !important;
+  border: 1px solid var(--retal-border) !important;
+  border-radius: var(--retal-radius) !important;
+  background: var(--retal-white) !important;
+  color: var(--retal-text) !important;
+  font-size: var(--retal-fs-md) !important;
+  padding-inline: var(--retal-space-3) !important;
+  box-shadow: none !important;
+  transition: border-color var(--retal-ease), box-shadow var(--retal-ease) !important;
+}
+.theme-entry textarea.SFC { padding-block: var(--retal-space-2) !important; }
+.theme-entry input.SFC:hover, .theme-entry textarea.SFC:hover { border-color: var(--retal-line-strong) !important; }
+
+/* Placeholder / watermark stays grey, also when the field is invalid */
+.theme-entry input::placeholder, .theme-entry textarea::placeholder,
+.theme-entry .watermark, .theme-entry .input-control-watermark,
+.theme-entry .input-control.invalid .input-control-watermark,
+.theme-entry .SFC.SourceCode-Forms-Controls-Web-TextBox.invalid.watermark {
+  color: var(--retal-muted) !important;
+  opacity: 1;
+}
+
+/* ---------- Keyboard focus (visible, brand coloured) ---------- */
+.theme-entry a:focus-visible,
+.theme-entry input:focus-visible, .theme-entry textarea:focus-visible, .theme-entry select:focus-visible,
+.theme-entry [tabindex]:focus-visible {
+  outline: 2px solid var(--retal-focus) !important;
+  outline-offset: 2px !important;
+}
+.theme-entry input.SFC:focus, .theme-entry textarea.SFC:focus {
+  border-color: var(--retal-primary) !important;
+  box-shadow: 0 0 0 3px var(--retal-primary-soft) !important;
+}
+
+/* ---------- Validation (CSS only - replaces the MutationObserver script) ---------- */
+.theme-entry .input-control.invalid input,
+.theme-entry .input-control.invalid textarea,
+.theme-entry .input-control.invalid select,
+.theme-entry input.SFC.invalid, .theme-entry textarea.SFC.invalid,
+.theme-entry .input-control.invalid .styling-outer-wrapper {
+  border-color: var(--retal-danger) !important;
+  box-shadow: 0 0 0 2px var(--retal-danger-soft) !important;
+}
+.theme-entry .validation-error,
+.theme-entry .error-message,
+.theme-entry .SourceCode-Forms-Controls-Web-Label.retal-field-error {
+  display: block;
+  margin-block-start: var(--retal-space-1);
+  color: var(--retal-danger) !important;
+  font-size: var(--retal-fs-xs) !important;
+}
+
+/* ---------- Cards / panels ---------- */
+.theme-entry .retal-card,
+.theme-entry .form .view .innerpanel > .panel {
+  background: var(--retal-card-bg) !important;
+  border: 1px solid var(--retal-line-soft) !important;
+  border-radius: var(--retal-radius) !important;
+  box-shadow: none !important;
+}
+
+/* ---------- Status pills (classes set by retal-runtime.js) ---------- */
+.theme-entry .status-ok, .theme-entry .status-warn, .theme-entry .status-danger, .theme-entry .status-suspended {
+  display: inline-block; padding: 2px 12px; border-radius: var(--retal-radius-pill); font-size: var(--retal-fs-xs); font-weight: 500;
+}
+.theme-entry .status-ok { background: var(--retal-success-soft) !important; color: var(--retal-success) !important; }
+.theme-entry .status-warn { background: var(--retal-warning-soft) !important; color: var(--retal-warning) !important; }
+.theme-entry .status-danger { background: var(--retal-danger-soft) !important; color: var(--retal-danger) !important; }
+.theme-entry .status-suspended { background: var(--retal-suspended-soft) !important; color: var(--retal-suspended) !important; }
+
+/* ---------- Links ---------- */
+.theme-entry a:not(.SourceCode-Forms-Controls-Web-Button) { color: var(--retal-primary); }
+.theme-entry a:not(.SourceCode-Forms-Controls-Web-Button):hover { color: var(--retal-primary-hover); }
+
+/* ---------- Sticky footer: no gap under the footer on short pages ---------- */
+/* retal-runtime.js adds .retal-sticky-footer to <body> only when a footer view is on the page */
+body.theme-entry.retal-sticky-footer { min-height: 100vh; background: var(--retal-page-bg) !important; }
+body.retal-sticky-footer .runtime-form { min-height: 100vh; display: flex; flex-direction: column; }
+body.retal-sticky-footer .runtime-form > .form { flex: 1 0 auto; }
+
+/* ---------- Responsive: one column on phones ---------- */
+@media (max-width: 767px) {
+  .theme-entry .editor-table, .theme-entry .editor-table > .editor-body,
+  .theme-entry .editor-row, .theme-entry .Grid-Layout .grid-row {
+    display: block !important; width: 100% !important;
+  }
+  .theme-entry .editor-cell, .theme-entry .Grid-Layout .grid-cell {
+    display: block !important; width: 100% !important; max-width: 100% !important;
+    padding-inline: 0 !important;
+  }
+  .theme-entry .form, .theme-entry .view { padding-inline: var(--retal-space-4) !important; }
+  .theme-entry a.SourceCode-Forms-Controls-Web-Button { width: 100% !important; justify-content: center; }
+  .theme-entry h1 { font-size: var(--retal-fs-2xl) !important; }
+  .theme-entry h2 { font-size: var(--retal-fs-xl) !important; }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .theme-entry * { transition: none !important; animation: none !important; }
+}

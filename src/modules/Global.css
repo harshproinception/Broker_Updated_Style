@@ -1,0 +1,463 @@
+/* Refactored for Retal K2 Theme v2 from Global.css - colours, fonts and radii now come from 00-retal-tokens.css; left/right are logical so Arabic mirrors. */
+/* PERF: ".pi-has-*" classes replace ":has(marker)" selectors - set by Global.js.
+   ":is(*, span)" / ":is(*, a)" always match; they only keep the original specificity. */
+/*  */
+
+body,
+.theme-entry,
+.runtime-form {
+    font-family: var(--retal-font-body) !important;
+    background-color: var(--retal-copper-50) !important;
+    color: var(--retal-info) !important;
+    -webkit-font-smoothing: antialiased;
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 100vh !important;
+    overflow-x: hidden !important;
+}
+
+.runtime-content {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.theme-entry .form {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.theme-entry .panel,
+.theme-entry .panel-body,
+.theme-entry .panel-body-wrapper,
+.theme-entry .innerpanel {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+
+.theme-entry .form .row.pi-has-header-layout {
+    position: fixed !important;
+    top: 0 !important;
+    inset-inline-start: 0 !important;
+    width: 100% !important;
+    height: 90px !important;
+    z-index: 2000 !important;
+    background: var(--retal-white) !important;
+    border-bottom: 1px solid var(--retal-line-soft) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry .form .row.pi-has-header-layout > .view {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.theme-entry div.retal-custom-header-layout {
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+    background-color: var(--retal-white) !important;
+    padding: 0 0px !important;
+    box-sizing: border-box !important;
+    border-bottom: none !important;
+    margin: 0 !important;
+    min-height: 90px !important;
+    height: 90px !important;
+
+   /* Removing the gap between aliasis and broker name  */
+    /* gap: 16px !important; */
+}
+
+.theme-entry div.retal-custom-header-layout > span[name="Cell logo"] {
+    display: flex !important;
+    align-items: center !important;
+    margin-inline-end: 0px !important;
+}
+
+.theme-entry div.retal-custom-header-layout > span[name="Cell logo"] img {
+    height: 38px !important;
+    width: auto !important;
+}
+
+.theme-entry div.retal-custom-header-layout > span[name="Cell middle section"] {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-grow: 1 !important;
+    justify-content: center !important;
+}
+
+.theme-entry div.retal-custom-header-layout > span[name="Cell header2"] {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.theme-entry div.retal-custom-header-layout > span[name="Cell header3"] {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+}
+
+.theme-entry span[name="header_name_dlb"] {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    color: var(--retal-black) !important;
+    line-height: 1.1 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.theme-entry span[name="header_desc_dlb"] {
+    font-size: 13px !important;
+    color: var(--retal-line-strong) !important;
+    margin-top: 2px !important;
+    margin-bottom: 0 !important;
+}
+
+.theme-entry span[name="profile_tag_dlb"] {
+    background-color: var(--retal-copper-600) !important;
+    color: var(--retal-white) !important;
+    border-radius: 50% !important;
+    width: 40px !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+}
+
+.theme-entry span[name*="company" i],
+.theme-entry span[name="profile_name_dlb"] {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    color: var(--retal-black) !important;
+    margin: 0 !important;
+}
+
+.theme-entry span[name="profile_desc_label"] {
+    font-size: 12px !important;
+    color: var(--retal-line-strong) !important;
+    margin: 0 !important;
+}
+
+.theme-entry div.retal-custom-header-layout > span.empty,
+.theme-entry div.retal-custom-header-layout > span:not([id]) {
+    display: none !important;
+}
+
+
+.theme-entry .form .row.pi-has-home-btn:is(*, a) {
+    position: fixed !important;
+    top: 90px !important;
+    inset-inline-start: 0 !important;
+    width: 250px !important;
+    height: calc(100vh - 90px) !important;
+    background-color: var(--retal-ink) !important;
+    z-index: 1000 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    box-sizing: border-box !important;
+    padding: 16px 14px 0 14px !important;
+    margin: 0 !important;
+}
+
+.theme-entry .form .row.pi-has-home-btn:is(*, a) > .view {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+}
+
+
+.theme-entry .form .row:not(.pi-has-header-layout):not(.pi-has-home-btn:is(*, a)) {
+    margin-inline-start: 250px !important;
+    width: calc(100% - 250px) !important;
+    box-sizing: border-box !important;
+    padding: 24px !important;
+    margin-top: 90px !important;
+}
+/* Adding one more condition CustomerLeadStyleDlb */
+
+.theme-entry .form.pi-has-cld-style .row:not(.pi-has-header-layout):not(.pi-has-home-btn:is(*, a)) {
+    margin-inline-start: 0 !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin-top: 0 !important;
+}
+
+.theme-entry .form .row:not(.pi-has-header-layout):not(.pi-has-home-btn:is(*, a)) ~ .row:not(.pi-has-header-layout):not(.pi-has-home-btn:is(*, a)) {
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+/*
+.theme-entry .form .row:not(.pi-has-header-layout):not(.pi-has-home-btn:is(*, a)) ~ .row:not(.pi-has-header-layout):not(.pi-has-home-btn:is(*, a)).pi-has-add-cust {
+    padding: 0px !important;
+} */
+
+.theme-entry .form .row.pi-has-home-btn:is(*, a) .root-table {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    gap: 8px !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+}
+
+.theme-entry .form .row.pi-has-home-btn:is(*, a) .editor-cell {
+    display: block !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry [name="Cell Cell30"],
+.theme-entry img[name="Retal_logo"] {
+    display: none !important;
+}
+
+
+.theme-entry .form .row.pi-has-home-btn:is(*, a) a.SourceCode-Forms-Controls-Web-Button {
+    font-family: var(--retal-font-body) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 14px !important; /* Replaces margin-right for clean RTL flipping */
+    width: 100% !important;
+    height: 48px !important;
+    padding: 0 16px !important;
+    margin: 0 !important;
+    border-radius: var(--retal-radius) !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: var(--retal-line-strong) !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    box-sizing: border-box !important;
+    text-decoration: none !important;
+    transition: all 0.2s ease !important;
+    cursor: pointer !important;
+    text-align: start !important;
+}
+
+.form .row.pi-has-home-btn:is(*, a) a.SourceCode-Forms-Controls-Web-Button:hover {
+    background-color: var(--retal-ink-2) !important;
+    color: var(--retal-white) !important;
+}
+
+.form .row.pi-has-home-btn:is(*, a) a.SourceCode-Forms-Controls-Web-Button.active-nav {
+    background-color: var(--retal-copper-600) !important;
+    color: var(--retal-white) !important;
+    font-weight: 600 !important;
+}
+
+.form .row.pi-has-home-btn:is(*, a) a.SourceCode-Forms-Controls-Web-Button::before {
+    content: "" !important;
+    display: inline-block !important;
+    width: 20px !important;
+    height: 20px !important;
+    min-width: 20px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    flex-shrink: 0 !important;
+}
+
+/* Icons */
+a[name="Home btn"]::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23C2C6CC' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6'/%3E%3C/svg%3E") !important;
+}
+
+a[name="Home btn"].active-nav::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23FFFFFF' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6'/%3E%3C/svg%3E") !important;
+}
+
+a[name="Add custm btn"]::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23C2C6CC' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z'/%3E%3C/svg%3E") !important;
+}
+
+a[name="Add custm btn"].active-nav::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23FFFFFF' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z'/%3E%3C/svg%3E") !important;
+}
+
+a[name="My custm btn"]::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23C2C6CC' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z'/%3E%3C/svg%3E") !important;
+}
+
+a[name="My custm btn"].active-nav::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23FFFFFF' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z'/%3E%3C/svg%3E") !important;
+}
+
+a[name="Project btn"]::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23C2C6CC' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M4 6h16M4 10h16M4 14h16M4 18h16'/%3E%3C/svg%3E") !important;
+}
+
+a[name="Project btn"].active-nav::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23FFFFFF' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M4 6h16M4 10h16M4 14h16M4 18h16'/%3E%3C/svg%3E") !important;
+}
+
+
+a[name="Worklist btn"]::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23C2C6CC' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11'/%3E%3C/svg%3E") !important;
+}
+
+a[name="Worklist btn"].active-nav::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23FFFFFF' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11'/%3E%3C/svg%3E") !important;
+}
+
+
+a[name="Configuration btn"]::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23C2C6CC' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z'/%3E%3Ccircle cx='12' cy='12' r='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") !important;
+}
+
+a[name="Configuration btn"].active-nav::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23FFFFFF' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z'/%3E%3Ccircle cx='12' cy='12' r='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") !important;
+}
+
+a[name="My cust lead btn"]::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23C2C6CC' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'/%3E%3Ccircle cx='8.5' cy='7' r='4'/%3E%3Cpolyline points='17 11 19 13 23 9'/%3E%3C/svg%3E") !important;
+}
+
+.theme-entry a[name="My cust lead btn"].active-nav::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23FFFFFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'/%3E%3Ccircle cx='8.5' cy='7' r='4'/%3E%3Cpolyline points='17 11 19 13 23 9'/%3E%3C/svg%3E") !important;
+}
+
+a[name="broker_status_button"]::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23C2C6CC' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='22 12 18 12 15 21 9 3 6 12 2 12'/%3E%3C/svg%3E") !important;
+}
+
+.theme-entry a[name="broker_status_button"].active-nav::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23FFFFFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='22 12 18 12 15 21 9 3 6 12 2 12'/%3E%3C/svg%3E") !important;
+}
+
+a[name="Retal_Cat_Btn"]::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23C2C6CC' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z'/%3E%3Cpath d='M14 2v6h6'/%3E%3Cpath d='M8 13h8M8 17h8'/%3E%3C/svg%3E") !important;
+}
+
+.theme-entry a[name="Retal_Cat_Btn"].active-nav::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23FFFFFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z'/%3E%3Cpath d='M14 2v6h6'/%3E%3Cpath d='M8 13h8M8 17h8'/%3E%3C/svg%3E") !important;
+}
+/*==============================
+Home page Banner
+===============================*/
+
+.theme-entry .banner-title span, span[name="Label_welcome"], span[name="Notification_name dlb"] {
+    color: var(--retal-white) !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+}
+
+
+.theme-entry span[name="NotificationDesc_label"] {
+    color: var(--retal-copper-100) !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+}
+
+/*==============================
+Hiding the list buttons in the home page
+===============================*/
+body.pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) a[name="Button All"],
+body.pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) a[name="Button In Progress"],
+body.pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) a[name="Button Need attention"],
+body.pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) a[name="Button Completed"],
+body.pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) a[name="Button All"],
+body.pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) a[name="Button In Progress"],
+body.pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) a[name="Button Need attention"],
+body.pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) a[name="Button Completed"] {
+    display: none !important;
+}
+
+/*==============================
+Giving the space to the any specific view 
+===============================*/
+.view.pi-has-space-style:is(*, span) {
+    margin-top: 90px !important;
+}
+
+/* Code for bypassing the global margin and padding for the rest of three tabs in customer opportunity form */
+
+.theme-entry .runtime-form.pi-has-cld-style .tab-box-body .form .row {
+    margin-inline-start: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 0 !important;
+    margin-top: 0 !important;
+}
+
+.theme-entry .runtime-form.pi-has-cld-style .tab-box-body,
+.theme-entry .runtime-form.pi-has-cld-style .tab-box-body-m,
+.theme-entry .runtime-form.pi-has-cld-style .tab-box-body-m-c,
+.theme-entry .runtime-form.pi-has-cld-style .tab-box-body-wrapper,
+.theme-entry .runtime-form.pi-has-cld-style .scroll-wrapper {
+    margin-inline-start: 0 !important;
+    margin-inline-end: 0 !important;
+    padding-inline-start: 0 !important;
+    padding-inline-end: 0 !important;
+    width: 100% !important;
+}
+
+
+   /* K2 SUB-VIEW POPUP - STACKING FIX */
+   
+
+/* .popupManager {
+    z-index: 3000 !important;
+}
+
+.popupManager .popup {
+    z-index: 3001 !important;
+} */
+
+
+/* =========================================================
+   K2 SUB-VIEW POPUP - APPLICATION ONLY
+   Uses the Global Header as the identifying marker
+   ========================================================= */
+
+/* body.pi-has-header-style:is(*, span) .popupManager {
+    z-index: 3000 !important;
+} */
+
+
+/* Fixing the pop-up z-inndex so thagt maximization of pop-up goes correct  */
+body.theme-entry:has(> form > .runtime-content .runtime-form) > .popupManager {
+    z-index: 3000 !important;
+}
+
+body.theme-entry:has(> form > .runtime-content .runtime-form) > .popupManager > .popup {
+    z-index: 3001 !important;
+}
+
+
+/* Adding this code for hididng the translation button on header */
+
+.theme-entry a[name="btnEnglish"],
+.theme-entry a[name="btnArabic"] {
+    display: none !important;
+}
+
+
+/* Adding this code to bypaas the global margin and padding which is coming from the side nav */
+.theme-entry .form:has(span[name="SideNav_Space_dlb"]) .row:not(.pi-has-header-layout):not(.pi-has-home-btn:is(*, a)) {
+    margin-inline-start: 0px !important;
+    width: 100% !important;
+}

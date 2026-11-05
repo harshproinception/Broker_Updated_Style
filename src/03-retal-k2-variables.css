@@ -1,0 +1,189 @@
+/* =========================================================================
+   RETAL K2 THEME v2 - 03 K2 THEME VARIABLES
+   K2's base theme (Lithium, dynamic) styles every built-in control - calendars,
+   lists, drop-downs, tabs, worklist, dialogs, progress steps - from ~475 CSS
+   variables generated from the style-profile accent colour. Left alone it
+   produces off-brand browns, grey buttons, blue/green chart series and the
+   Poppins font (an extra 155 KB+ download). Mapping them to the Retal tokens
+   brands the native controls without !important.
+   The doubled class beats K2's own ".theme-entry" rule whatever the load order.
+   ========================================================================= */
+.theme-entry.theme-entry {
+  /* ---- Fonts: stops Poppins from being used or downloaded ---- */
+  --main-font-family: var(--retal-font-body);
+  --heading-font-family: var(--retal-font-display);
+  --button-font-family: var(--retal-font-body);
+
+  /* ---- Core ---- */
+  --k2-main-accent-color: var(--retal-primary);
+  --k2-content-background-color: var(--retal-page-bg);
+  --k2-panel-background-color: var(--retal-white);
+  --k2-error-color: var(--retal-danger);
+  --page-background-color: var(--retal-page-bg);
+  --form-background-color: var(--retal-page-bg);
+  --panel-background-color: var(--retal-white);
+  --view-background-color: var(--retal-white);
+  --panel-border-color: var(--retal-line-soft);
+  --view-header-background-color: var(--retal-copper-50);
+  --view-text-color: var(--retal-text);
+  --view-shadow: none;
+
+  /* ---- Square blocks (brand) ---- */
+  --control-rounding: 0; --panel-rounding: 0; --view-rounding: 0; --input-rounding: 0; --textbox-rounding: 0;
+  --button-rounding: 0; --calendar-item-rounding: 0; --tooltip-rounding: 0; --tree-item-rounding: 0;
+  --chart-rounding: 0; --tab-rounding: 0; --popover-rounding: 0; --menu-rounding: 0; --dialog-rounding: 0;
+
+  /* ---- Text ---- */
+  --normal-text-color: var(--retal-text);
+  --disabled-normal-text-color: var(--retal-muted);
+  --description-text-color: var(--retal-text-secondary);
+  --paragraph-text-color: var(--retal-text);
+  --page-title-text-color: var(--retal-text);
+  --page-subtitle-text-color: var(--retal-text-secondary);
+  --heading1-text-color: var(--retal-text); --heading2-text-color: var(--retal-text);
+  --heading3-text-color: var(--retal-text); --heading4-text-color: var(--retal-text);
+  --error-text-color: var(--retal-danger);
+  --hyperlink-text-color: var(--retal-primary);
+  --hyperlink-focus-border-color: var(--retal-primary);
+
+  /* ---- Inputs ---- */
+  --input-background-color: var(--retal-white);
+  --input-border-color: var(--retal-line);
+  --input-text-color: var(--retal-text);
+  --input-watermark-text-color: var(--retal-muted);
+  --input-focus-border-color: var(--retal-primary);
+  --input-disabled-background-color: var(--retal-surface);
+  --input-disabled-border-color: var(--retal-line);
+  --input-disabled-text-color: var(--retal-muted);
+  --input-readonly-background-color: var(--retal-surface-2);
+  --input-readonly-border-color: var(--retal-line);
+  --input-readonly-text-color: var(--retal-text-secondary);
+  --input-error-background-color: var(--retal-white);
+  --input-error-border-color: var(--retal-danger);
+  --input-error-text-color: var(--retal-danger);
+  --input-error-watermark-text-color: var(--retal-muted);
+  --input-text-highlight-background-color: var(--retal-primary);
+  --input-button-text-color: var(--retal-text-secondary);
+  --input-button-hover-background-color: var(--retal-primary);
+  --required-indicator-background-color: var(--retal-danger);
+  --radio-checked-color: var(--retal-primary);
+  --checkbox-checked-color: var(--retal-primary);
+  --radio-border-color: var(--retal-line-strong);
+  --checkbox-border-color: var(--retal-line-strong);
+  --file-upload-border-color: var(--retal-line-strong);
+  --file-upload-empty-border-color: var(--retal-line-strong);
+  --file-upload-text-color: var(--retal-text);
+  --file-upload-empty-text-color: var(--retal-text-secondary);
+  --file-upload-empty-hover-background-color: var(--retal-primary-soft);
+  --smartfield-text-color: var(--retal-text);
+
+  /* ---- Buttons ---- */
+  --button-background-color: var(--retal-white);
+  --button-border-color: var(--retal-primary);
+  --button-text-color: var(--retal-primary);
+  --button-hover-background-color: var(--retal-primary-soft);
+  --button-hover-border-color: var(--retal-primary);
+  --button-hover-text-color: var(--retal-primary);
+  --button-focus-background-color: var(--retal-white);
+  --button-focus-text-color: var(--retal-primary);
+  --button-disabled-background-color: var(--retal-surface);
+  --button-disabled-border-color: var(--retal-line);
+  --button-disabled-text-color: var(--retal-muted);
+  --primary-button-background-color: var(--retal-primary);
+  --primary-button-border-color: var(--retal-primary);
+  --primary-button-text-color: var(--retal-white);
+  --primary-button-hover-background-color: var(--retal-primary-hover);
+  --primary-button-hover-border-color: var(--retal-primary-hover);
+  --primary-button-hover-text-color: var(--retal-white);
+  --primary-button-focus-background-color: var(--retal-primary-hover);
+  --primary-button-focus-text-color: var(--retal-white);
+  --quiet-button-background-color: var(--retal-white);
+  --quiet-button-border-color: var(--retal-primary);
+  --quiet-button-text-color: var(--retal-primary);
+  --quiet-button-hover-background-color: var(--retal-primary-soft);
+  --quiet-button-hover-border-color: var(--retal-primary);
+  --quiet-button-hover-text-color: var(--retal-primary);
+  --quiet-button-focus-text-color: var(--retal-primary);
+  --destructive-button-background-color: var(--retal-danger);
+  --destructive-button-border-color: var(--retal-danger);
+  --destructive-button-hover-background-color: #8C332B;
+  --destructive-button-hover-border-color: #8C332B;
+
+  /* ---- Menus, dialogs, tooltips ---- */
+  --menu-text-color: var(--retal-text);
+  --menu-item-hover-background-color: var(--retal-primary-soft);
+  --menu-item-selected-background-color: var(--retal-primary);
+  --dialog-header-text-color: var(--retal-text);
+  --dialog-separator-line-color: var(--retal-line-soft);
+  --dialog-shadow: var(--retal-shadow-md);
+  --tooltip-text-color: var(--retal-text);
+  --tooltip-border-color: var(--retal-line);
+
+  /* ---- Lists and grids ---- */
+  --list-border-color: var(--retal-line);
+  --list-column-header-background-color: var(--retal-copper-50);
+  --list-column-header-text-color: var(--retal-text-secondary);
+  --list-column-header-border-color: var(--retal-line-soft);
+  --list-item-text-color: var(--retal-text);
+  --list-item-hover-background-color: var(--retal-primary-soft);
+  --list-item-hover-text-color: var(--retal-text);
+  --list-item-selected-background-color: var(--retal-primary);
+  --list-item-background-color-even-zebra: var(--retal-surface-2);
+  --list-action-button-background-color: var(--retal-copper-50);
+  --list-action-button-text-color: var(--retal-text);
+  --list-error-background-color: var(--retal-danger-soft);
+  --list-error-text-color: var(--retal-danger);
+
+  /* ---- Tabs ---- */
+  --tab-text-color: var(--retal-text-secondary);
+  --tab-selected-text-color: var(--retal-text);
+  --tab-selected-background-color: var(--retal-white);
+  --tab-body-background-color: var(--retal-white);
+  --main-tab-selected-text-color: var(--retal-text);
+
+  /* ---- Toolbars ---- */
+  --toolbar-text-color: var(--retal-text);
+  --toolbar-button-text-color: var(--retal-text);
+  --toolbar-button-hover-background-color: var(--retal-primary-soft);
+  --toolbar-button-hover-border-color: var(--retal-primary-soft);
+  --toolbar-border-color: var(--retal-line-soft);
+  --toolbar-separator-line-color: var(--retal-line-soft);
+
+  /* ---- Calendar ---- */
+  --calendar-text-color: var(--retal-text);
+  --calendar-item-text-color: var(--retal-text);
+  --calendar-item-hover-background-color: var(--retal-primary-soft);
+  --calendar-item-hover-border-color: var(--retal-primary-soft);
+  --calendar-selected-item-background-color: var(--retal-primary);
+  --calendar-today-border-color: var(--retal-primary);
+
+  /* ---- Pills, badges, icons ---- */
+  --pill-background-color: var(--retal-primary-soft);
+  --pill-text-color: var(--retal-text);
+  --badge-warning-background-color: var(--retal-warning);
+  --icon-base-color: var(--retal-text);
+  --icon-accent-color: var(--retal-primary);
+
+  /* ---- Progress steps (registration stepper) ---- */
+  --progress-rail-color: var(--retal-line);
+  --progress-rail-completed-color: var(--retal-success);
+  --progress-step-completed-background-color: var(--retal-success);
+  --progress-step-in-progress-background-color: var(--retal-primary);
+  --progress-step-selected-background-color: var(--retal-primary);
+  --progress-step-icon-color: var(--retal-white);
+  --progress-text-color: var(--retal-text);
+
+  /* ---- Charts: brand-led series instead of K2's green/blue ramp ---- */
+  --chart-series-0: var(--retal-copper-600);
+  --chart-series-1: var(--retal-ink);
+  --chart-series-2: var(--retal-sky);
+  --chart-series-3: var(--retal-olive);
+  --chart-series-4: var(--retal-copper-300);
+  --chart-series-5: var(--retal-line-strong);
+  --chart-background-color: var(--retal-white);
+  --chart-title-text-color: var(--retal-text);
+  --chart-label-text-color: var(--retal-text-secondary);
+
+  /* ---- Search highlight ---- */
+  --search-highlight-background-color: var(--retal-cream, #F3E7C9);
+}

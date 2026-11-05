@@ -1,0 +1,754 @@
+/* Refactored for Retal K2 Theme v2 from BroucherForm.css - colours, fonts and radii now come from 00-retal-tokens.css; left/right are logical so Arabic mirrors. */
+.theme-entry .runtime-form.pi-has-brochure-form {
+    --retal-ink: var(--retal-copper-900);
+    --retal-brown: var(--retal-copper-800);
+    --retal-copper: var(--retal-copper-600);
+    --retal-copper-deep: var(--retal-copper-700);
+    --retal-cream: var(--retal-copper-50);
+    --retal-paper: var(--retal-copper-100);
+    --retal-muted: var(--retal-muted);
+    --retal-line: var(--retal-copper-200);
+    color: var(--retal-ink) !important;
+    font-family: var(--retal-font-body) !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .form {
+    /* background: transparent !important; */
+    background-color: var(--retal-copper-50) !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"],
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item1"] {
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .panel-body,
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .panel-body-wrapper,
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item1"] .panel-body,
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item1"] .panel-body-wrapper {
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .panel-body-t,
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .panel-body-m,
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .panel-body-b,
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item1"] .panel-body-t,
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item1"] .panel-body-m,
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item1"] .panel-body-b {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .form > .row:first-child {
+    position: fixed !important;
+    top: 0 !important;
+    inset-inline-start: 0 !important;
+    inset-inline-start: 0 !important;
+    inset-inline-end: 0 !important;
+    z-index: 2000 !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 112px !important;
+    min-height: 112px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-bottom: 1px solid var(--retal-copper-100) !important;
+    border-radius: 0 !important;
+    background: var(--retal-white) !important;
+    box-shadow: 0 2px 12px rgba(43, 31, 24, 0.035) !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .form > .row:first-child > .view,
+.theme-entry .runtime-form.pi-has-brochure-form .form > .row:first-child > .formcontrol {
+    display: block !important;
+    width: 100% !important;
+    height: 112px !important;
+    min-height: 112px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .innerpanel,
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .panel-body,
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .panel-body-m,
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .panel-body-m-c,
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .panel-body-wrapper {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: var(--retal-white) !important;
+    box-shadow: none !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .root-table[name="Table"] {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: clamp(18px, 2vw, 34px) !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 112px !important;
+    min-height: 112px !important;
+    margin: 0 !important;
+    padding: 0 clamp(20px, 2.2vw, 42px) !important;
+    overflow: hidden !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: var(--retal-white) !important;
+    box-shadow: none !important;
+    grid-template-columns: none !important;
+    grid-template-rows: none !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .root-table[name="Table"] > span[name="Cell logo"] {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    flex: 0 0 auto !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: 300px !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] img[name="RETAL_primary_logo"] {
+    display: block !important;
+    width: auto !important;
+    height: 48px !important;
+    max-width: min(24vw, 280px) !important;
+    max-height: 48px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    object-fit: contain !important;
+    object-position: left center !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .root-table[name="Table"] > span[name="Cell middle section"] {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    flex: 1 1 auto !important;
+    width: auto !important;
+    min-width: 0 !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .root-table[name="Table"] > span[name="Cell middle section"] [name="Table1"] {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    flex: 1 1 auto !important;
+    width: auto !important;
+    min-width: 0 !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    grid-template-columns: none !important;
+    grid-template-rows: none !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] [name="Table1"] > span[name="Cell Cell2"] {
+    display: flex !important;
+    flex: 1 1 auto !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    width: auto !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] h1[name="header_name_dlb"] {
+    display: block !important;
+    width: auto !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: var(--retal-copper-900) !important;
+    font-family: var(--retal-font-display) !important;
+    font-size: clamp(30px, 2.25vw, 42px) !important;
+    font-weight: 400 !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.55px !important;
+    text-align: start !important;
+    overflow-wrap: normal !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] span[name="header_desc_dlb"] {
+    display: none !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] span[name="Header_style_dbl"],
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] a[name="btnEnglish"],
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] a[name="btnArabic"],
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] [name="Table1"] > span[name="Cell Cell6"] {
+    display: none !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .root-table[name="Table"] > span[name="Cell header2"] {
+    display: none !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .root-table[name="Table"] > span[name="Cell header3"] {
+    display: flex !important;
+    flex: 0 0 auto !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: 290px !important;
+    margin: 0 0 0 auto !important;
+    padding: 0 0 0 clamp(12px, 2vw, 30px) !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] span[name="profile_name_dlb"]:not(.empty) {
+    display: block !important;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: var(--retal-black) !important;
+    font-family: var(--retal-font-body) !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+    white-space: nowrap !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] span[name="profile_desc_label"] {
+    display: block !important;
+    width: auto !important;
+    margin: 3px 0 0 !important;
+    padding: 0 !important;
+    color: var(--retal-muted) !important;
+    font-family: var(--retal-font-body) !important;
+    font-size: 13px !important;
+    font-weight: 400 !important;
+    line-height: 1.4 !important;
+    white-space: nowrap !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .form > .row:not(:first-child) {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-inline-start: 0 !important;
+    margin-inline-start: 0 !important;
+    margin-inline-end: 0 !important;
+    padding: 0 16px !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .form > .row:nth-child(2) {
+    margin-top: 112px !important;
+    padding-top: 14px !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .form > .row:nth-child(n+3) {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .form > .row:nth-child(2) > .view,
+.theme-entry .runtime-form.pi-has-brochure-form .form > .row:nth-child(2) > .formcontrol,
+.theme-entry .runtime-form.pi-has-brochure-form .form > .row:nth-child(n+3) > .view,
+.theme-entry .runtime-form.pi-has-brochure-form .form > .row:nth-child(n+3) > .formcontrol {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item1"] {
+    padding: clamp(20px, 2.7vw, 38px) !important;
+    border: 1px solid rgba(175, 130, 99, 0.16) !important;
+    border-radius: var(--retal-radius) !important;
+    background: linear-gradient(180deg, var(--retal-copper-50) 0%, var(--retal-copper-100) 100%) !important;
+    box-shadow: 0 15px 40px rgba(58, 39, 27, 0.08) !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item1"] .root-table[name="Table"] {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    grid-template-rows: none !important;
+    grid-auto-flow: row !important;
+    grid-auto-rows: auto !important;
+    align-items: stretch !important;
+    gap: 22px 18px !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-section-heading {
+    display: block !important;
+    grid-column: 1 / -1 !important;
+    grid-row: auto !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+    margin: 4px 0 -2px !important;
+    padding: 8px 2px 0 !important;
+    overflow: visible !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form [name="Riyadh"],
+.theme-entry .runtime-form.pi-has-brochure-form [name="Jeddah"],
+.theme-entry .runtime-form.pi-has-brochure-form [name="Alkhobar"] {
+    display: block !important;
+    width: auto !important;
+    margin: 0 0 5px !important;
+    padding: 0 !important;
+    color: var(--retal-copper-600) !important;
+    font-family: var(--retal-font-body) !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    line-height: 1.4 !important;
+    letter-spacing: 2.8px !important;
+    text-transform: uppercase !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form h2[name="Riyadh_projects"],
+.theme-entry .runtime-form.pi-has-brochure-form h2[name="Jrddah_projects"],
+.theme-entry .runtime-form.pi-has-brochure-form h2[name="Alkhobarprojects"] {
+    display: block !important;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: var(--retal-copper-700) !important;
+    font-family: var(--retal-font-display) !important;
+    font-size: clamp(28px, 2.7vw, 38px) !important;
+    font-weight: 500 !important;
+    line-height: 1.14 !important;
+    letter-spacing: -0.6px !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form [name="Arabic_riyad"],
+.theme-entry .runtime-form.pi-has-brochure-form [name="Arabic_jeddah"],
+.theme-entry .runtime-form.pi-has-brochure-form [name="Arabic_Alkhobar"] {
+    display: block !important;
+    width: 100% !important;
+    margin: 8px 0 0 !important;
+    padding: 7px 0 0 !important;
+    border-top: 1px solid var(--retal-copper-200) !important;
+    color: var(--retal-copper-600) !important;
+    font-family: var(--retal-font-body) !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    line-height: 1.6 !important;
+    text-align: end !important;
+    direction: rtl !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+    float: none !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 0 20px !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(160, 112, 82, 0.17) !important;
+    border-radius: var(--retal-radius) !important;
+    background: linear-gradient(150deg, var(--retal-white) 0%, var(--retal-copper-50) 100%) !important;
+    box-shadow: 0 7px 20px rgba(57, 37, 24, 0.075) !important;
+    cursor: pointer !important;
+    transform: translate3d(0, 0, 0) scale(1);
+    transform-origin: center center !important;
+    transition: transform 420ms cubic-bezier(0.2, 0.75, 0.25, 1), box-shadow 420ms cubic-bezier(0.2, 0.75, 0.25, 1), border-color 350ms ease !important;
+    animation: retalBrochureCardEnter 620ms cubic-bezier(0.2, 0.72, 0.22, 1) both !important;
+    will-change: transform, box-shadow !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card:nth-of-type(2) {
+    animation-delay: 60ms !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card:nth-of-type(3) {
+    animation-delay: 110ms !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card:nth-of-type(4) {
+    animation-delay: 160ms !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card:nth-of-type(5) {
+    animation-delay: 210ms !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-image {
+    position: relative !important;
+    display: block !important;
+    flex: 0 0 clamp(175px, 18vw, 228px) !important;
+    width: 100% !important;
+    height: clamp(175px, 18vw, 228px) !important;
+    min-height: clamp(175px, 18vw, 228px) !important;
+    max-height: 228px !important;
+    margin: 0 0 17px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    border: 0 !important;
+    border-radius: 14px 14px 0 0 !important;
+    background: var(--retal-copper-200) !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-image::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    display: block !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+    transform: scale(1) !important;
+    transition: transform 700ms cubic-bezier(0.2, 0.7, 0.2, 1), filter 700ms ease !important;
+    will-change: transform !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form [name="Edwansedara_phase4_img"].retal-project-image::before {
+    background-image: url("../img/ewan-sedra-phase-4-img.webp") !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form [name="Edwansedara_phase5_img"].retal-project-image::before {
+    background-image: url("../img/ewan-sedra-phase-5.webp") !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form [name="Ayalasedara_img"].retal-project-image::before {
+    background-image: url("../img/ayala-sedra-img.webp") !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form [name="RoyaSedaraCompound_img"].retal-project-image::before {
+    background-image: url("../img/roya-sedra-compound-img.webp") !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form [name="RejanHillsCompound_img"].retal-project-image::before {
+    background-image: url("../img/rejan-hills-compound-img.webp") !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form [name="ayalaalmohammadiyah_img"].retal-project-image::before {
+    background-image: url("../img/ayala-al-mohammadiyah-img.webp") !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form [name="Noburesidences_img"].retal-project-image::before {
+    background-image: url("../img/nobu-residences-img.webp") !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form [name="Retalrise_img"].retal-project-image::before {
+    background-image: url("../img/retal-rise-img.webp") !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card h4[name="Edwanasedara_phase_4_lbl"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card h4[name="Edwanasedara_phase_5_lbl"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card h4[name="Ayala_sedara_lbl"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card h4[name="Roya_sedra_compound_lbl"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card h4[name="Rejanhillscompound_lbl"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card h4[name="ayalaalmohammadiyah_lbl"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card h4[name="Noburesidences_lbl"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card h4[name="Label24"] {
+    display: block !important;
+    width: auto !important;
+    min-width: 0 !important;
+    margin: 0 22px 8px !important;
+    padding: 0 !important;
+    color: var(--retal-copper-800) !important;
+    font-family: var(--retal-font-display) !important;
+    font-size: clamp(19px, 1.45vw, 24px) !important;
+    font-weight: 500 !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.25px !important;
+    text-align: start !important;
+    overflow-wrap: anywhere !important;
+    transition: color 300ms ease !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Riyadhresedential_lbl"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Riyadhresedential_lbl2"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Riyadhresedential_lbl3"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Riyadhresedential_lbl4"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Riyadhresedential_lbl5"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Jeddahresedential_lbl"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Alkhobarresidence_lbl"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Label25"] {
+    display: block !important;
+    width: auto !important;
+    margin: 0 22px 10px !important;
+    padding: 0 !important;
+    color: var(--retal-muted) !important;
+    font-family: var(--retal-font-body) !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    line-height: 1.5 !important;
+    letter-spacing: 1.8px !important;
+    text-transform: uppercase !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Edwanasedaraphase4_link"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Edwanasedaraphase5_link"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Ayalasedara_link"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Royasedaracompound_link"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="rejanhillscompound_link"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="ayalaalmohammadiyah_lbl_link"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Noburesidence_link"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Retalrise_link"] {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    width: fit-content !important;
+    max-width: calc(100% - 44px) !important;
+    margin: auto 22px 0 !important;
+    padding: 8px 0 0 !important;
+    color: var(--retal-copper-600) !important;
+    font-family: var(--retal-font-body) !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    line-height: 1.5 !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    transition: color 250ms ease, transform 300ms cubic-bezier(0.2, 0.7, 0.2, 1) !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Edwanasedaraphase4_link"]::after,
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Edwanasedaraphase5_link"]::after,
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Ayalasedara_link"]::after,
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Royasedaracompound_link"]::after,
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="rejanhillscompound_link"]::after,
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="ayalaalmohammadiyah_lbl_link"]::after,
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Noburesidence_link"]::after,
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name="Retalrise_link"]::after {
+    content: "↗" !important;
+    display: inline-block !important;
+    font-family: var(--retal-font-body) !important;
+    font-size: 17px !important;
+    line-height: 1 !important;
+    transition: transform 300ms cubic-bezier(0.2, 0.7, 0.2, 1) !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card:hover,
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card:focus-within {
+    z-index: 5 !important;
+    transform: translate3d(0, -7px, 0) scale(1.025) !important;
+    border-color: rgba(157, 97, 65, 0.55) !important;
+    box-shadow: 0 22px 44px rgba(57, 37, 24, 0.19) !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card:hover .retal-project-image::before,
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card:focus-within .retal-project-image::before {
+    transform: scale(1.075) !important;
+    filter: saturate(1.06) contrast(1.02) !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card:hover h4,
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card:focus-within h4 {
+    color: var(--retal-copper-700) !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card:hover [name$="_link"],
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card:focus-within [name$="_link"] {
+    color: var(--retal-copper-700) !important;
+    transform: translateX(3px) !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card:hover [name$="_link"]::after,
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card:focus-within [name$="_link"]::after {
+    transform: translate(3px, -1px) !important;
+}
+
+.theme-entry .runtime-form.pi-has-brochure-form .retal-project-card:active {
+    transform: translate3d(0, -2px, 0) scale(0.995) !important;
+    transition-duration: 120ms !important;
+}
+
+@keyframes retalBrochureCardEnter {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 14px, 0) scale(0.99);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+}
+
+@media (max-width: 1100px) {
+    .theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item1"] .root-table[name="Table"] {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 20px 16px !important;
+    }
+
+    .theme-entry .runtime-form.pi-has-brochure-form .retal-project-image {
+        flex-basis: 205px !important;
+        height: 205px !important;
+        min-height: 205px !important;
+    }
+}
+
+@media (max-width: 650px) {
+    .theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .root-table[name="Table"],
+    .theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .retal-brochure-header {
+        border-radius: var(--retal-radius) !important;
+    }
+
+    .theme-entry .runtime-form.pi-has-brochure-form .retal-brochure-header {
+        height: 76px !important;
+        min-height: 76px !important;
+        background-position: center !important;
+    }
+
+    .theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item1"] {
+        padding: 18px 14px !important;
+        border-radius: var(--retal-radius) !important;
+    }
+
+    .theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item1"] .root-table[name="Table"] {
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 18px !important;
+    }
+
+    .theme-entry .runtime-form.pi-has-brochure-form .retal-project-section-heading {
+        margin-top: 7px !important;
+    }
+
+    .theme-entry .runtime-form.pi-has-brochure-form .retal-project-image {
+        flex-basis: 220px !important;
+        height: 220px !important;
+        min-height: 220px !important;
+    }
+
+    .theme-entry .runtime-form.pi-has-brochure-form .retal-project-card:hover,
+    .theme-entry .runtime-form.pi-has-brochure-form .retal-project-card:focus-within {
+        transform: translate3d(0, -3px, 0) scale(1.008) !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .theme-entry .runtime-form.pi-has-brochure-form .retal-project-card,
+    .theme-entry .runtime-form.pi-has-brochure-form .retal-project-image::before,
+    .theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name$="_link"],
+    .theme-entry .runtime-form.pi-has-brochure-form .retal-project-card [name$="_link"]::after {
+        animation: none !important;
+        transition: none !important;
+        transform: none !important;
+    }
+}
+
+@media (max-width: 760px) {
+    .theme-entry .runtime-form.pi-has-brochure-form .form > .row:first-child,
+    .theme-entry .runtime-form.pi-has-brochure-form .form > .row:first-child > .view,
+    .theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .root-table[name="Table"] {
+        height: 88px !important;
+        min-height: 88px !important;
+        border-radius: 0 !important;
+    }
+
+    .theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .root-table[name="Table"] {
+        gap: 14px !important;
+        padding: 0 16px !important;
+    }
+
+    .theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] img[name="RETAL_primary_logo"] {
+        height: 36px !important;
+        max-height: 36px !important;
+        max-width: 35vw !important;
+    }
+
+    .theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] h1[name="header_name_dlb"] {
+        font-size: clamp(24px, 5vw, 32px) !important;
+    }
+
+    .theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] .root-table[name="Table"] > span[name="Cell header3"] {
+        max-width: 42vw !important;
+        padding-inline-start: 8px !important;
+    }
+
+    .theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] span[name="profile_name_dlb"]:not(.empty) {
+        font-size: 13px !important;
+    }
+
+    .theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"] span[name="profile_desc_label"] {
+        font-size: 11px !important;
+    }
+
+    .theme-entry .runtime-form.pi-has-brochure-form .form > .row:nth-child(2) {
+        margin-top: 88px !important;
+        padding: 10px 10px 0 !important;
+    }
+}
+
+/* Adding this code to place the hyperlink in the center */
+.theme-entry .runtime-form.pi-has-brochure-form .hyperlinkTopPanel {
+    margin-inline-start: 85px !important;
+}

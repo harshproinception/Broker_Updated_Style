@@ -1,0 +1,1368 @@
+/* Refactored for Retal K2 Theme v2 from List_and_card_Ops.css - colours, fonts and radii now come from 00-retal-tokens.css; left/right are logical so Arabic mirrors. */
+/* PERF: ".pi-has-*" classes replace ":has(marker)" selectors - set by Global.js.
+   ":is(*, span)" / ":is(*, a)" always match; they only keep the original specificity. */
+.form > .row.pi-has-mycust-list:is(*, span),
+.view.pi-has-mycust-list:is(*, span),
+.grid.pi-has-mycust-list:is(*, span) {
+    box-sizing: border-box !important;
+    padding-inline-start: 0 !important;
+    padding-inline-end: 0 !important;
+    width: 99% !important;
+    margin-inline-start: 5px !important;
+}
+
+.view.pi-has-mycust-list:is(*, span) .grid,
+.grid.pi-has-mycust-list:is(*, span) {
+    width: 100% !important;
+    background: var(--retal-white) !important;
+    border: 1px solid var(--retal-copper-100) !important;
+    border-radius: var(--retal-radius) !important;
+    box-shadow: 0 3px 12px rgba(60, 40, 30, 0.04) !important;
+    overflow: hidden !important;
+    margin-inline-start: 0 !important;
+    padding-inline-start: 0 !important;
+    box-sizing: border-box !important;
+}
+
+.view.pi-has-mycust-list:is(*, span) .grid-toolbars,
+.grid.pi-has-mycust-list:is(*, span) .grid-toolbars {
+    background: var(--retal-white) !important;
+    padding: 16px 20px 16px 0px !important;
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    gap: 8px !important;
+    margin-inline-start: 0 !important;
+}
+
+.view.pi-has-mycust-list:is(*, span) .grid-toolbars > *,
+.grid.pi-has-mycust-list:is(*, span) .grid-toolbars > * {
+    float: none !important;
+}
+
+.view.pi-has-mycust-list:is(*, span) a.SourceCode-Forms-Controls-Web-Button,
+.view.pi-has-mycust-list:is(*, span) a.toolbar-button,
+.view.pi-has-mycust-list:is(*, span) a.Edit-row,
+.view.pi-has-mycust-list:is(*, span) input[type="button"],
+.view.pi-has-mycust-list:is(*, span) input[type="submit"],
+.grid.pi-has-mycust-list:is(*, span) a.SourceCode-Forms-Controls-Web-Button,
+.grid.pi-has-mycust-list:is(*, span) a.toolbar-button,
+.grid.pi-has-mycust-list:is(*, span) a.Edit-row {
+    cursor: pointer !important;
+    pointer-events: auto !important;
+}
+
+
+.view.pi-has-mycust-list:is(*, span) input[name*="Search"],
+.grid.pi-has-mycust-list:is(*, span) input[name*="Search"] {
+    width: 320px !important;
+    height: 38px !important;
+    padding: 0 12px !important;
+    background: var(--retal-white) !important;
+    border: 1px solid var(--retal-copper-200) !important;
+    border-radius: var(--retal-radius) !important;
+    color: var(--retal-ink-2) !important;
+    font-size: 13px !important;
+    outline: none !important;
+    box-sizing: border-box !important;
+    pointer-events: auto !important;
+    vertical-align: middle !important;
+    margin-inline-start: 0 !important;
+    display: inline-block !important;
+}
+
+
+.view.pi-has-mycust-list:is(*, span) a[name*="Search"],
+.grid.pi-has-mycust-list:is(*, span) a[name*="Search"] {
+    height: 38px !important;
+    padding: 0 14px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: var(--retal-copper-500) !important;
+    border: none !important;
+    border-radius: 0px !important;
+    color: var(--retal-white) !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    font-size: 13px !important;
+    box-sizing: border-box !important;
+    white-space: nowrap !important;
+    vertical-align: middle !important;
+    margin-inline-start: 6px !important;
+}
+
+.view.pi-has-mycust-list:is(*, span) a[name*="Search"]:hover,
+.grid.pi-has-mycust-list:is(*, span) a[name*="Search"]:hover {
+    background: var(--retal-copper-600) !important;
+}
+
+
+.view.pi-has-mycust-list:is(*, span) a[name*="Clear"],
+.grid.pi-has-mycust-list:is(*, span) a[name*="Clear"] {
+    height: 38px !important;
+    padding: 0 14px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: var(--retal-white) !important;
+    color: var(--retal-copper-500) !important;
+    border: 1px solid var(--retal-copper-200) !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    box-sizing: border-box !important;
+    vertical-align: middle !important;
+    margin-inline-start: 6px !important;
+    border-radius: var(--retal-radius) !important;
+}
+
+
+.view.pi-has-mycust-list:is(*, span) a[name="Button All"],
+.view.pi-has-mycust-list:is(*, span) a[name="Button In Progress"],
+.view.pi-has-mycust-list:is(*, span) a[name="Button Need attention"],
+.view.pi-has-mycust-list:is(*, span) a[name="Button Completed"],
+.grid.pi-has-mycust-list:is(*, span) a[name="Button All"],
+.grid.pi-has-mycust-list:is(*, span) a[name="Button In Progress"],
+.grid.pi-has-mycust-list:is(*, span) a[name="Button Need attention"],
+.grid.pi-has-mycust-list:is(*, span) a[name="Button Completed"] {
+    height: 38px !important;
+    padding: 0 14px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: var(--retal-white) !important;
+    color: var(--retal-copper-500) !important;
+    border: 1px solid var(--retal-copper-200) !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    box-sizing: border-box !important;
+    vertical-align: middle !important;
+}
+
+/* .view:has(span[name="MyCustomer_List_Style_dlb"]) a[name="Button All"],
+.grid:has(span[name="MyCustomer_List_Style_dlb"]) a[name="Button All"] {
+    border-radius: 0px 0 0 0px !important;
+}
+
+.view:has(span[name="MyCustomer_List_Style_dlb"]) a[name="Button Completed"],
+.grid:has(span[name="MyCustomer_List_Style_dlb"]) a[name="Button Completed"] {
+    border-radius: 0 0px 0px 0 !important;
+} */
+
+.view.pi-has-mycust-list:is(*, span) a[name^="Button "].active,
+.grid.pi-has-mycust-list:is(*, span) a[name^="Button "].active {
+    background: var(--retal-copper-500) !important;
+    color: var(--retal-white) !important;
+}
+
+
+body.pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) a[name*="Add a customer"],
+body.pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) a[name*="Add a customer"] {
+    height: 38px !important;
+    padding: 0 16px !important;
+    margin-inline-start: 290px !important;
+    margin-inline-end: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: var(--retal-copper-500) !important;
+    border: none !important;
+    border-radius: 0px !important;
+    color: var(--retal-white) !important;
+    text-decoration: none !important;
+    font-weight: 700 !important;
+    font-size: 13px !important;
+    box-sizing: border-box !important;
+    white-space: nowrap !important;
+    vertical-align: middle !important;
+}
+
+/* RTL Override */
+[dir="rtl"] body.pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) a[name*="Add a customer"],
+[dir="rtl"] body.pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) a[name*="Add a customer"],
+body[dir="rtl"].pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) a[name*="Add a customer"],
+body[dir="rtl"].pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) a[name*="Add a customer"] {
+    margin-inline-end: 230px !important;
+    margin-inline-start: 0 !important;
+}
+
+body.pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) .grid-toolbars:has(a[name*="Add a customer"]),
+body.pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) .grid-toolbars:has(a[name*="Add a customer"]) {
+    display: flex !important;
+    justify-content: flex-start !important;
+}
+
+body.pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) a[name*="Add a customer"]:hover,
+body.pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) a[name*="Add a customer"]:hover {
+    background: var(--retal-copper-600) !important;
+}
+
+.view.pi-has-mycust-list:is(*, span) .grid-table,
+.view.pi-has-mycust-list:is(*, span) .grid-content-table,
+.view.pi-has-mycust-list:is(*, span) table.grid-content-table,
+.view.pi-has-mycust-list:is(*, span) table.grid-header-table,
+.grid.pi-has-mycust-list:is(*, span) .grid-table,
+.grid.pi-has-mycust-list:is(*, span) .grid-content-table,
+.grid.pi-has-mycust-list:is(*, span) table.grid-content-table,
+.grid.pi-has-mycust-list:is(*, span) table.grid-header-table {
+    width: 100% !important;
+    table-layout: fixed !important;
+    border-collapse: collapse !important;
+    margin-inline-start: 4px !important;
+    padding-inline-start: 0 !important;
+    background-color: var(--retal-copper-50) !important;
+    --list-item-hover-background-color: var(--retal-copper-100) !important;
+    --list-item-selected-background-color: var(--retal-copper-200) !important;
+}
+
+
+.view.pi-has-mycust-list:is(*, span) .grid-header-table th,
+.view.pi-has-mycust-list:is(*, span) .grid-header-table td,
+.view.pi-has-mycust-list:is(*, span) .grid thead th,
+.view.pi-has-mycust-list:is(*, span) .grid-header-cell,
+.grid.pi-has-mycust-list:is(*, span) .grid-header-table th,
+.grid.pi-has-mycust-list:is(*, span) .grid-header-table td,
+.grid.pi-has-mycust-list:is(*, span) .grid thead th,
+.grid.pi-has-mycust-list:is(*, span) .grid-header-cell,
+.grid.pi-has-mycust-list:is(*, span) .grid-column-header-table td {
+    padding: 14px 16px 14px 0px !important;
+    /* text-align: left !important; */
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    /* color: #8C8C8C !important; */
+    background: var(--color-primary) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    box-sizing: border-box !important;
+    vertical-align: middle !important;
+}
+
+.view.pi-has-mycust-list:is(*, span) .grid-header-table th > *,
+.view.pi-has-mycust-list:is(*, span) .grid-header-cell > *,
+.view.pi-has-mycust-list:is(*, span) .grid-header-cell-content,
+.view.pi-has-mycust-list:is(*, span) .grid-header-cell-label,
+.view.pi-has-mycust-list:is(*, span) .grid-header-cell-text,
+.grid.pi-has-mycust-list:is(*, span) .grid-column-header-text,
+.grid.pi-has-mycust-list:is(*, span) .grid-column-header-cell-content {
+    color: var(--retal-white) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    margin-inline-start: 4px !important;
+    padding-inline-start: 0 !important;
+    /* text-align: left !important; */
+    display: inline-flex !important;
+    align-items: center !important;
+}
+
+
+.view.pi-has-mycust-list:is(*, span) .grid-content-table tbody tr,
+.grid.pi-has-mycust-list:is(*, span) .grid-content-table tbody tr {
+    height: 54px !important;
+    background: var(--retal-white) !important;
+}
+
+.view.pi-has-mycust-list:is(*, span) .grid-content-table tbody tr:nth-child(even),
+.grid.pi-has-mycust-list:is(*, span) .grid-content-table tbody tr:nth-child(even) {
+    background: var(--retal-copper-50) !important;
+}
+
+.view.pi-has-mycust-list:is(*, span) .grid-content-table tbody tr:hover,
+.grid.pi-has-mycust-list:is(*, span) .grid-content-table tbody tr:hover {
+    background: var(--retal-copper-50) !important;
+}
+
+.view.pi-has-mycust-list:is(*, span) .grid-content-table tbody td,
+.grid.pi-has-mycust-list:is(*, span) .grid-content-table tbody td {
+    padding: 0 16px 0 0px !important;
+    border-bottom: 1px solid var(--retal-copper-100) !important;
+    font-size: 13px !important;
+    color: var(--retal-info) !important;
+    /* text-align: left !important; */
+    vertical-align: middle !important;
+    box-sizing: border-box !important;
+}
+
+.view.pi-has-mycust-list:is(*, span) .grid-content-table tbody td > *,
+.grid.pi-has-mycust-list:is(*, span) .grid-content-table tbody td > * {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: inline-block !important;
+    box-sizing: border-box !important;
+}
+
+.view.pi-has-mycust-list:is(*, span) .grid-header-table th:first-child,
+.view.pi-has-mycust-list:is(*, span) .grid-content-table tbody td:first-child,
+.grid.pi-has-mycust-list:is(*, span) .grid-column-header-table td:first-child,
+.grid.pi-has-mycust-list:is(*, span) .grid-content-table tbody td:first-child {
+    padding-inline-start: 0px !important;
+}
+
+.view.pi-has-mycust-list:is(*, span) .grid-content-table tbody td:last-child,
+.grid.pi-has-mycust-list:is(*, span) .grid-content-table tbody td:last-child {
+    /* text-align: center !important; */
+    padding-inline-start: 0 !important;
+    padding-inline-end: 0 !important;
+}
+
+
+.view.pi-has-mycust-list:is(*, span) .unit-pill,
+.grid.pi-has-mycust-list:is(*, span) .unit-pill {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 3px 10px !important;
+    background-color: var(--retal-copper-50) !important;
+    color: var(--retal-copper-500) !important;
+    border-radius: var(--retal-radius) !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.3px !important;
+}
+
+.view.pi-has-mycust-list:is(*, span) .days-urgent,
+.grid.pi-has-mycust-list:is(*, span) .days-urgent {
+    color: var(--retal-danger) !important;
+    font-weight: 700 !important;
+    font-size: 13px !important;
+}
+
+.view.pi-has-mycust-list:is(*, span) .days-pill-completed,
+.grid.pi-has-mycust-list:is(*, span) .days-pill-completed {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 3px 12px !important;
+    background-color: var(--retal-success-soft) !important;
+    color: var(--retal-success) !important;
+    border-radius: var(--retal-radius) !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+}
+
+.view.pi-has-mycust-list:is(*, span) .days-muted,
+.grid.pi-has-mycust-list:is(*, span) .days-muted {
+    color: var(--retal-muted) !important;
+    font-size: 13px !important;
+    font-weight: 400 !important;
+}
+
+/* .theme-entry .grid .grid-column-header-table,
+.theme-entry .grid .grid-column-header-table th,
+.theme-entry .grid .grid-column-header-table td {
+    background-color: #f6f1ee !important;
+}
+ */
+
+.theme-entry .view.pi-has-header-name .grid-toolbars, 
+.theme-entry .grid.pi-has-header-name .grid-toolbars {
+    background: var(--retal-copper-50) !important;
+    padding: 0px !important;
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    gap: 8px !important;
+    margin-inline-start: 0 !important;
+}
+
+
+.theme-entry [name="header_name_label"] {
+    color: var(--retal-copper-600) !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    margin: 0 !important;
+}
+
+/*==============================
+Hiding the list buttons in the home page
+===============================*/
+body.pi-has-card-style:is(*, span) .theme-entry .toolbar>.toolbar-wrapper>table>tbody>tr>td>.SFC.SourceCode-Forms-Controls-Web-TextBox,
+body.pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) a[name*="Search"],
+body.pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) a[name*="Search"],
+body.pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) a[name="Button All"],
+body.pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) a[name="Button In Progress"],
+body.pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) a[name="Button Need attention"],
+body.pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) a[name="Button Completed"],
+body.pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) a[name="Button All"],
+body.pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) a[name="Button In Progress"],
+body.pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) a[name="Button Need attention"],
+body.pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) a[name="Button Completed"] {
+    display: none !important;
+}
+
+/*===================================================
+  grid toolbar hieght fix for customer dashboard page
+=====================================================*/
+
+body.pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) .grid-toolbars,
+body.pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) .grid-toolbars {
+    height: 80px !important;
+}
+
+/* =====================================================
+   FIX: UNNECESSARY HORIZONTAL SCROLLBAR IN K2 LISTS
+===================================================== */
+/* Preserve vertical scrolling if the list needs it */
+.theme-entry .view.pi-has-mycust-list .scroll-wrapper {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+}
+
+
+
+/* =============================================================
+    ops card css strat from here
+=============================================================*/
+
+
+
+.theme-entry .form .row { margin: 0 !important; }
+.theme-entry .form .row > .view > * { margin: 0 !important; }
+/* .theme-entry .form .view { margin: 0 !important; padding: 0 !important; } */
+.runtime-content { margin-top: -18px !important; }
+body, .theme-entry, .runtime-content, .runtime-view, .panel, .panel-body, .panel-body-wrapper, .scroll-contents {
+    /* background-color: #F8F6F2 !important; */
+    background-image: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    font-family: var(--retal-font-body) !important;
+}
+.theme-entry span[name="Cell Notification"] {
+    background-color: var(--retal-copper-600) !important;
+    border-radius: var(--retal-radius) !important;
+    padding: 24px 32px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    margin-bottom: 24px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+.banner-left-group {
+    display: flex !important;
+    align-items: center !important;
+    gap: 20px !important;
+}
+.theme-entry .banner-icon-wrapper {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    border-radius: var(--retal-radius) !important;
+    width: 48px !important;
+    height: 48px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+}
+.theme-entry .banner-text-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+}
+.theme-entry .banner-title {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    color: var(--retal-white) !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+}
+.theme-entry .banner-title * {
+    color: var(--retal-white) !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+}
+.theme-entry span[name="NotificationDesc_label"] {
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-size: 14px !important;
+}
+.theme-entry .custom-btn {
+    background-color: var(--retal-white) !important;
+    color: var(--retal-ink) !important;
+    border: none !important;
+    border-radius: var(--retal-radius) !important;
+    padding: 10px 20px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    display: flex !important;
+    align-items: center !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
+    transition: all 0.2s ease !important;
+    white-space: nowrap !important;
+}
+.theme-entry .custom-btn:hover {
+    background-color: var(--retal-surface) !important;
+}
+.theme-entry div[name="Table cards"] {
+    display: flex !important;
+    gap: 20px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+.theme-entry div[name="Table cards"] > span,
+.theme-entry div[name="Table cards"] .editor-cell {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 !important;
+    min-width: 0 !important;
+}
+.theme-entry .custom-card {
+    background-color: var(--retal-white) !important;
+    border-radius: var(--retal-radius) !important;
+    padding: 24px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03) !important;
+    box-sizing: border-box !important;
+    cursor: pointer !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+.theme-entry .custom-card:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06) !important;
+}
+.theme-entry .card-icon-wrapper {
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: var(--retal-radius) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-bottom: 20px !important;
+    flex-shrink: 0 !important;
+}
+.theme-entry .bg-icon-0 { background-color: var(--retal-copper-50) !important; }
+.theme-entry .bg-icon-1 { background-color: var(--retal-copper-50) !important; }
+.theme-entry .bg-icon-2 { background-color: var(--retal-copper-50) !important; }
+.theme-entry .bg-icon-3 { background-color: var(--retal-success-soft) !important; }
+ 
+.theme-entry .custom-card a.SFC.SourceCode-Forms-Controls-Web-Button,
+.theme-entry .custom-card .card-number-btn {
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 0 8px 0 !important;
+    text-align: start !important;
+    text-decoration: none !important;
+    font-family: var(--retal-font-body) !important;
+    font-size: 32px !important;
+    font-weight: 700 !important;
+    color: var(--retal-black) !important;
+    display: block !important;
+    line-height: 1.2 !important;
+    cursor: pointer !important;
+    height: auto !important;
+    min-height: 0 !important;
+    width: auto !important;
+}
+.theme-entry .custom-card .card-label {
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    color: var(--retal-muted) !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.4 !important;
+}
+/* =========================================
+   OPS DASHBOARD CARDS
+   Scoped to Ops_cards_style_dlb
+========================================= */
+
+.theme-entry div[name="DashboardCountItemview"].pi-has-ops-cards {
+    background: var(--retal-copper-50) !important;
+    /* padding: 28px 36px !important; */
+    box-sizing: border-box !important;
+}
+
+.theme-entry div[name="DashboardCountItemview"].pi-has-ops-cards .panel-toolbars,
+.theme-entry div[name="DashboardCountItemview"].pi-has-ops-cards .toolbar {
+    display: none !important;
+}
+
+.theme-entry div[name="DashboardCountItemview"].pi-has-ops-cards .panel-body,
+.theme-entry div[name="DashboardCountItemview"].pi-has-ops-cards .panel-body-m,
+.theme-entry div[name="DashboardCountItemview"].pi-has-ops-cards .panel-body-m-c,
+.theme-entry div[name="DashboardCountItemview"].pi-has-ops-cards .panel-body-wrapper {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Cards table */
+.theme-entry div[name="DashboardCountItemview"].pi-has-ops-cards
+[name="Dashboard_cards_table"] {
+    display: grid !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    gap: 20px !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* Individual card */
+.theme-entry div[name="DashboardCountItemview"].pi-has-ops-cards
+[name="Dashboard_cards_table"] > .editor-cell {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    position: relative !important;
+    min-width: 0 !important;
+    min-height: 208px !important;
+    margin: 0 !important;
+    /* padding: 28px 28px 24px !important; */
+    /* background: #FFFFFF !important; */
+    border: 1px solid var(--retal-copper-100) !important;
+    border-radius: var(--retal-radius) !important;
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.035) !important; */
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    transition: box-shadow 0.25s ease, transform 0.25s ease !important;
+}
+
+/* Hover effect */
+.theme-entry div[name="DashboardCountItemview"].pi-has-ops-cards
+[name="Dashboard_cards_table"] > .editor-cell:hover {
+    box-shadow: 0 8px 22px rgba(91, 62, 44, 0.10) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Icon container */
+.theme-entry div[name="DashboardCountItemview"].pi-has-ops-cards
+[name="Dashboard_cards_table"] > .editor-cell::before {
+    content: "" !important;
+    display: block !important;
+    width: 52px !important;
+    height: 52px !important;
+    min-width: 52px !important;
+    margin: 0 0 24px 0 !important;
+    border-radius: var(--retal-radius) !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 26px 26px !important;
+    box-sizing: border-box !important;
+}
+
+/* Card 1 - Registered customers */
+.theme-entry div[name="DashboardCountItemview"].pi-has-ops-cards
+[name="Dashboard_cards_table"] > .editor-cell:nth-child(1)::before {
+    background-color: var(--retal-copper-50) !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238D624B' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2'/%3E%3Ccircle cx='10' cy='7' r='4'/%3E%3Cpath d='M21 21v-2a4 4 0 0 0-3-3.87'/%3E%3Cpath d='M16 3.13a4 4 0 0 1 0 7.75'/%3E%3C/svg%3E") !important;
+}
+
+/* Card 2 - Accounts created */
+.theme-entry div[name="DashboardCountItemview"].pi-has-ops-cards
+[name="Dashboard_cards_table"] > .editor-cell:nth-child(2)::before {
+    background-color: var(--retal-copper-50) !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C47B35' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpolyline points='12 6 12 12 16 14'/%3E%3C/svg%3E") !important;
+}
+
+/* Card 3 - Expiring soon */
+.theme-entry div[name="DashboardCountItemview"].pi-has-ops-cards
+[name="Dashboard_cards_table"] > .editor-cell:nth-child(3)::before {
+    background-color: var(--retal-copper-50) !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D97706' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10.3 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.7 3.86a2 2 0 0 0-3.4 0Z'/%3E%3Cline x1='12' y1='9' x2='12' y2='13'/%3E%3Cline x1='12' y1='17' x2='12.01' y2='17'/%3E%3C/svg%3E") !important;
+}
+
+/* Card 4 - Sales complete */
+.theme-entry div[name="DashboardCountItemview"].pi-has-ops-cards
+[name="Dashboard_cards_table"] > .editor-cell:nth-child(4)::before {
+    background-color: var(--retal-success-soft) !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2350935A' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") !important;
+}
+
+/* Card 5 - Expired or cancelled */
+.theme-entry div[name="DashboardCountItemview"].pi-has-ops-cards
+[name="Dashboard_cards_table"] > .editor-cell:nth-child(5)::before {
+    background-color: var(--retal-danger-soft) !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23B86557' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='18' y1='6' x2='6' y2='18'/%3E%3Cline x1='6' y1='6' x2='18' y2='18'/%3E%3C/svg%3E") !important;
+}
+
+/* Count button */
+.theme-entry div[name="DashboardCountItemview"].pi-has-ops-cards
+[name="Dashboard_cards_table"] > .editor-cell > a[name^="Button "] {
+    display: block !important;
+    width: auto !important;
+    min-height: 0 !important;
+    margin: 0 0 14px 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+    color: var(--retal-black) !important;
+    font-family: var(--retal-font-body) !important;
+    font-size: 36px !important;
+    font-weight: 700 !important;
+    line-height: 1.1 !important;
+    text-align: start !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    box-sizing: border-box !important;
+}
+
+/* Card label */
+.theme-entry div[name="DashboardCountItemview"].pi-has-ops-cards
+[name="Dashboard_cards_table"] > .editor-cell > span.SFC.SourceCode-Forms-Controls-Web-Label {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: var(--retal-muted) !important;
+    font-family: var(--retal-font-body) !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 1.5 !important;
+    text-align: start !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+    box-sizing: border-box !important;
+}
+
+/* Keep hidden count data labels hidden */
+.theme-entry div[name="DashboardCountItemview"].pi-has-ops-cards
+[name="Dashboard_cards_table"] > .editor-cell > .SFC.SourceCode-Forms-Controls-Web-DataLabel.hidden {
+    display: none !important;
+}
+
+/* Tablet */
+@media (max-width: 1100px) {
+    .theme-entry div[name="DashboardCountItemview"].pi-has-ops-cards {
+        padding: 24px !important;
+    }
+
+    .theme-entry div[name="DashboardCountItemview"].pi-has-ops-cards
+    [name="Dashboard_cards_table"] {
+        gap: 16px !important;
+    }
+
+    .theme-entry div[name="DashboardCountItemview"].pi-has-ops-cards
+    [name="Dashboard_cards_table"] > .editor-cell {
+        padding: 24px 20px !important;
+    }
+}
+
+/* Smaller screens */
+@media (max-width: 850px) {
+    .theme-entry div[name="DashboardCountItemview"].pi-has-ops-cards
+    [name="Dashboard_cards_table"] {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 16px !important;
+    }
+
+    .theme-entry div[name="DashboardCountItemview"].pi-has-ops-cards
+    [name="Dashboard_cards_table"] > .editor-cell {
+        min-height: 190px !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+    .theme-entry div[name="DashboardCountItemview"].pi-has-ops-cards {
+        padding: 16px !important;
+    }
+
+    .theme-entry div[name="DashboardCountItemview"].pi-has-ops-cards
+    [name="Dashboard_cards_table"] {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+    }
+
+    .theme-entry div[name="DashboardCountItemview"].pi-has-ops-cards
+    [name="Dashboard_cards_table"] > .editor-cell {
+        min-height: 180px !important;
+        padding: 24px !important;
+    }
+}
+
+
+.custom-card .card-number-btn {
+    cursor: pointer !important;
+}
+
+/* 1. Ensure the card container clips the stretched overlay */
+.theme-entry div[name="DashboardCountItemview"].pi-has-ops-cards
+[name="Dashboard_cards_table"] > .editor-cell {
+    position: relative !important;
+    cursor: pointer !important;
+    background-color: #ffff !important;
+}
+
+/* 1. Ensure the card container is the boundary */
+.theme-entry div[name="DashboardCountItemview"].pi-has-ops-cards
+[name="Dashboard_cards_table"] > .editor-cell {
+    position: relative !important;
+    overflow: hidden !important;
+    cursor: pointer !important;
+}
+
+/* 2. CRITICAL FIX: Force the button AND any K2 wrappers inside the cell to be static. 
+   This allows the absolute ::after element to break out and fill the .editor-cell */
+.theme-entry div[name="DashboardCountItemview"].pi-has-ops-cards
+[name="Dashboard_cards_table"] > .editor-cell > div,
+.theme-entry div[name="DashboardCountItemview"].pi-has-ops-cards
+[name="Dashboard_cards_table"] > .editor-cell a[name^="Button "] {
+    position: static !important;
+    pointer-events: auto !important;
+}
+
+/* 3. Extend the button's clickable area across the whole card */
+.theme-entry div[name="DashboardCountItemview"].pi-has-ops-cards
+[name="Dashboard_cards_table"] > .editor-cell a[name^="Button "]::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    inset-inline-start: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 20 !important;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+}
+
+/* Let clicks pass through the label to the button overlay */
+.theme-entry div[name="DashboardCountItemview"].pi-has-ops-cards
+[name="Dashboard_cards_table"] > .editor-cell span.SFC.SourceCode-Forms-Controls-Web-Label {
+    position: relative !important; /* Keeps label visible above the background if needed */
+    z-index: 10 !important;
+    pointer-events: none !important;
+}
+/* This code bypaas the generic code for making the first child of editor cell behave differently */
+.theme-entry div[name="DashboardCountItemview"].pi-has-ops-cards
+[name="Dashboard_cards_table"] > .editor-cell:first-child {
+    background-color: var(--retal-white) !important;
+    grid-column: auto !important;
+}
+
+.theme-entry .panel[name="OpsTeam.InternalLandingPage.Form Area Item1"] [name="Worklist"] .stylewrapper {
+    padding: 0 !important;
+    background: transparent !important;
+    overflow: hidden !important;
+}
+ 
+.theme-entry .panel[name="OpsTeam.InternalLandingPage.Form Area Item1"] [name="Worklist"] .SourceCodeFormsControlsWorklist {
+    width: 100% !important;
+    border: 1px solid var(--retal-copper-100) !important;
+    border-radius: var(--retal-radius) !important;
+    background: var(--retal-white) !important;
+    box-shadow: 0 8px 24px rgba(65, 43, 29, 0.07) !important;
+    overflow: hidden !important;
+}
+ 
+.theme-entry .panel[name="OpsTeam.InternalLandingPage.Form Area Item1"] [name="Worklist"] table.nav {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    background: var(--retal-white) !important;
+    border-bottom: 1px solid var(--retal-copper-100) !important;
+}
+ 
+.theme-entry .panel[name="OpsTeam.InternalLandingPage.Form Area Item1"] [name="Worklist"] .worklistToolbarHeaderTextWrapper {
+    padding: 16px 22px !important;
+}
+ 
+.theme-entry .panel[name="OpsTeam.InternalLandingPage.Form Area Item1"] [name="Worklist"] .headerTxt {
+    color: var(--retal-copper-800) !important;
+    font-size: 17px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.1px !important;
+}
+ 
+.theme-entry .panel[name="OpsTeam.InternalLandingPage.Form Area Item1"] [name="Worklist"] .worklistToolbarIconWrapper {
+    padding: 10px 18px !important;
+    text-align: end !important;
+}
+ 
+.theme-entry .panel[name="OpsTeam.InternalLandingPage.Form Area Item1"] [name="Worklist"] a.RefreshInput {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    border: 1px solid var(--retal-copper-100) !important;
+    border-radius: var(--retal-radius) !important;
+    background: var(--retal-white) !important;
+    color: var(--retal-copper-600) !important;
+    transition: background 220ms ease, border-color 220ms ease, transform 220ms ease !important;
+}
+ 
+.theme-entry .panel[name="OpsTeam.InternalLandingPage.Form Area Item1"] [name="Worklist"] a.RefreshInput:hover {
+    background: var(--retal-copper-100) !important;
+    border-color: var(--retal-copper-300) !important;
+    transform: rotate(12deg) !important;
+}
+ 
+.theme-entry .panel[name="OpsTeam.InternalLandingPage.Form Area Item1"] [name="Worklist"] .WorkListItemTableHeader {
+    background: var(--retal-copper-50) !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+}
+ 
+.theme-entry .panel[name="OpsTeam.InternalLandingPage.Form Area Item1"] [name="Worklist"] .WorkListItemTableHeader th {
+    padding: 15px 18px !important;
+    /* background: #f6f0eb !important; */
+    color: var(--retal-copper-600) !important;
+    border-bottom: 1px solid var(--retal-copper-200) !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.65px !important;
+    text-align: start !important;
+    vertical-align: middle !important;
+    box-sizing: border-box !important;
+}
+ 
+.theme-entry .panel[name="OpsTeam.InternalLandingPage.Form Area Item1"] [name="Worklist"] .WorkListGridTableBody {
+    background: var(--retal-white) !important;
+    overflow-x: auto !important;
+}
+ 
+.theme-entry .panel[name="OpsTeam.InternalLandingPage.Form Area Item1"] [name="Worklist"] .WorkListItemTable {
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    background: var(--retal-white) !important;
+}
+ 
+.theme-entry .panel[name="OpsTeam.InternalLandingPage.Form Area Item1"] [name="Worklist"] .WorkListItemTable tbody.WorklistItemSectionDiv > tr > td {
+    padding: 14px 18px !important;
+    background: var(--retal-white) !important;
+    color: var(--retal-copper-800) !important;
+    border-bottom: 1px solid var(--retal-copper-100) !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    vertical-align: middle !important;
+    transition: background 180ms ease !important;
+}
+ 
+.theme-entry .panel[name="OpsTeam.InternalLandingPage.Form Area Item1"] [name="Worklist"] .WorkListItemTable tbody.WorklistItemSectionDiv > tr:nth-child(even) > td {
+    background: var(--retal-copper-50) !important;
+}
+ 
+.theme-entry .panel[name="OpsTeam.InternalLandingPage.Form Area Item1"] [name="Worklist"] .WorkListItemTable tbody.WorklistItemSectionDiv > tr:hover > td {
+    background: var(--retal-copper-100) !important;
+}
+ 
+.theme-entry .panel[name="OpsTeam.InternalLandingPage.Form Area Item1"] [name="Worklist"] .WorkListItemTable tbody.WorklistItemSectionDiv > tr {
+    cursor: pointer !important;
+    transition: background 180ms ease !important;
+}
+ 
+.theme-entry .panel[name="OpsTeam.InternalLandingPage.Form Area Item1"] [name="Worklist"] .loadmore {
+    height: auto !important;
+    padding: 14px 16px !important;
+    background: var(--retal-white) !important;
+    text-align: center !important;
+}
+ 
+.theme-entry .panel[name="OpsTeam.InternalLandingPage.Form Area Item1"] [name="Worklist"] .LoadMoreHyperlink {
+    display: inline-block !important;
+    /* padding:  !important; */
+    border: 1px solid var(--retal-copper-600) !important;
+    border-radius: var(--retal-radius) !important;
+    background: var(--retal-copper-600) !important;
+    color: var(--retal-white) !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    transition: background 200ms ease, box-shadow 200ms ease, transform 200ms ease !important;
+}
+ 
+.theme-entry .panel[name="OpsTeam.InternalLandingPage.Form Area Item1"] [name="Worklist"] .LoadMoreHyperlink:hover {
+    background: var(--retal-copper-700) !important;
+    box-shadow: 0 5px  12px rgba(91, 52, 32, 0.16) !important;
+    transform: translateY(-1px) !important;
+}
+ 
+@media (prefers-reduced-motion: reduce) {
+    .theme-entry .panel[name="OpsTeam.InternalLandingPage.Form Area Item1"] [name="Worklist"] a.RefreshInput,
+    .theme-entry .panel[name="OpsTeam.InternalLandingPage.Form Area Item1"] [name="Worklist"] .WorkListItemTable tbody.WorklistItemSectionDiv > tr > td,
+    .theme-entry .panel[name="OpsTeam.InternalLandingPage.Form Area Item1"] [name="Worklist"] .LoadMoreHyperlink {
+        transition: none !important;
+        transform: none !important;
+    }
+}
+
+.view.pi-has-mycust-list .grid-toolbars [name*="Table search" i],
+.view.pi-has-mycust-list .grid-toolbars [title*="Table search" i],
+.grid.pi-has-mycust-list .grid-toolbars [name*="Table search" i],
+.grid.pi-has-mycust-list .grid-toolbars [title*="Table search" i] {
+    margin-bottom: -18px !important;
+    margin-top: -10px !important;
+    margin-inline-start: -10px !important;
+}
+/* Make only the view containing "Configuration Type Label" transparent */
+.view:has([name="Configuration Type Label"]),
+.view:has([name="Configuration Type Label"]) .innerpanel,
+.view:has([name="Configuration Type Label"]) .panel,
+.view:has([name="Configuration Type Label"]) .panel-body,
+.view:has([name="Configuration Type Label"]) [class^="panel-body-"],
+.view:has([name="Configuration Type Label"]) .panel-body-wrapper,
+.view:has([name="Configuration Type Label"]) .root-table,
+.view:has([name="Configuration Type Label"]) .editor-cell {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+
+
+/* ==========================================================================
+
+   K2 THEME ENTRY - MESSAGE & WARNING POPUPS
+
+   Scope: K2 popup dialogs containing a *-message class
+
+   Covers: Default, Confirmation, Error, Info, Warning, None and future types
+
+   Default K2 icons and internal message layout remain untouched.
+
+   ========================================================================== */
+
+
+/* ---- 1. Common popup configuration -------------------------------------- */
+
+.theme-entry .popup.dialog[class*="-message"] {
+
+    --pp-width: 440px;
+
+    --pp-brand: var(--retal-copper-600);
+
+    --pp-brand-hover: var(--retal-copper-600);
+
+    --pp-brand-dark: var(--retal-copper-800);
+
+    --pp-btn-border: var(--retal-copper-300);
+
+    --pp-divider: var(--retal-copper-100);
+
+    --pp-text: var(--retal-ink-2);
+
+    --pp-header-bg: var(--retal-copper-50);
+
+    --pp-header-text: var(--retal-copper-900);
+
+    background: var(--retal-white) !important;
+
+    border: 1px solid var(--retal-copper-100) !important;
+
+    border-radius: var(--retal-radius) !important;
+
+    overflow: hidden !important;
+
+    box-shadow:
+
+        0 24px 60px rgba(92, 46, 20, 0.20),
+
+        0 4px 12px rgba(92, 46, 20, 0.08) !important;
+
+}
+
+
+/* ---- 2. Warning popup width adjustment ---------------------------------- */
+
+/* Only applies to the original small warning popup.
+
+   K2 calculates its initial position using a 320px width. */
+
+.theme-entry .popup.warning-message.simple-message-content.runtime-message.size-small {
+
+    width: var(--pp-width) !important;
+
+    margin-inline-start: calc((320px - var(--pp-width)) / 2) !important;
+
+}
+
+
+/* ---- 3. Header ----------------------------------------------------------- */
+
+.theme-entry .popup.dialog[class*="-message"] .popup-header,
+
+.theme-entry .popup.dialog[class*="-message"] .popup-header-l,
+
+.theme-entry .popup.dialog[class*="-message"] .popup-header-c,
+
+.theme-entry .popup.dialog[class*="-message"] .popup-header-r,
+
+.theme-entry .popup.dialog[class*="-message"] .popup-header-wrapper,
+
+.theme-entry .popup.dialog[class*="-message"] .popup-header-wrapper .wrapper {
+
+    background: var(--pp-header-bg) !important;
+
+}
+
+.theme-entry .popup.dialog[class*="-message"] .popup-header {
+
+    box-shadow:
+
+        -40px 0 0 var(--pp-header-bg),
+
+        40px 0 0 var(--pp-header-bg) !important;
+
+}
+
+.theme-entry .popup.dialog[class*="-message"] .popup-header-text {
+
+    color: var(--pp-header-text) !important;
+
+    font-size: 17px !important;
+
+    font-weight: 600 !important;
+
+}
+
+
+/* ---- 4. Body ------------------------------------------------------------- */
+
+/* Preserve all K2 internal icon, panel and message positioning. */
+
+.theme-entry .popup.dialog[class*="-message"] .popup-body-l,
+
+.theme-entry .popup.dialog[class*="-message"] .popup-body-r,
+
+.theme-entry .popup.dialog[class*="-message"] .popup-footer-l,
+
+.theme-entry .popup.dialog[class*="-message"] .popup-footer-r {
+
+    display: none !important;
+
+}
+
+.theme-entry .popup.dialog[class*="-message"] .popup-body,
+
+.theme-entry .popup.dialog[class*="-message"] .popup-body-c,
+
+.theme-entry .popup.dialog[class*="-message"] .popup-body-content {
+
+    background: var(--retal-white) !important;
+
+}
+
+.theme-entry .popup.dialog[class*="-message"] .lyt-messagebox-layout .message {
+
+    font-size: 15px !important;
+
+    line-height: 1.55 !important;
+
+    font-weight: 400 !important;
+
+    color: var(--pp-text) !important;
+
+}
+
+
+/* ---- 5. Footer ------------------------------------------------------------ */
+
+.theme-entry .popup.dialog[class*="-message"] .popup-footer {
+
+    height: auto !important;
+
+    background: var(--retal-white) !important;
+
+    border-top: 1px solid var(--pp-divider) !important;
+
+}
+
+.theme-entry .popup.dialog[class*="-message"] .popup-footer-c {
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: flex-end !important;
+
+    gap: 12px !important;
+
+    margin: 0 !important;
+
+    padding: 14px 20px !important;
+
+    background: var(--retal-white) !important;
+
+}
+
+
+/* ---- 6. Default buttons - secondary ------------------------------------- */
+
+/* Cancel, No, Close and other secondary actions. */
+
+.theme-entry .popup.dialog[class*="-message"] .popup-footer a.button {
+
+    display: inline-flex !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    box-sizing: border-box !important;
+
+    float: none !important;
+
+    min-width: 0 !important;
+
+    height: 40px !important;
+
+    margin: 0 !important;
+
+    padding: 0 24px !important;
+
+    font-size: 15px !important;
+
+    font-weight: 600 !important;
+
+    line-height: 1 !important;
+
+    text-decoration: none !important;
+
+    cursor: pointer !important;
+
+    background: var(--retal-white) !important;
+
+    color: var(--pp-brand-dark) !important;
+
+    border: 1.5px solid var(--pp-btn-border) !important;
+
+    border-radius: var(--retal-radius) !important;
+
+    box-shadow: none !important;
+
+    transition:
+
+        background-color 0.15s ease,
+
+        border-color 0.15s ease,
+
+        color 0.15s ease !important;
+
+}
+
+.theme-entry .popup.dialog[class*="-message"] .popup-footer a.button:hover {
+
+    background: var(--retal-copper-50) !important;
+
+    border-color: var(--pp-brand) !important;
+
+}
+
+
+/* ---- 7. Primary buttons - OK / Yes -------------------------------------- */
+
+.theme-entry .popup.dialog[class*="-message"] .popup-footer a.button[id^="messageBoxButton_OK"],
+
+.theme-entry .popup.dialog[class*="-message"] .popup-footer a.button[id^="messageBoxButton_Yes"],
+
+.theme-entry .popup.dialog.confirmation-message .popup-footer a.button:first-of-type {
+
+    order: 2 !important;
+
+    background: var(--pp-brand) !important;
+
+    border-color: var(--pp-brand) !important;
+
+    color: var(--retal-white) !important;
+
+    margin-inline-end: 18px !important;
+
+}
+
+.theme-entry .popup.dialog[class*="-message"] .popup-footer a.button[id^="messageBoxButton_OK"]:hover,
+
+.theme-entry .popup.dialog[class*="-message"] .popup-footer a.button[id^="messageBoxButton_Yes"]:hover,
+
+.theme-entry .popup.dialog.confirmation-message .popup-footer a.button:first-of-type:hover {
+
+    background: var(--pp-brand-hover) !important;
+
+    border-color: var(--pp-brand-hover) !important;
+
+}
+
+
+/* ---- 8. Cancel buttons in other K2 popups ------------------------------- */
+
+/* Targets Cancel buttons when K2 exposes their identity through
+
+   an ID, class, title or accessibility label.
+
+   Does not affect ordinary form buttons. */
+
+.theme-entry .popup .popup-footer a.button[id*="cancel" i],
+
+.theme-entry .popup .popup-footer a.button[class*="cancel" i],
+
+.theme-entry .popup .popup-footer a.button[title*="cancel" i],
+
+.theme-entry .popup .popup-footer a.button[aria-label*="cancel" i] {
+
+    background: var(--retal-white) !important;
+
+    color: var(--pp-brand-dark, var(--retal-copper-800)) !important;
+
+    border: 1.5px solid var(--pp-btn-border, var(--retal-copper-300)) !important;
+
+    border-radius: var(--retal-radius) !important;
+
+    box-shadow: none !important;
+
+}
+
+.theme-entry .popup .popup-footer a.button[id*="cancel" i]:hover,
+
+.theme-entry .popup .popup-footer a.button[class*="cancel" i]:hover,
+
+.theme-entry .popup .popup-footer a.button[title*="cancel" i]:hover,
+
+.theme-entry .popup .popup-footer a.button[aria-label*="cancel" i]:hover {
+
+    background: var(--retal-copper-50) !important;
+
+    border-color: var(--pp-brand, var(--retal-copper-600)) !important;
+
+}
+
+
+/* ---- 9. Keyboard focus --------------------------------------------------- */
+
+.theme-entry .popup.dialog[class*="-message"] .popup-footer a.button:focus-visible,
+
+.theme-entry .popup .popup-footer a.button[id*="cancel" i]:focus-visible,
+
+.theme-entry .popup .popup-footer a.button[class*="cancel" i]:focus-visible,
+
+.theme-entry .popup .popup-footer a.button[title*="cancel" i]:focus-visible,
+
+.theme-entry .popup .popup-footer a.button[aria-label*="cancel" i]:focus-visible {
+
+    outline: 2px solid rgba(166, 96, 62, 0.45) !important;
+
+    outline-offset: 2px !important;
+
+}
+
+
+/* ---- 10. Responsive warning popup --------------------------------------- */
+
+@media (max-width: 480px) {
+
+    .theme-entry .popup.warning-message.simple-message-content.runtime-message.size-small {
+
+        width: calc(100vw - 32px) !important;
+
+        margin-inline-start: calc((320px - (100vw - 32px)) / 2) !important;
+
+    }
+
+}
+ 

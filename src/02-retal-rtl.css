@@ -1,0 +1,41 @@
+/* =========================================================================
+   RETAL K2 THEME v2 - 02 RIGHT-TO-LEFT
+   Active when retal-runtime.js sets <html dir="rtl" lang="ar"> (Arabic culture).
+   The module files were converted to logical properties (margin-inline-start,
+   inset-inline-end, text-align:start ...), so most layout mirrors on its own.
+   This file covers what logical properties cannot.
+   ========================================================================= */
+
+html[dir="rtl"] body.theme-entry { direction: rtl; text-align: start; }
+
+/* Arabic reads better slightly larger and with more line height */
+html[lang^="ar"] .theme-entry { --retal-lh-body: 1.7; --retal-font-display: var(--retal-font-arabic-display); --font-title: var(--retal-font-arabic-display); }
+html[lang^="ar"] .theme-entry input, html[lang^="ar"] .theme-entry textarea { font-size: 16px !important; }
+
+/* Directional icons flip (arrows, chevrons, back buttons) */
+html[dir="rtl"] .theme-entry .retal-icon-dir,
+html[dir="rtl"] .theme-entry [class*="arrow"]:not([class*="up"]):not([class*="down"]),
+html[dir="rtl"] .theme-entry .icon-chevron-right,
+html[dir="rtl"] .theme-entry .icon-chevron-left { transform: scaleX(-1); }
+
+/* Numbers, emails, phone numbers, IDs and reference codes stay left-to-right */
+html[dir="rtl"] .theme-entry input[type="email"],
+html[dir="rtl"] .theme-entry input[type="tel"],
+html[dir="rtl"] .theme-entry input[name*="Email" i],
+html[dir="rtl"] .theme-entry input[name*="Mobile" i],
+html[dir="rtl"] .theme-entry input[name*="Phone" i],
+html[dir="rtl"] .theme-entry input[name*="Reference" i],
+html[dir="rtl"] .theme-entry input[name*="IBAN" i],
+html[dir="rtl"] .theme-entry .retal-ltr {
+  direction: ltr; text-align: end; unicode-bidi: plaintext;
+}
+
+/* K2 grids and list views */
+html[dir="rtl"] .theme-entry .grid-content-table td,
+html[dir="rtl"] .theme-entry .grid-column-header-table th { text-align: start !important; }
+
+/* K2 drop-down arrow sits on the left in Arabic */
+html[dir="rtl"] .theme-entry .input-control.select-box .input-control-buttons { inset-inline-end: 0; inset-inline-start: auto; }
+
+/* Flex rows (stepper, card groups, header) already run right-to-left under dir="rtl";
+   do not add row-reverse, or they flip back. */

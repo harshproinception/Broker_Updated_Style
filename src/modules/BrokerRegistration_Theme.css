@@ -1,0 +1,1232 @@
+/* Refactored for Retal K2 Theme v2 from BrokerRegistration_Theme.css - colours, fonts and radii now come from 00-retal-tokens.css; left/right are logical so Arabic mirrors. */
+/* =========================================
+1. CSS VARIABLES (COLORS & FONTS)
+========================================= */
+
+
+
+
+   
+
+
+
+
+
+:root {
+    
+    /* Bronze / Brown Color */
+    
+    /* Button hover ke liye dark shade */
+    
+    /* Text / Headings Dark Color */
+    
+    /* Background Light Color */
+    --retal-border: var(--retal-line);
+    /* Textbox borders ke liye */
+    --retal-white: var(--retal-white);
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+    /* Font Variables */
+    
+    
+    
+}
+
+
+
+.theme-entry {
+    font-family: var(--retal-font-body) !important;
+}
+
+
+/*=================================
+For all views border radius setting (commented as of now as there might be some styling issues)
+=====================================*/
+/* 
+    .theme-entry .form .view .innerpanel>.grid,
+    .theme-entry #pgInnerPanel .view .innerpanel>.grid,
+    .theme-entry .form-tabs>.tab-box-body .view .innerpanel>.grid,
+    .theme-entry #pgTabContent .view .innerpanel>.grid,
+    .theme-entry .form .view .innerpanel>.panel,
+    .theme-entry #pgInnerPanel .view .innerpanel>.panel,
+    .theme-entry .form-tabs>.tab-box-body .view .innerpanel>.panel,
+    .theme-entry #pgTabContent .view .innerpanel>.panel,
+    .theme-entry .form .view-canvas>.grid,
+    .theme-entry #pgInnerPanel .view-canvas>.grid,
+    .theme-entry .form-tabs>.tab-box-body .view-canvas>.grid,
+    .theme-entry #pgTabContent .view-canvas>.grid,
+    .theme-entry .form .view-canvas>.panel,
+    .theme-entry #pgInnerPanel .view-canvas>.panel,
+    .theme-entry .form-tabs>.tab-box-body .view-canvas>.panel,
+    .theme-entry #pgTabContent .view-canvas>.panel {
+        border-radius: 12px !important;
+    } */
+
+
+.theme-entry .form {
+    padding: 0 !important;
+}
+
+.theme-entry div[name="Header_Navbar"] {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 999 !important;
+}
+
+.theme-entry .panel-header,
+.theme-entry .panel-header-text,
+.theme-entry .form-title,
+.theme-entry .view-title,
+.theme-entry .window-header,
+.theme-entry h1,
+.theme-entry h2,
+.theme-entry h3,
+.theme-entry h4 {
+    font-family: var(--retal-font-display) !important;
+    font-weight: normal !important;
+    text-wrap: auto !important;
+}
+
+.theme-entry .SourceCode-Forms-Controls-Web-Control,
+.theme-entry .SourceCode-Forms-Controls-Web-Button,
+.theme-entry input,
+.theme-entry select,
+.theme-entry textarea,
+.theme-entry p {
+    font-family: var(--retal-font-body) !important;
+}
+
+
+.theme-entry span.button-text,
+.theme-entry span.headerTxt,
+.theme-entry .SourceCodeFormsControlsWorklist span.worklist-grid-column-header-cell-text,
+.theme-entry .WatermarkText  {
+    font-family: var(--retal-font-body) !important;
+}
+
+
+.theme-entry .styling-font,
+.theme-entry .SFC.SourceCode-Forms-Controls-Web-DataLabel {
+    font-family: var(--retal-font-body) !important;
+    font-size: 16px !important;
+}
+
+.theme-entry .runtime-content {
+    margin: 0 !important;
+}
+
+/**/
+
+
+/* =========================================================
+   SAFETY NET: HIGH SPECIFICITY K2 HIDDEN CONTROLS FIX
+   Yeh CSS rule specific elements ko target karta hai taaki 
+   unki power humari design CSS se zyada ho jaye.
+========================================================= */
+
+/* Generic High Power Hide */
+html body .theme-entry .hidden,
+html body .theme-entry [style*="display: none"],
+html body .theme-entry [style*="display:none"],
+
+/* Specific Elements High Power Hide (Buttons, Radios, Inputs) */
+html body .theme-entry a.button.hidden,
+html body .theme-entry a.button[style*="display: none"],
+html body .theme-entry label.radio.hidden,
+html body .theme-entry label.radio[style*="display: none"],
+html body .theme-entry .input-control.hidden,
+html body .theme-entry .SFC.SourceCode-Forms-Controls-Web-Label.hidden,
+html body .theme-entry span.hidden {
+    display: none !important;
+}
+
+
+.theme-entry .grid-content-table tbody tr>td {
+    vertical-align: middle !important;
+}
+
+.theme-entry .grid table.grid-content-table tr.selected>td {
+    background-color: var(--retal-suspended-soft) !important;
+}
+
+
+.theme-entry a.SourceCode-Forms-Controls-Web-Button,
+.theme-entry .SourceCode-Forms-Controls-Web-Button {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    justify-content: center !important;
+    padding: clamp(5px, 2vw, 16px) clamp(5px, 2vw, 30px) !important;
+    border-radius: 0px !important;
+    font-family: var(--retal-font-body) !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    letter-spacing: .03em !important;
+    cursor: pointer !important;
+    margin: 0px 5px !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+}
+
+.theme-entry .SFC.SourceCode-Forms-Controls-Web-Label:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+    text-wrap: auto !important;
+}
+
+
+/* =========================================================
+   2. "NORMAL" BUTTON COLORS (Only for default buttons)
+========================================================= */
+.theme-entry a.SourceCode-Forms-Controls-Web-Button:not(.button-primary):not(.button-quiet):not(.button-destructive) {
+    background-color: var(--retal-white) !important;
+    border: 1px solid var(--retal-copper-100) !important;
+    color: var(--retal-ink) !important;
+}
+
+/* NORMAL BUTTON - HOVER STATE */
+.theme-entry a.SourceCode-Forms-Controls-Web-Button:not(.button-primary):not(.button-quiet):not(.button-destructive):hover {
+    color: var(--color-primary) !important;
+    border: 1px solid var(--color-primary) !important;
+}
+
+
+
+/*=============================
+        HEADER DESIGNING
+===============================*/
+
+.theme-entry a[name="btnLanguage"] {
+    color: var(--color-primary) !important;
+    margin-inline-end: 10px !important;
+    font-size: 16px;
+    font-family: var(--retal-font-body) !important;
+    background-color: var(--retal-white) !important;
+    border: solid 1px var(--retal-copper-50) !important;
+    border-radius: 0 !important;
+}
+
+.theme-entry a[name="btnLanguage"]:hover {
+    background-color: var(--primary-header-hover) !important;
+    border: solid 1px var(--color-primary) !important;
+}
+
+.theme-entry span[name="emptySpaceBottom"] {
+    display: none !important;
+}
+
+
+/* =========================================
+3. Footer CSS and design
+========================================= */
+
+.theme-entry .rfooter {
+    width: 100vw !important;
+    margin-top: 0px !important;
+    background: var(--retal-copper-800) !important;
+    color: var(--retal-copper-100) !important;
+    margin-bottom: 0px !important;
+    display: block !important;
+}
+
+.theme-entry .rfooter  h1,
+.theme-entry .rfooter  h2,
+.theme-entry .rfooter  h3,
+.theme-entry .rfooter  h4 {
+    font-family: var(--retal-font-display) !important;
+    font-weight: normal !important;
+    text-wrap: auto !important;
+}
+
+.theme-entry .rf-top {
+    max-width: 1040px !important;
+    margin: 0 auto !important;
+    padding: 10px 44px 10px !important;
+    display: grid !important;
+    grid-template-columns: 1.5fr 1fr 1.4fr !important;
+    gap: 40px !important;
+    align-items: center !important;
+}
+
+.theme-entry .rf-logo {
+    height: 28px !important;
+    opacity: .95 !important;
+    margin-bottom: 18px !important;
+}
+
+.theme-entry .display {
+    font-family: var(--retal-font-display) !important;
+    font-weight: 500 !important;
+}
+
+.theme-entry .rf-slog {
+    font-size: 23px !important;
+    color: var(--retal-white) !important;
+    line-height: 1.16 !important;
+    max-width: 250px !important;
+    margin-bottom: 20px !important;
+}
+
+.theme-entry .rf-social {
+    display: flex !important;
+    gap: 10px !important;
+}
+
+.theme-entry .rf-social a {
+    width: 36px !important;
+    height: 36px !important;
+    border: 1px solid rgba(255, 255, 255, .25) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: var(--retal-copper-100) !important;
+    transition: .2s !important;
+}
+
+.theme-entry .rf-col h4 {
+    font-size: 11.5px !important;
+    letter-spacing: .16em !important;
+    text-transform: uppercase !important;
+    color: rgba(255, 255, 255, .58) !important;
+    margin: 0 0 13px !important;
+    font-weight: 600 !important;
+}
+
+.theme-entry .rf-col a,
+.rf-col p {
+    display: block !important;
+    font-size: 14px !important;
+    color: var(--retal-copper-100) !important;
+    text-decoration: none !important;
+    margin: 0 0 9px !important;
+    line-height: 1.5 !important;
+}
+
+.theme-entry .rf-col h4 {
+    font-size: 11.5px !important;
+    letter-spacing: .16em !important;
+    text-transform: uppercase !important;
+    color: rgba(255, 255, 255, .58) !important;
+    margin: 0 0 13px !important;
+    font-weight: 600 !important;
+}
+
+.theme-entry .rf-bot-in {
+    max-width: 1040px !important;
+    margin: 0 auto !important;
+    padding: 16px 44px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    gap: 12px !important;
+    flex-wrap: wrap !important;
+    font-size: 12px !important;
+    color: rgba(255, 255, 255, .55) !important;
+    border-top: 1px solid rgba(255, 255, 255, .12) !important;
+}
+
+.theme-entry .rf-bot-in a {
+    color: rgba(255, 255, 255, .72) !important;
+    text-decoration: none !important;
+}
+
+
+/* =======================================================================
+ 4 Common_Navigation Progress Bar and CANCEL BUTTON STYLING & SVG INJECTION
+========================================================================== */
+
+.theme-entry div[name="Common_Navigation"] {
+    background: transparent !important;
+}
+
+.theme-entry div[name="Common_Navigation"] p {
+    color: var(--retal-muted) !important;
+}
+
+.theme-entry a[name="btnCancel"] {
+    color: var(--retal-copper-600) !important;
+    background: none !important;
+    border: none !important;
+    font-weight: 600 !important;
+    font-size: 13.5px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    margin-bottom: 10px !important;
+    box-shadow: none !important;
+    /* K2 default shadow hatane ke liye */
+    text-decoration: none !important;
+}
+
+/* Pseudo-element for SVG Icon using Mask Image */
+.theme-entry a[name="btnCancel"]::before {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: currentColor;
+
+    /* SVG converted to Data URI Mask */
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 12H5M11 18l-6-6 6-6'/%3E%3C/svg%3E") no-repeat center / contain;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 12H5M11 18l-6-6 6-6'/%3E%3C/svg%3E") no-repeat center / contain;
+}
+
+
+/* =========================================================
+  5 K2 PROGRESS BAR CUSTOMIZATION (INLINE, STRETCHED & GREEN)
+========================================================= */
+
+
+.theme-entry div[name="Progress"] .container.metro {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    /* Isse elements naye line mein nahi jayenge */
+    width: 100% !important;
+    counter-reset: k2-step-counter;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Ensure container takes full width */
+.theme-entry div[name="Progress"] .step-container {
+    display: flex !important;
+    flex: 1 1 0 !important;
+    /* This will STRETCH connecting line */
+    min-width: 0 !important;
+}
+
+.theme-entry div[name="Progress"] .step-area {
+    display: flex !important;
+    flex-direction: row !important;
+    /* ADDED THIS */
+    width: 100% !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-decoration: none !important;
+}
+
+.theme-entry div[name="Progress"] .step-item,
+.theme-entry div[name="Progress"] .step-title {
+    display: contents !important;
+}
+
+.theme-entry div[name="Progress"] .connector-left {
+    order: 1;
+}
+
+.theme-entry div[name="Progress"] .step {
+    order: 2;
+}
+
+.theme-entry div[name="Progress"] .title {
+    order: 3;
+}
+
+.theme-entry div[name="Progress"] .connector-right {
+    order: 4;
+}
+
+/* FIX LINE STRETCHING */
+.theme-entry div[name="Progress"] .connector-left,
+.theme-entry div[name="Progress"] .connector-right {
+    position: static !important;
+    height: 2px !important;
+    background-color: var(--retal-copper-100) !important;
+    flex: 1 1 100% !important;
+    /* Stretch fixing */
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+.theme-entry div[name="Progress"] .step-container.first .connector-left,
+.theme-entry div[name="Progress"] .step-container.last .connector-right {
+    display: none !important;
+}
+
+/* DEFAULT STEP CIRCLE */
+.theme-entry div[name="Progress"] .step {
+    counter-increment: k2-step-counter;
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 50% !important;
+    border: 2px solid var(--retal-copper-100) !important;
+    background-color: var(--retal-white) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+    cursor: default !important;
+    pointer-events: none !important;
+}
+
+.theme-entry div[name="Progress"] .step svg {
+    display: none !important;
+}
+
+/* NUMBER (1, 2, 3...) */
+.theme-entry div[name="Progress"] .step::after {
+    content: counter(k2-step-counter);
+    font-family: var(--retal-font-body) !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: var(--retal-line-strong) !important;
+}
+
+.theme-entry div[name="Progress"] .title {
+    font-family: var(--retal-font-body) !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    color: var(--retal-muted) !important;
+    margin-inline-start: 12px !important;
+    margin-inline-end: 12px !important;
+    white-space: nowrap !important;
+    overflow: visible !important;
+    display: block !important;
+}
+
+/* -----------------------------------------------------
+   CURRENT ACTIVE STEP (Step 1 by default where user is)
+------------------------------------------------------ */
+.theme-entry div[name="Progress"] .step-container.selected .step {
+    background-color: var(--retal-primary, var(--retal-copper-500)) !important;
+    border-color: var(--retal-primary, var(--retal-copper-500)) !important;
+}
+
+.theme-entry div[name="Progress"] .step-container.selected .step::after {
+    color: var(--retal-white) !important;
+    /* Active text color */
+}
+
+.theme-entry div[name="Progress"] .step-container.selected .title {
+    color: var(--retal-dark, var(--retal-ink)) !important;
+    font-weight: 600 !important;
+}
+
+/* -----------------------------------------------------
+   COMPLETED STEPS (Green Check & Green Line)
+------------------------------------------------------ */
+/* Green Circle for completed steps */
+.theme-entry div[name="Progress"] .step-container.completed .step {
+    background-color: var(--retal-success) !important;
+    /* Green color */
+    border-color: var(--retal-success) !important;
+}
+
+/* Replace Number with Green Tick using Mask Image */
+.theme-entry div[name="Progress"] .step-container.completed .step::after {
+    content: '';
+    /* Number hide */
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    /* Tick color */
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") no-repeat center / contain;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") no-repeat center / contain;
+}
+
+/* Title text color for completed step */
+.theme-entry div[name="Progress"] .step-container.completed .title {
+    color: var(--retal-dark, var(--retal-ink)) !important;
+}
+
+/* Green Connector Lines: Right line of completed step AND Left line of next step */
+.theme-entry div[name="Progress"] .step-container.completed .connector-right,
+.theme-entry div[name="Progress"] .step-container.completed+.step-container .connector-left {
+    background-color: var(--retal-success) !important;
+}
+
+/* =========================================================
+  6 HERO BACKGROUND & SVG STYLING LANDING PAGE
+========================================================= */
+.theme-entry .rhero-bg {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    background-color: rgb(158, 104, 80) !important;
+}
+
+.theme-entry svg.rhero-sky {
+    position: absolute !important;
+    inset-inline-start: 0 !important;
+    inset-inline-end: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 56% !important;
+}
+
+.theme-entry svg.rhero-sky * {
+    stroke: rgba(255, 255, 255, 0.5) !important;
+    stroke-width: 1.1 !important;
+    fill: none !important;
+    vector-effect: non-scaling-stroke !important;
+    stroke-dasharray: 1600 !important;
+    stroke-dashoffset: 0 !important;
+}
+
+
+/* =========================================================
+  7 POP UP STYLING
+========================================================= */
+.theme-entry .dialog:not(.sub-form):not(.sub-view) a.button {
+    padding: 0.5rem 1rem !important;
+    height: auto !important;
+    line-height: normal !important;
+    box-sizing: border-box !important;
+}
+
+
+/*=======================================================
+    8 Pill Styling based on Name
+========================================================*/
+
+.theme-entry span[name="dlbApplicationStatus"] {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    padding: 4px 11px !important;
+    border-radius: 30px !important;
+    white-space: nowrap !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Dot same as Prototype*/
+.theme-entry span[name="dlbApplicationStatus"]::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+/* 4. Conditional Classes (JS will add these) */
+
+/* OK State (Active, Submitted) */
+.theme-entry span[name="dlbApplicationStatus"].status-ok {
+    background: var(--ok-soft) !important;
+    color: var(--ok-color) !important;
+}
+
+.theme-entry span[name="dlbApplicationStatus"].status-ok::before {
+    background-color: var(--ok-color) !important;
+}
+
+/* Warn State (Expiring soon, Pending approval) */
+.theme-entry span[name="dlbApplicationStatus"].status-warn {
+    background: var(--warn-soft) !important;
+    color: var(--warn-color) !important;
+}
+
+.theme-entry span[name="dlbApplicationStatus"].status-warn::before {
+    background-color: var(--warn-color) !important;
+}
+
+/* Danger State (Rejected) */
+.theme-entry span[name="dlbApplicationStatus"].status-danger {
+    background: var(--danger-soft) !important;
+    color: var(--danger-color) !important;
+}
+
+.theme-entry span[name="dlbApplicationStatus"].status-danger::before {
+    background-color: var(--danger-color) !important;
+}
+
+/* Suspended State */
+.theme-entry span[name="dlbApplicationStatus"].status-suspended {
+    background: var(--suspended-soft) !important;
+    color: var(--suspended-color) !important;
+}
+
+.theme-entry span[name="dlbApplicationStatus"].status-suspended::before {
+    background-color: var(--suspended-color) !important;
+}
+
+
+/*==========================================================
+9. Error Message Pill
+============================================================*/
+
+.theme-entry span[name="dlbErrorMsg"] {
+    margin: 1rem auto !important;
+    font-weight: Normal !important;
+    font-style: var(--font-body);
+    font-size: 13px !important;
+    background-color: var(--warn-soft) !important;
+    filter: none !important;
+    color: var(--warn-color) !important;
+    padding: 10px !important;
+    border-radius: 1rem !important;
+    width: 100% !important;
+}
+
+[name="dlbErrorMsg"]::before {
+    content: "" !important;
+    display: inline-block !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-color: currentColor !important;
+    -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='black' stroke-width='2.5'><path d='M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z'/><path d='m9 12 2 2 4-4' /></svg>") no-repeat center !important;
+    mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='black' stroke-width='2.5'><path d='M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z'/><path d='m9 12 2 2 4-4' /></svg>") no-repeat center !important;
+}
+
+
+.theme-entry span[name="dlbErrorMsg"] {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    margin: 1rem auto !important;
+    font-weight: normal !important;
+    font-family: var(--retal-font-body) !important;
+    font-size: 13px !important;
+    background-color: var(--warn-soft) !important;
+    color: var(--warn-color) !important;
+    padding: 10px !important;
+    border-radius: 1rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Icon (::before) */
+[name="dlbErrorMsg"]::before {
+    content: "" !important;
+    display: inline-block !important;
+    flex-shrink: 0 !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-color: currentColor !important;
+
+    -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='black' stroke-width='2.5'><path stroke-linecap='round' stroke-linejoin='round' d='M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z'/><path stroke-linecap='round' stroke-linejoin='round' d='m9 12 2 2 4-4' /></svg>") no-repeat center / contain !important;
+
+    mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='black' stroke-width='2.5'><path stroke-linecap='round' stroke-linejoin='round' d='M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z'/><path stroke-linecap='round' stroke-linejoin='round' d='m9 12 2 2 4-4' /></svg>") no-repeat center / contain !important;
+}
+
+/*==========================================================
+10. Track Application Page Specific changes
+============================================================*/
+[name="btnCheckStatus"]::before {
+    content: "" !important;
+    display: inline-block !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-color: currentColor !important;
+    -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='black' stroke-width='2.5'><path stroke-linecap='round' stroke-linejoin='round' d='M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z'/></svg>") no-repeat center !important;
+    mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='black' stroke-width='2.5'><path stroke-linecap='round' stroke-linejoin='round' d='M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z'/></svg>") no-repeat center !important;
+}
+
+.theme-entry div[name="TrackApplicationItemView"] {
+    background: transparent !important;
+}
+
+.theme-entry div[name="TrackApplicationItemView"] :is(h1, h2, h3, h4, h5, h6) {
+    color: black !important;
+}
+
+
+.theme-entry [name="lblTrackApplicationNote"] {
+    color: var(--muted-color) !important;
+}
+
+
+/*=====================================================================================
+11. SELECT CATEGORY TYPE VIEW LEVEL CHANGES (RADIO BUTTON CSS IS IN BR_RadioButtonCard.css FILE)
+=======================================================================================*/
+
+.theme-entry span[name="dlbSelectedCategoryExpression"],
+.theme-entry span[name="Rejected Data Label"]
+
+{
+    background-color: var(--retal-info-soft) !important;
+    color: var(--retal-info) !important;
+    display: flex !important;
+    gap: 11px !important;
+    padding: 13px 15px !important;
+    border-radius: var(--retal-radius) !important;
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    align-items: center !important;
+}
+
+[name="dlbSelectedCategoryExpression"]::before {
+    content: "" !important;
+    display: inline-block !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-color: currentColor !important;
+    -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='black' stroke-width='2.5'><path d='M20 6 9 17l-5-5' /></svg>") no-repeat center !important;
+    mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='black' stroke-width='2.5'><path d='M20 6 9 17l-5-5' /></svg>") no-repeat center !important;
+}
+
+[name="Rejected Data Label"]::before {
+    content: "" !important;
+    display: inline-block !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-color: currentColor !important;
+    -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='black' stroke-width='2.5'><path d='M21 12a9 9 0 1 1-3-6.7M21 3v5h-5' /></svg>") no-repeat center !important;
+    mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='black' stroke-width='2.5'><path d='M21 12a9 9 0 1 1-3-6.7M21 3v5h-5' /></svg>") no-repeat center !important;
+}
+
+
+
+[name="btnContinueButton"]::after,
+[name="btnReviewButton"]::after {
+    content: "" !important;
+    display: inline-block !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-color: currentColor !important;
+    -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='black' stroke-width='2.5'><path d='M5 12h14M13 6l6 6-6 6' /></svg>") no-repeat center !important;
+    mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='black' stroke-width='2.5'><path d='M5 12h14M13 6l6 6-6 6' /></svg>") no-repeat center !important;
+}
+
+[name="btnSubmitToRetal"]::before {
+    content: "" !important;
+    display: inline-block !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-color: currentColor !important;
+    -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='black' stroke-width='2.5'><path d='M20 6 9 17l-5-5' /></svg>") no-repeat center !important;
+    mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='black' stroke-width='2.5'><path d='M20 6 9 17l-5-5' /></svg>") no-repeat center !important;
+}
+
+[name="btnBack"]::before {
+    content: "" !important;
+    display: inline-block !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-color: currentColor !important;
+    -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='black' stroke-width='2.5'><path d='M19 12H5M11 18l-6-6 6-6' /></svg>") no-repeat center !important;
+    mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='black' stroke-width='2.5'><path d='M19 12H5M11 18l-6-6 6-6' /></svg>") no-repeat center !important;
+}
+
+
+
+/* =========================================================
+12. SUB-VIEW & SUB-FORM MODAL STYLING
+========================================================= */
+
+/* Overlay*/
+.theme-entry .modalizer {
+    background-color: rgba(0, 0, 0, 0.45) !important;
+    backdrop-filter: blur(3px) !important;
+}
+
+
+.theme-entry div.popup.dialog.sub-form,
+.theme-entry div.popup.dialog.sub-view {
+    border: none !important;
+    border-radius: var(--retal-radius) !important;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2) !important;
+    background-color: var(--retal-copper-50) !important;
+    overflow: hidden !important;
+}
+
+
+.theme-entry div.popup.dialog.sub-form .window-header,
+.theme-entry div.popup.dialog.sub-view .window-header {
+    background-color: var(--retal-white) !important;
+    border-bottom: 1px solid var(--retal-line-soft) !important;
+    padding: 16px 24px !important;
+    display: flex !important;
+    align-items: center !important;
+    height: auto !important;
+}
+
+
+.theme-entry div.popup.dialog.sub-form .window-header .panel-header-text,
+.theme-entry div.popup.dialog.sub-view .window-header .panel-header-text {
+    color: var(--retal-ink) !important;
+    font-family: var(--retal-font-body) !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+}
+
+
+.theme-entry div.popup.dialog.sub-form .window-close,
+.theme-entry div.popup.dialog.sub-view .window-close {
+    background: transparent !important;
+    border: none !important;
+    width: 24px !important;
+    height: 24px !important;
+    inset-inline-end: 20px !important;
+    top: 16px !important;
+    opacity: 0.5 !important;
+    transition: opacity 0.3s ease !important;
+}
+
+.theme-entry div.popup.dialog.sub-form .window-close:hover,
+.theme-entry div.popup.dialog.sub-view .window-close:hover {
+    opacity: 1 !important;
+    /* Hover pe dark hoga */
+}
+
+
+.theme-entry div.popup.dialog.sub-form .window-close span,
+.theme-entry div.popup.dialog.sub-view .window-close span {
+    display: none !important;
+}
+
+
+.theme-entry div.popup.dialog.sub-form .window-close::after,
+.theme-entry div.popup.dialog.sub-view .window-close::after {
+    content: "" !important;
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: var(--retal-ink) !important;
+    -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M6 18L18 6M6 6l12 12'/></svg>") no-repeat center / contain !important;
+    mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M6 18L18 6M6 6l12 12'/></svg>") no-repeat center / contain !important;
+}
+
+
+.theme-entry div.popup.dialog.sub-form .popup-body,
+.theme-entry div.popup.dialog.sub-view .popup-body {
+    background-color: transparent !important;
+    padding: 20px !important;
+}
+
+
+
+/* ========================================== */
+/* 13. VERTICAL LAYOUT SETTINGS                */
+/* ========================================== */
+
+.theme-entry div[name="ApplicationStatusProgressBar"] .container.metro {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    height: auto !important;
+    padding-inline-start: 0 !important;
+}
+
+.theme-entry div[name="ApplicationStatusProgressBar"] .step-container {
+    width: 100% !important;
+    display: block !important;
+    margin-bottom: 25px !important;
+    position: relative !important;
+}
+
+.theme-entry div[name="ApplicationStatusProgressBar"] .step-area {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    pointer-events: none !important;
+    /* Clicks disable karne ke liye */
+    cursor: default !important;
+}
+
+/* Default K2 Lines chupana */
+.theme-entry div[name="ApplicationStatusProgressBar"] .connector-left,
+.theme-entry div[name="ApplicationStatusProgressBar"] .connector-right {
+    display: none !important;
+}
+
+.theme-entry div[name="ApplicationStatusProgressBar"] .step-item {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-inline-end: 15px !important;
+}
+
+.theme-entry div[name="ApplicationStatusProgressBar"] .step-title {
+    text-align: start !important;
+    margin-top: 0 !important;
+}
+
+
+/* ========================================== */
+/* 13.a  COLORS, ICONS AUR STATUS LOGIC          */
+/* ========================================== */
+
+/* Default Circle Setup (Sabse pehle sabko grey circle banayenge) */
+.theme-entry div[name="ApplicationStatusProgressBar"] .step {
+    width: 26px !important;
+    height: 26px !important;
+    border-radius: 50% !important;
+    background-color: var(--retal-copper-100) !important;
+    /* Blank Grey Background */
+    border: none !important;
+    /* K2 ki default border hatana */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+    z-index: 2 !important;
+    /* Ensure icon vertical line ke upar rahe */
+}
+
+/* ---- NOT STARTED STATE (Blank) ---- */
+.theme-entry div[name="ApplicationStatusProgressBar"] .step-container:not(.completed):not(.inprogress) .step svg {
+    display: none !important;
+}
+
+.theme-entry div[name="ApplicationStatusProgressBar"] .step-container:not(.completed):not(.inprogress) .title {
+    color: var(--retal-muted) !important;
+    /* Light text for pending */
+    font-weight: normal !important;
+}
+
+
+/* ---- COMPLETED & IN-PROGRESS STATE (Green + White SVG) ---- */
+.theme-entry div[name="ApplicationStatusProgressBar"] .step-container.completed .step,
+.theme-entry div[name="ApplicationStatusProgressBar"] .step-container.inprogress .step {
+    background-color: var(--retal-success) !important;
+    /* Aapki image wala Green */
+}
+
+.theme-entry div[name="ApplicationStatusProgressBar"] .step-container.completed .step svg,
+.theme-entry div[name="ApplicationStatusProgressBar"] .step-container.inprogress .step svg {
+    display: block !important;
+    fill: var(--retal-white) !important;
+    color: var(--retal-white) !important;
+}
+
+.theme-entry div[name="ApplicationStatusProgressBar"] .step-container.completed .title,
+.theme-entry div[name="ApplicationStatusProgressBar"] .step-container.inprogress .title {
+    color: var(--retal-black) !important;
+    font-weight: bold !important;
+}
+
+
+/* =========================================================
+   K2 TREE CONTROL -> PREMIUM SIDEBAR MENU
+========================================================= */
+
+/* 1. Main Sidebar Container Styling */
+.theme-entry div[name="asideNavigationMenu"] {
+    background-color: var(--retal-ink-2) !important;
+    height: 100vh !important;
+    padding: 24px 0 !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    text-wrap: auto !important;
+}
+
+/* 2. K2 Default Kachra Hide Karna (Expander +/-, Watermark) */
+.theme-entry div[name="asideNavigationMenu"] .PART-expander-clickable-area,
+.theme-entry div[name="asideNavigationMenu"] .image-container,
+.theme-entry div[name="asideNavigationMenu"] .watermark {
+    display: none !important;
+}
+
+/* 3. Remove all K2 default paddings and margins */
+.theme-entry div[name="asideNavigationMenu"] ul.node-container {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* =========================================
+   LEVEL 0: MAIN HEADERS (BROKERS, REVIEW, SETUP)
+========================================= */
+.theme-entry div[name="asideNavigationMenu"] li.node[data-level="0"]>.content {
+    padding: 24px 24px 8px 24px !important;
+    cursor: default !important;
+    background: transparent !important;
+}
+
+.theme-entry div[name="asideNavigationMenu"] li.node[data-level="0"]>.content .text {
+    color: var(--retal-muted) !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+}
+
+/* =========================================
+   LEVEL 1: CHILD LINKS (All Brokers, Admin, etc.)
+========================================= */
+.theme-entry div[name="asideNavigationMenu"] li.node[data-level="1"]>.content {
+    padding: 12px 16px !important;
+    margin: 4px 16px !important;
+    border-radius: var(--retal-radius) !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* Normal State Text */
+.theme-entry div[name="asideNavigationMenu"] li.node[data-level="1"]>.content .text {
+    color: var(--retal-white) !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+}
+
+/* Hover State */
+.theme-entry div[name="asideNavigationMenu"] li.node[data-level="1"]:hover>.content {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Active / Selected State (Brand Color) */
+.theme-entry div[name="asideNavigationMenu"] li.node[data-level="1"].selected>.content,
+.theme-entry div[name="asideNavigationMenu"] li.node[data-level="1"][aria-selected="true"]>.content {
+    background-color: var(--retal-copper-500) !important;
+}
+
+.theme-entry div[name="asideNavigationMenu"] li.node[data-level="1"].selected>.content .PART-header-clickable-area,
+.theme-entry div[name="asideNavigationMenu"] li.node[data-level="1"][aria-selected="true"]>.content .PART-header-clickable-area {
+    background-color: var(--retal-copper-500) !important;
+    border: none !important;
+}
+
+
+/* =========================================
+   CUSTOM ICONS (Based on Text Names)
+========================================= */
+/* 'All Brokers' Icon */
+.theme-entry div[name="asideNavigationMenu"] span[title="All Brokers"]::before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" fill="none" stroke="%23ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* 'Approvals' Icon */
+.theme-entry div[name="asideNavigationMenu"] span[title="Approvals (Worklist)"]::before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" fill="none" stroke="%23ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* 'Admin' Icon */
+.theme-entry div[name="asideNavigationMenu"] span[title="Admin / Configuration"]::before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" fill="none" stroke="%23ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+/*Hide Hamburger Menu*/
+.theme-entry .menu-btn {
+    display: none !important;
+}
+
+
+/* Parent headers (BROKERS, REVIEW, SETUP) click disable */
+div[name="asideNavigationMenu"] li.node[data-level="0"]>.content .PART-header-clickable-area {
+    pointer-events: none !important;
+    /* Mouse click completely block */
+    cursor: default !important;
+    /* Arrow cursor ( no pointer) */
+}
+
+/* Ensure Child nodes (Level 1) normally clickable */
+div[name="asideNavigationMenu"] li.node[data-level="1"]>.content .PART-header-clickable-area {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+}
+
+
+
+/*Worklist control*/
+
+.theme-entry .SourceCode-Forms-Controls-Web-ControlPack-Worklist .SourceCodeFormsControlsWorklist {
+    border-radius: 1rem !important;
+}
+
+.theme-entry .WorkListGridHeader {
+    background-color: var(--retal-copper-500) !important;
+}
+
+.theme-entry .worklist-grid-column-header-cell-text {
+
+    font-weight: bold !important;
+    color: var(--retal-white) !important;
+}
+
+.theme-entry .WorklistItemGridRow .style-aware .worklist-grid-odd .SelectedDivBackground {
+    background-color: var(--muted-color) !important;
+}
+
+.theme-entry .SourceCodeFormsControlsWorklist .worklist-grid-odd {
+    background-color: var(--retal-white) !important;
+}
+
+
+/*ADMIN CONFIG PAGE*/
+
+.theme-entry div[name="AdminCommissionRate_View"] span.SFC,
+.theme-entry div[name="AdminCommissionRate_View"] span.SourceCode-Forms-Controls-Web-Label span.LabelWrap {
+    font-size: 13pt !important;
+}
+
+
+/*All Broker Page*/
+
+
+.theme-entry div[name="All_Brokers_View"].grid .grid-body-content td {
+    vertical-align: middle !important;
+    padding: 0 1rem !important;
+}
+
+.theme-entry .grid-body-content td div.grid-content-cell-wrapper p {
+    text-wrap: auto !important;
+}
+
+.theme-entry div.grid-body-content-wrapper{
+    border-radius: 0 0 1rem 1rem !important;
+}
+
+.theme-entry div[name="All_Brokers_View"] .grid-column-headers-wrapper {
+    padding: 5px !important;
+    background: var(--color-primary) !important;
+    border-radius: 1rem 1rem 0 0 !important;
+}
+.theme-entry div[name="All_Brokers_View"] .grid-column-header-text {
+    color: white !important;
+}
+
+/* View background transparent */
+.theme-entry div[name="All_Brokers_View"] {
+    background-color: transparent !important;
+}
+
+/* Tool Bar common */
+.theme-entry div[name="All_Brokers_View"] a[name="ToolBarButton_All"] {
+    background: var(--color-primary) !important;
+    padding: 0.5rem 2rem !important;
+    font-weight: 400 !important;
+    border-radius: 2rem !important;
+    border: 3px solid white !important;
+}
+
+/* Text Inside button */
+.theme-entry div[name="All_Brokers_View"] a[name="ToolBarButton_All"] *{
+    color: white !important;
+}
+
+/*Broker Details and Action View*/
+
+.theme-entry div[name="table_Individual-Local"],
+.theme-entry div[name="table_Individual-International"],
+.theme-entry div[name="table_Company-Local"],
+.theme-entry div[name="table_Company-International"],
+.theme-entry div[name="table_AllDocumentsDisplay"]
+
+{
+    border-radius: 1rem !important;
+}

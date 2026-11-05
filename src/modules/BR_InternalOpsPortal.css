@@ -1,0 +1,214 @@
+/* Refactored for Retal K2 Theme v2 from BR_InternalOpsPortal.css - colours, fonts and radii now come from 00-retal-tokens.css; left/right are logical so Arabic mirrors. */
+/* =========================================================
+   K2 NATIVE TABS TO VERTICAL DARK SIDEBAR CONVERSION
+========================================================= */
+
+/* 1. Main Container: Flexbox Row (Sidebar on Left, Content on Right) */
+.theme-entry .tab-box.tabs-top.form-tabs {
+    display: flex !important;
+    flex-direction: row !important;
+    min-height: 100vh !important;
+    border: none !important;
+    background: none !important;
+    overflow: hidden !important;
+}
+
+/* 2. Left Sidebar (The UL list of tabs) */
+.theme-entry ul.tab-box-tabs {
+    flex: 0 0 250px !important; /* Sidebar Width */
+    background-color: var(--retal-ink-2) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 24px 16px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    border: none !important;
+    gap: 4px !important;
+    overflow: hidden !important;
+}
+
+/* 3. Section Headers (Injected via JS - BROKERS, REVIEW, etc.) */
+.theme-entry ul.tab-box-tabs li.sidebar-section-header {
+    color: var(--retal-muted) !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    padding: 20px 8px 8px 8px !important;
+    background: transparent !important;
+    border: none !important;
+    cursor: default !important;
+    pointer-events: none !important; /* Prevents clicking */
+}
+
+/* 4. The Tabs (LI elements - Making them Pills) */
+.theme-entry ul.tab-box-tabs li:not(.sidebar-section-header) {
+    width: 100% !important;
+    margin: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: var(--retal-radius) !important;
+    overflow: hidden !important;
+}
+
+/* 5. Tab Links & Typography */
+.theme-entry ul.tab-box-tabs li:not(.sidebar-section-header) a {
+    display: flex !important;
+    align-items: center !important;
+    padding: 12px 16px !important;
+    color: var(--retal-white) !important;
+    font-size: 15px !important;
+    font-family: var(--retal-font-body) !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    border: none !important;
+    transition: background-color 0.2s ease !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Clean up K2's default tab images and wrappers */
+.theme-entry ul.tab-box-tabs li a .tab-l,
+.theme-entry ul.tab-box-tabs li a .tab-m,
+.theme-entry ul.tab-box-tabs li a .tab-r,
+.theme-entry ul.tab-box-tabs li a .tab-text {
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* 6. Hover State for Tabs */
+.theme-entry ul.tab-box-tabs li:not(.sidebar-section-header):hover {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* 7. Active / Selected Tab State (Brand Orange Pill) */
+.theme-entry ul.tab-box-tabs li.tab-box-tab-selected:not(.sidebar-section-header),
+.theme-entry ul.tab-box-tabs li.selected:not(.sidebar-section-header) {
+    background-color: var(--retal-copper-500) !important;
+}
+
+/* =========================================================
+   RIGHT SIDE: CONTENT AREA (Views Container)
+========================================================= */
+
+/* 8. Flex it to take remaining width */
+.theme-entry .tab-box-body {
+    flex: 1 !important; 
+    background-color: var(--retal-copper-50) !important; 
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* 9. Nuke K2's 9-grid borders completely */
+.theme-entry .tab-box-body-t,
+.theme-entry .tab-box-body-b,
+.theme-entry .tab-box-body-m-l,
+.theme-entry .tab-box-body-m-r {
+    display: none !important;
+}
+
+.theme-entry .tab-box-body-m,
+.theme-entry .tab-box-body-m-c,
+.theme-entry .tab-box-body-wrapper {
+    border: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+    height: 100% !important;
+    display: block !important;
+}
+
+/* =========================================================
+   1. LOGO STYLING
+========================================================= */
+ul.tab-box-tabs li.sidebar-logo {
+    padding: 10px 16px 32px 8px !important;
+    background: transparent !important;
+    border: none !important;
+    display: flex !important;
+    align-items: center !important;
+    pointer-events: none !important; /* Prevent clicking the logo */
+}
+
+/* =========================================================
+   2. SELECTED TAB
+========================================================= */
+
+/* Target the anchor tag (<a>) that actually gets the 'selected' class */
+ul.tab-box-tabs li a.selected {
+    background-color: var(--retal-copper-600) !important; 
+    color: var(--retal-white) !important;
+    border-radius: var(--retal-radius) !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important;
+}
+
+/* Ensure the SVG icon inside the selected tab turns white */
+ul.tab-box-tabs li a.selected svg {
+    stroke: var(--retal-white) !important;
+}
+
+/* Strip any background from K2's inner wrapper elements for the selected tab */
+ul.tab-box-tabs li a.selected .tab-l,
+ul.tab-box-tabs li a.selected .tab-m,
+ul.tab-box-tabs li a.selected .tab-r,
+ul.tab-box-tabs li a.selected .tab-text {
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+
+/*Hiding translation buttons hotfix*/
+.theme-entry a[name="btnEnglish"],
+.theme-entry a[name="btnArabic"] {
+    display: none !important;
+}
+
+/* =========================================================
+New MAIN CONTAINER (Pushed down to make room for Header)
+========================================================= */
+.tab-box.tabs-top.form-tabs {
+    display: flex !important;
+    flex-direction: row !important;
+    margin-top: 90px !important; /* Header ke liye top mein jagah banayi */
+    height: calc(100vh - 90px) !important; /* Scroll bar hatane ke liye bachi hui height */
+    border: none !important;
+    background: none !important;
+    overflow: hidden !important; 
+}
+
+/* =========================================================
+   New GLOBAL TOP NAVBAR (Header View spanning 100% width)
+========================================================= */
+.global-top-navbar {
+    position: fixed !important; /* Right side se bahar nikal kar top par lock karega */
+    top: 0 !important;
+    inset-inline-start: 0 !important;
+    width: 100vw !important; /* Poori screen ki width lega */
+    height: 90px !important; /* Upar diye gaye margin-top ke barabar height */
+    z-index: 9999 !important;
+    background-color: var(--retal-white) !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important; /* Halke depth ke liye shadow */
+    box-sizing: border-box !important;
+    padding-inline-start: 10px !important; 
+}
+
+
+.theme-entry p[name="lblOperations"] {
+    font-size: 12px !important;
+    color: var(--retal-line-strong) !important;
+    margin: 0 !important;
+}
+
+.theme-entry p[name="dlbCurrentUserName"] {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    color: var(--retal-black) !important;
+    margin: 0 !important;
+}
+
+
+

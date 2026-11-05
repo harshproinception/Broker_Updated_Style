@@ -1,0 +1,560 @@
+/* Refactored for Retal K2 Theme v2 from CustomerLeadDetails.css - colours, fonts and radii now come from 00-retal-tokens.css; left/right are logical so Arabic mirrors. */
+
+/* Four Tabs butons style  */
+
+.theme-entry .runtime-form.pi-has-cld-style .tab-box-tabs {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    height: 50px !important;
+    min-height: 50px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: var(--retal-copper-100) !important;
+    border: 0 !important;
+    border-bottom: 1px solid var(--retal-copper-200) !important;
+    list-style: none !important;
+}
+
+.theme-entry .runtime-form.pi-has-cld-style .tab-box-tabs>li {
+    display: block !important;
+    float: none !important;
+    width: auto !important;
+    min-width: 0 !important;
+    height: 50px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.theme-entry .runtime-form.pi-has-cld-style .tab-box-tabs>li>a.tab {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: auto !important;
+    min-width: 110px !important;
+    height: 50px !important;
+    padding: 0 26px !important;
+    margin: 0 !important;
+    background: var(--retal-copper-100) !important;
+    color: var(--retal-copper-700) !important;
+    border: 0 !important;
+    border-inline-end: 1px solid var(--retal-copper-200) !important;
+    border-bottom: 3px solid transparent !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    box-sizing: border-box !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+}
+
+.theme-entry .runtime-form.pi-has-cld-style .tab-box-tabs>li>a.tab:hover {
+    background: var(--retal-white) !important;
+    color: var(--retal-copper-600) !important;
+    border-bottom-color: var(--retal-copper-300) !important;
+}
+
+.theme-entry .runtime-form.pi-has-cld-style .tab-box-tabs>li>a.tab.selected {
+    background: var(--retal-white) !important;
+    color: var(--retal-copper-600) !important;
+    font-weight: 700 !important;
+    border: 0 !important;
+    border-inline-end: 1px solid var(--retal-copper-200) !important;
+    border-bottom: 3px solid var(--retal-copper-600) !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry .runtime-form.pi-has-cld-style .tab-box-tabs>li>a.tab .tab-wrapper,
+.theme-entry .runtime-form.pi-has-cld-style .tab-box-tabs>li>a.tab .tab-text {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: inherit !important;
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    white-space: nowrap !important;
+}
+
+.theme-entry .form-tabs > .tab-box-tabs > li > a.tab:hover {
+    color: var(--color-primary) !important;
+    background: var(--color-primary-light) !important;
+}
+
+.theme-entry .form-tabs > .tab-box-tabs > li > a.tab.selected,
+.theme-entry .form-tabs > .tab-box-tabs > li > a.tab.active {
+    color: var(--color-primary) !important;
+    border-bottom: 2px solid var(--color-primary) !important;
+    background: var(--retal-white) !important;
+}
+
+.theme-entry .form-tabs > .tab-box-tabs > li > a.tab .tab-wrapper {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.theme-entry .form-tabs > .tab-box-tabs > li > a.tab .tab-text {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    white-space: nowrap !important;
+}
+
+.theme-entry .form-tabs > .tab-box-body {
+    display: block !important;
+    width: 100% !important;
+    position: relative !important;
+}
+
+.theme-entry [name="Progress"] .container.metro {
+    display: flex !important;
+    width: 100% !important;
+}
+
+.theme-entry [name="Progress"] .step {
+    border-radius: 50% !important;
+    background: var(--retal-copper-200) !important;
+}
+
+.theme-entry [name="Progress"] .step-title {
+    color: var(--color-text-muted) !important;
+    font-size: 12px !important;
+}
+
+.theme-entry [name="Progress"] .connector-left,
+.theme-entry [name="Progress"] .connector-right {
+    background: var(--retal-copper-200) !important;
+}
+
+.theme-entry [name="Progress"] .completed .step,
+.theme-entry [name="Progress"] .last-completed .step {
+    background: var(--color-success) !important;
+}
+
+.theme-entry [name="Progress"] .completed .step-title,
+.theme-entry [name="Progress"] .last-completed .step-title {
+    color: var(--color-success) !important;
+}
+
+.theme-entry [name="Progress"] .inprogress .step,
+.theme-entry [name="Progress"] .selected .step {
+    background: var(--color-primary) !important;
+}
+
+.theme-entry [name="Progress"] .inprogress .step-title,
+.theme-entry [name="Progress"] .selected .step-title {
+    color: var(--color-primary) !important;
+}
+
+.theme-entry table {
+    border-color: var(--color-border) !important;
+}
+
+.theme-entry table th {
+    color: var(--color-text-secondary) !important;
+    font-weight: 600 !important;
+}
+
+.theme-entry table td {
+    color: var(--color-text) !important;
+}
+
+.theme-entry .input-control.invalid,
+.theme-entry .input-control.invalid.watermark,
+.theme-entry input.invalid,
+.theme-entry textarea.invalid {
+    border-color: var(--color-danger) !important;
+}
+
+.theme-entry .input-control.invalid a.input-control,
+.theme-entry .input-control.invalid a.input-control span,
+.theme-entry input.invalid,
+.theme-entry textarea.invalid {
+    color: var(--color-danger) !important;
+}
+
+.theme-entry .input-control.invalid .input-control-watermark {
+    color: var(--color-danger) !important;
+}
+
+.theme-entry .validation-error {
+    color: var(--color-danger) !important;
+    font-size: 12px !important;
+    margin-top: 5px !important;
+}
+
+.theme-entry .popup.dialog {
+    border-radius: 0 !important;
+    overflow: hidden !important;
+    box-shadow: var(--shadow-md) !important;
+}
+
+.theme-entry .popup.dialog .dialog-header,
+.theme-entry .popup.dialog .popup-header {
+    background: var(--color-surface) !important;
+    border-bottom: 1px solid var(--color-border) !important;
+}
+
+.theme-entry .popup.dialog .dialog-content,
+.theme-entry .popup.dialog .popup-content {
+    background: var(--color-surface) !important;
+}
+
+.theme-entry .tooltip {
+    padding: 7px 10px !important;
+    border-radius: 0 !important;
+    background: var(--retal-ink) !important;
+    color: var(--retal-white) !important;
+    font-size: 12px !important;
+}
+
+.theme-entry a.SourceCode-Forms-Controls-Web-Button.icon-button,
+.theme-entry .SourceCode-Forms-Controls-Web-Button.icon-button {
+    width: 40px !important;
+    min-width: 40px !important;
+    height: 40px !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+}
+
+.theme-entry .panel,
+.theme-entry .view,
+.theme-entry .section {
+    box-sizing: border-box !important;
+}
+
+/* =========================================================
+  5 K2 PROGRESS BAR CUSTOMIZATION (INLINE, STRETCHED & GREEN)
+========================================================= */
+
+
+.theme-entry div[name="Progress"] .container.metro {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    /* Isse elements naye line mein nahi jayenge */
+    width: 100% !important;
+    counter-reset: k2-step-counter;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Ensure container takes full width */
+.theme-entry div[name="Progress"] .step-container {
+    display: flex !important;
+    flex: 1 1 0 !important;
+    /* This will STRETCH connecting line */
+    min-width: 0 !important;
+}
+
+.theme-entry div[name="Progress"] .step-area {
+    display: flex !important;
+    flex-direction: row !important;
+    /* ADDED THIS */
+    width: 100% !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-decoration: none !important;
+}
+
+.theme-entry div[name="Progress"] .step-item,
+.theme-entry div[name="Progress"] .step-title {
+    display: contents !important;
+}
+
+.theme-entry div[name="Progress"] .connector-left {
+    order: 1;
+}
+
+.theme-entry div[name="Progress"] .step {
+    order: 2;
+}
+
+.theme-entry div[name="Progress"] .title {
+    order: 3;
+}
+
+.theme-entry div[name="Progress"] .connector-right {
+    order: 4;
+}
+
+/* FIX LINE STRETCHING */
+.theme-entry div[name="Progress"] .connector-left,
+.theme-entry div[name="Progress"] .connector-right {
+    position: static !important;
+    height: 2px !important;
+    background-color: var(--retal-copper-100) !important;
+    flex: 1 1 100% !important;
+    /* Stretch fixing */
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+.theme-entry div[name="Progress"] .step-container.first .connector-left,
+.theme-entry div[name="Progress"] .step-container.last .connector-right {
+    display: none !important;
+}
+
+/* DEFAULT STEP CIRCLE */
+.theme-entry div[name="Progress"] .step {
+    counter-increment: k2-step-counter;
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 50% !important;
+    border: 2px solid var(--retal-copper-100) !important;
+    background-color: var(--retal-white) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+    cursor: default !important;
+    pointer-events: none !important;
+}
+
+.theme-entry div[name="Progress"] .step svg {
+    display: none !important;
+}
+
+/* NUMBER (1, 2, 3...) */
+.theme-entry div[name="Progress"] .step::after {
+    content: counter(k2-step-counter);
+    font-family: var(--retal-font-body) !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: var(--retal-line-strong) !important;
+}
+
+.theme-entry div[name="Progress"] .title {
+    font-family: var(--retal-font-body) !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    color: var(--retal-muted) !important;
+    margin-inline-start: 12px !important;
+    margin-inline-end: 12px !important;
+    white-space: nowrap !important;
+    overflow: visible !important;
+    display: block !important;
+}
+
+/* -----------------------------------------------------
+   CURRENT ACTIVE STEP (Step 1 by default where user is)
+------------------------------------------------------ */
+.theme-entry div[name="Progress"] .step-container.selected .step {
+    background-color: var(--retal-primary, var(--retal-copper-500)) !important;
+    border-color: var(--retal-primary, var(--retal-copper-500)) !important;
+}
+
+.theme-entry div[name="Progress"] .step-container.selected .step::after {
+    color: var(--retal-white) !important;
+    /* Active text color */
+}
+
+.theme-entry div[name="Progress"] .step-container.selected .title {
+    color: var(--retal-dark, var(--retal-ink)) !important;
+    font-weight: 600 !important;
+}
+
+/* -----------------------------------------------------
+   COMPLETED STEPS (Green Check & Green Line)
+------------------------------------------------------ */
+/* Green Circle for completed steps */
+.theme-entry div[name="Progress"] .step-container.completed .step {
+    background-color: var(--retal-success) !important;
+    /* Green color */
+    border-color: var(--retal-success) !important;
+}
+
+/* Replace Number with Green Tick using Mask Image */
+.theme-entry div[name="Progress"] .step-container.completed .step::after {
+    content: '';
+    /* Number hide */
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    /* Tick color */
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") no-repeat center / contain;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") no-repeat center / contain;
+}
+
+/* Title text color for completed step */
+.theme-entry div[name="Progress"] .step-container.completed .title {
+    color: var(--retal-dark, var(--retal-ink)) !important;
+}
+
+/* Green Connector Lines: Right line of completed step AND Left line of next step */
+.theme-entry div[name="Progress"] .step-container.completed .connector-right,
+.theme-entry div[name="Progress"] .step-container.completed+.step-container .connector-left {
+    background-color: var(--retal-success) !important;
+}
+
+@media (max-width: 860px) {
+
+    .theme-entry a.SourceCode-Forms-Controls-Web-Button,
+    .theme-entry .SourceCode-Forms-Controls-Web-Button {
+        min-height: 40px !important;
+        padding: 9px 14px !important;
+    }
+
+    .theme-entry .SourceCode-Forms-Controls-Web-ListView {
+        overflow-x: auto !important;
+    }
+
+    .theme-entry .form-tabs > .tab-box-tabs > li > a.tab {
+        min-width: 78px !important;
+        padding-inline-start: 10px !important;
+        padding-inline-end: 10px !important;
+        font-size: 13px !important;
+    }
+
+    .theme-entry [name="Progress"] .container.metro {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 14px !important;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .theme-entry input.SFC.SourceCode-Forms-Controls-Web-TextBox,
+    .theme-entry .SFC.SourceCode-Forms-Controls-Web-Control-SpinBox,
+    .theme-entry .dropdown-box,
+    .theme-entry .calendar-control {
+        height: 42px !important;
+    }
+
+    .theme-entry a.SourceCode-Forms-Controls-Web-Button,
+    .theme-entry .SourceCode-Forms-Controls-Web-Button {
+        min-height: 40px !important;
+        padding: 9px 12px !important;
+    }
+}
+
+
+/* Below is the code for the tables (it is moved from the lead but the js to handle table is in lead.js  */
+
+.theme-entry .detail-table {
+    width: 100% !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    background: var(--retal-white) !important;
+    border: 1px solid var(--retal-copper-100) !important;
+    border-radius: var(--retal-radius) !important;
+    overflow: hidden !important;
+}
+
+.theme-entry .detail-table > .editor-cell {
+    min-height: 38px !important;
+    height: auto !important;
+    padding: 8px 14px !important;
+    margin: 0 !important;
+    border-bottom: 1px solid var(--retal-copper-100) !important;
+    box-sizing: border-box !important;
+    background: var(--retal-white) !important;
+}
+
+.theme-entry .detail-table > .editor-cell:nth-last-child(-n + 2) {
+    border-bottom: 0 !important;
+}
+
+.theme-entry .detail-table > .editor-cell > .SFC.SourceCode-Forms-Controls-Web-Label {
+    color: var(--retal-copper-600) !important;
+    font-weight: 600 !important;
+    font-size: 13px !important;
+    line-height: 1.2 !important;
+}
+
+.theme-entry .detail-table > .editor-cell > .SFC.SourceCode-Forms-Controls-Web-DataLabel {
+    color: var(--retal-copper-800) !important;
+    font-weight: 500 !important;
+    font-size: 13px !important;
+    line-height: 1.2 !important;
+}
+
+.theme-entry .detail-table > .editor-cell:first-child {
+    grid-column: 1 / -1 !important;
+    min-height: 40px !important;
+    height: 40px !important;
+    padding: 10px 14px !important;
+    background: var(--retal-copper-50) !important;
+    border-bottom: 1px solid var(--retal-copper-100) !important;
+}
+
+.theme-entry .detail-table > .editor-cell:first-child .SFC.SourceCode-Forms-Controls-Web-Label {
+    color: var(--retal-copper-600) !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.3px !important;
+}
+
+
+/* Handeling the k2 default error message popup */
+.theme-entry .lyt-messagebox-layout {
+    display: grid !important;
+    grid-template-columns: 32px minmax(0, 1fr) !important;
+    column-gap: 16px !important;
+    align-items: start !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry .lyt-messagebox-layout .icon {
+    width: 32px !important;
+    min-width: 32px !important;
+    height: 32px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+.theme-entry .lyt-messagebox-layout .message {
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.5 !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+    box-sizing: border-box !important;
+}
+
+/* adding the border to the list header*/
+.theme-entry .grid .grid-column-headers {
+    background-color: var(--list-column-header-background-color);
+    border: 1px solid var(--retal-copper-200) !important;
+}
+
+/*==============================
+Converting textbox to the normal text 
+===============================*/
+.theme-entry input.SFC.SourceCode-Forms-Controls-Web-TextBox[name="Broker Custm Det Text Box National ID"],
+.theme-entry .SFC.SourceCode-Forms-Controls-Web-TextBox[name="Broker Custm Det Text Box National ID"],
+.theme-entry .SFC.SourceCode-Forms-Controls-Web-Control-SpinBox[name="Broker Custm Det Text Box National ID"] {
+    padding-inline-start: 0px !important;
+    padding-bottom: 0px !important;
+    border: none !important;
+   padding-top: 25px !important;
+}
+
+/* Adding the border to the progress bar  */
+
+.theme-entry .runtime-form.pi-has-cld-style .progress-view {
+    border: 2px solid var(--retal-copper-100) !important;
+    border-radius: var(--retal-radius) !important;
+    background: var(--retal-white) !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+}
+
+/* Adding this code for the removing the space  */
+.theme-entry .panel[name="CustomerJourney.CustomerOpportunity.Form Area Item"] {
+    margin-top: -35px !important;
+}
